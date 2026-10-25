@@ -1,0 +1,1173 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Café1981 Ámsterdam · Desayunos, brunch y cócteles en Leidseplein</title>
+<meta name="description" content="Café-brasserie entre Leidseplein y el Rijksmuseum. Eggs Royale y buen café desde las 8:00, cócteles y cenas desde las 16:30. Abierto todos los días.">
+<link rel="canonical" href="https://januslikt.github.io/cafe1981/es/">
+<link rel="alternate" hreflang="en" href="https://januslikt.github.io/cafe1981/">
+<link rel="alternate" hreflang="nl" href="https://januslikt.github.io/cafe1981/nl/">
+<link rel="alternate" hreflang="de" href="https://januslikt.github.io/cafe1981/de/">
+<link rel="alternate" hreflang="fr" href="https://januslikt.github.io/cafe1981/fr/">
+<link rel="alternate" hreflang="es" href="https://januslikt.github.io/cafe1981/es/">
+<link rel="alternate" hreflang="x-default" href="https://januslikt.github.io/cafe1981/">
+<meta name="theme-color" content="#0b101c">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" href="https://januslikt.github.io/cafe1981/img/pauw.svg" type="image/svg+xml">
+<meta property="og:type" content="restaurant">
+<meta property="og:site_name" content="Café1981">
+<meta property="og:title" content="Café1981 Ámsterdam · Desayunos, brunch y cócteles en Leidseplein">
+<meta property="og:description" content="Café-brasserie entre Leidseplein y el Rijksmuseum. Eggs Royale y buen café desde las 8:00, cócteles y cenas desde las 16:30. Abierto todos los días.">
+<meta property="og:url" content="https://januslikt.github.io/cafe1981/es/">
+<meta property="og:image" content="https://januslikt.github.io/cafe1981/img/terrace.jpg">
+<meta property="og:image:width" content="1800">
+<meta property="og:image:height" content="1200">
+<meta property="og:image:alt" content="La terraza de Café1981 con sombrillas blancas en Korte Leidsedwarsstraat, Ámsterdam">
+<meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:locale:alternate" content="nl_NL">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="geo.region" content="NL-NH">
+<meta name="geo.placename" content="Amsterdam">
+<meta name="geo.position" content="52.3623932;4.8862299">
+<meta name="ICBM" content="52.3623932, 4.8862299">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Hanken+Grotesk:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap">
+<link rel="preload" as="image" href="../img/terrace-1800.webp" imagesrcset="../img/terrace-960.webp 960w, ../img/terrace-1280.webp 1280w, ../img/terrace-1800.webp 1800w" imagesizes="100vw" fetchpriority="high">
+<style>
+/* Layout: cinematic full-bleed hero that turns from the terrace by day to the bar by night, then an editorial midnight-navy page with brass details taken from the real facade */
+:root {
+  --bg: #0b101c;          /* midnight navy, like the awning */
+  --bg-2: #121a2b;
+  --paper: #efe8db;       /* linen */
+  --brass: #c8a46a;
+  --brass-hi: #e2c48f;
+  --mute: #98a0b0;
+  --line: rgba(239,232,219,.13);
+  --f-display: "Cormorant", "Cormorant Garamond", Garamond, "Times New Roman", serif;
+  --f-body: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono: "DM Mono", ui-monospace, Menlo, monospace;
+  --ease: cubic-bezier(.2,.7,.1,1);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--paper); font-family: var(--f-body); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: clip; }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+:focus-visible { outline: 2px solid var(--brass); outline-offset: 3px; border-radius: 3px; }
+.wrap { max-width: 1320px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+.label { font-family: var(--f-mono); font-size: 11.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--brass); }
+h1, h2, h3 { font-family: var(--f-display); font-weight: 300; margin: 0; line-height: .95; letter-spacing: -.02em; text-wrap: balance; }
+em { font-style: italic; }
+
+/* grain */
+.grain { position: fixed; inset: -50%; z-index: 50; pointer-events: none; opacity: .07; mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  animation: grain 1s steps(4) infinite; }
+@keyframes grain { 25% { transform: translate(-3%, 2%); } 50% { transform: translate(2%, -3%); } 75% { transform: translate(-1%, 3%); } }
+
+/* NAV: floating pill */
+.nav { position: fixed; z-index: 40; left: 0; right: 0; top: 0; padding-top: calc(16px + env(safe-area-inset-top, 0px)); pointer-events: none; }
+.nav .wrap { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.pill { pointer-events: auto; display: flex; align-items: center; gap: 6px; padding: 6px; border-radius: 99px; background: rgba(11,16,28,.42); backdrop-filter: blur(18px) saturate(1.3); -webkit-backdrop-filter: blur(18px) saturate(1.3); border: 1px solid rgba(239,232,219,.12); transition: background .4s; }
+.nav.solid .pill { background: rgba(11,16,28,.82); }
+.brand, .wordmark { font-variant-numeric: lining-nums; }
+.brand { display: block; padding: 2px 12px 2px 14px; }
+.brand img { height: 40px; width: auto; display: block; }
+.brand i { color: var(--brass); }
+.links { display: flex; gap: 2px; }
+.links a { font-size: 14px; padding: 8px 14px; border-radius: 99px; color: rgba(239,232,219,.85); transition: background .25s, color .25s; }
+.links a:hover { background: rgba(239,232,219,.1); color: var(--paper); }
+.btn { display: inline-flex; align-items: center; gap: 10px; padding: 12px 20px; border-radius: 99px; font-weight: 600; font-size: 14px; white-space: nowrap; transition: transform .35s var(--ease), background .3s, color .3s; }
+.btn:hover { transform: translateY(-2px); }
+.btn-brass { background: var(--brass); color: #1a140b; }
+.btn-brass:hover { background: var(--brass-hi); }
+.btn-line { border: 1px solid rgba(239,232,219,.35); }
+.btn-line:hover { background: var(--paper); color: var(--bg); }
+.arrow { display: inline-block; transition: transform .35s var(--ease); }
+.btn:hover .arrow { transform: translateX(3px); }
+
+/* HERO */
+.hero { position: relative; height: 100svh; min-height: 640px; max-height: 1100px; overflow: hidden; isolation: isolate; }
+.hero-media { position: absolute; inset: 0; z-index: -2; clip-path: inset(0 0 0 0 round 0); animation: open 1.6s var(--ease) both; }
+@keyframes open { from { clip-path: inset(14% 10% 14% 10% round 28px); } }
+.hero-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity 2.4s ease; animation: drift 24s ease-in-out infinite alternate; }
+.hero-media img.night { opacity: 0; }
+.hero.is-night .hero-media img.night { opacity: 1; }
+@keyframes drift { from { transform: scale(1.06) translate3d(0,0,0); } to { transform: scale(1.14) translate3d(-1.5%, -1%, 0); } }
+.hero::after { content: ""; position: absolute; inset: 0; z-index: -1; background:
+  linear-gradient(180deg, rgba(11,16,28,.55) 0%, rgba(11,16,28,0) 26%),
+  linear-gradient(0deg, rgba(11,16,28,.92) 0%, rgba(11,16,28,.35) 38%, rgba(11,16,28,0) 62%),
+  linear-gradient(90deg, rgba(11,16,28,.45) 0%, rgba(11,16,28,0) 55%); }
+.hero-inner { height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding-block: 120px 28px; }
+.hero h1 { font-size: clamp(58px, 10.5vw, 168px); }
+.line { display: block; overflow: hidden; padding-bottom: .06em; }
+.line > span { display: block; animation: rise 1.3s var(--ease) both; }
+.line:nth-child(2) > span { animation-delay: .12s; }
+@keyframes rise { from { transform: translateY(105%); } }
+.hero h1 .swap { display: grid; }
+.hero h1 .swap > span { grid-area: 1 / 1; transition: opacity 1.1s ease, transform 1.1s var(--ease), filter 1.1s; }
+.hero h1 .swap .off { opacity: 0; transform: translateY(18%); filter: blur(10px); }
+.hero h1 .accent { font-style: italic; color: var(--brass-hi); }
+.hero-foot { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px; margin-top: 30px; }
+.hero-lede { max-width: 42ch; font-size: 17px; color: rgba(239,232,219,.86); margin: 0; animation: fade 1.2s .5s both; }
+@keyframes fade { from { opacity: 0; transform: translateY(14px); } }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; animation: fade 1.2s .65s both; }
+.daynight { display: inline-flex; align-items: center; gap: 4px; padding: 4px; border-radius: 99px; border: 1px solid rgba(239,232,219,.25); background: rgba(11,16,28,.35); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+.daynight button { all: unset; cursor: pointer; font-family: var(--f-mono); font-size: 11.5px; letter-spacing: .08em; padding: 8px 12px; border-radius: 99px; color: var(--mute); transition: background .4s, color .4s; }
+.daynight button[aria-pressed="true"] { background: var(--paper); color: var(--bg); }
+
+/* info bar */
+.infobar { margin-top: 34px; display: grid; grid-template-columns: repeat(4, auto); justify-content: space-between; gap: 20px; padding-top: 18px; border-top: 1px solid rgba(239,232,219,.2); font-size: 14px; animation: fade 1.2s .8s both; }
+.infobar > div { display: flex; gap: 10px; align-items: baseline; min-width: 0; }
+.infobar .k { font-family: var(--f-mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--mute); }
+.status { display: inline-flex; align-items: center; gap: 8px; }
+.dot { width: 7px; height: 7px; border-radius: 50%; background: #7fd49b; box-shadow: 0 0 0 0 rgba(127,212,155,.6); animation: pulse 2.2s infinite; flex: none; align-self: center; }
+.dot.closed { background: #d9846f; animation: none; }
+@keyframes pulse { 70% { box-shadow: 0 0 0 8px rgba(127,212,155,0); } 100% { box-shadow: 0 0 0 0 rgba(127,212,155,0); } }
+
+/* MARQUEE */
+.marquee { border-block: 1px solid var(--line); overflow: hidden; padding-block: 22px; background: var(--bg); }
+.track { display: flex; gap: 48px; width: max-content; animation: scroll 38s linear infinite; font-family: var(--f-display); font-size: clamp(28px, 3.2vw, 44px); font-weight: 300; white-space: nowrap; }
+.track span { display: inline-flex; align-items: center; gap: 48px; }
+.track span::after { content: "✦"; font-size: .4em; color: var(--brass); }
+.track span:nth-child(even) { font-style: italic; color: var(--brass-hi); }
+@keyframes scroll { to { transform: translateX(-50%); } }
+
+/* STATEMENT: words light up on scroll */
+.statement { padding-block: 140px 120px; }
+.statement .wrap { display: grid; grid-template-columns: 220px 1fr; gap: 40px; }
+.s-pauw { width: 112px; height: auto; margin-bottom: 22px; }
+.statement p.big { font-family: var(--f-display); font-weight: 300; font-size: clamp(32px, 4.3vw, 64px); line-height: 1.08; letter-spacing: -.015em; margin: 0; }
+.statement .w { color: rgba(239,232,219,.2); transition: color .5s ease; }
+.statement .w.on { color: var(--paper); }
+.statement .w.b.on { color: var(--brass-hi); font-style: italic; }
+
+/* MENU */
+.menu { padding-block: 40px 140px; }
+.menu-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 48px; }
+.menu-head h2 { font-size: clamp(48px, 7vw, 110px); }
+.tabs { display: inline-flex; padding: 4px; border-radius: 99px; border: 1px solid var(--line); }
+.tabs button { all: unset; cursor: pointer; padding: 10px 18px; border-radius: 99px; font-size: 14px; color: var(--mute); transition: background .35s, color .35s; }
+.tabs button[aria-selected="true"] { background: var(--paper); color: var(--bg); }
+.menu-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 64px; align-items: start; }
+.dishes { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.dish { display: grid; grid-template-columns: 1fr auto; gap: 6px 24px; padding-block: 24px; border-bottom: 1px solid var(--line); cursor: default; transition: padding .45s var(--ease); }
+.dish h3 { font-size: clamp(30px, 3vw, 44px); transition: color .3s, transform .45s var(--ease); }
+.dish p { margin: 0; color: var(--mute); font-size: 15px; grid-column: 1; }
+.dish .tag { grid-row: 1 / span 2; grid-column: 2; align-self: center; font-family: var(--f-mono); font-size: 11.5px; letter-spacing: .1em; color: var(--mute); text-transform: uppercase; }
+.dish:hover h3, .dish.active h3 { color: var(--brass-hi); transform: translateX(10px); }
+.dish:hover h3 em, .dish.active h3 em { font-style: italic; }
+.menu-visual { position: sticky; top: 100px; aspect-ratio: 4 / 5; max-width: 100%; border-radius: 6px; overflow: hidden; background: var(--bg-2); }
+.menu-visual img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transform: scale(1.08); transition: opacity .8s ease, transform 1.4s var(--ease); }
+.menu-visual img.show { opacity: 1; transform: scale(1); }
+.menu-visual .cap { position: absolute; left: 16px; bottom: 16px; z-index: 2; font-family: var(--f-mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; padding: 7px 11px; border-radius: 99px; background: rgba(11,16,28,.55); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+.menu-note { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 10px 24px; align-items: center; color: var(--mute); font-size: 14px; }
+.menu-note a { color: var(--paper); border-bottom: 1px solid var(--brass); padding-bottom: 2px; }
+.panel[hidden] { display: none !important; }
+
+/* SPACES: asymmetric image pair with parallax */
+.spaces { background: var(--paper); color: #17201c; padding-block: 140px; }
+.spaces .label { color: #8a6a35; }
+.spaces .wrap { display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px; align-items: end; }
+.spaces .copy { grid-column: 1 / span 5; align-self: start; }
+.spaces h2 { font-size: clamp(44px, 5.6vw, 88px); margin: 18px 0 26px; }
+.spaces h2 em { color: #8a6a35; }
+.spaces p { max-width: 40ch; color: #43504a; font-size: 17px; margin: 0; }
+.walklist { margin-top: 44px; max-width: 440px; }
+.walk-head { font-family: var(--f-mono); font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: #8a6a35; padding-bottom: 12px; border-bottom: 1px solid rgba(23,32,28,.85); }
+.walklist ol { list-style: none; margin: 0; padding: 0; }
+.walklist li { display: flex; align-items: baseline; gap: 14px; padding-block: 16px; border-bottom: 1px solid rgba(23,32,28,.14); }
+.walk-ic { width: 17px; height: 17px; flex: none; align-self: center; fill: none; stroke: #8a6a35; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.walk-ic circle { fill: #8a6a35; stroke: none; }
+.walklist .place { font-size: 16px; color: #17201c; }
+.walklist .lead { flex: 1; min-width: 20px; border-bottom: 1px dotted rgba(23,32,28,.3); transform: translateY(-4px); }
+.walklist .mins { font-family: var(--f-display); font-size: 30px; line-height: 1; color: #17201c; font-variant-numeric: lining-nums; }
+.walklist .mins small { font-size: 18px; font-style: italic; color: #8a6a35; }
+.ph { overflow: hidden; border-radius: 4px; position: relative; max-width: 100%; }
+.ph img { width: 100%; height: 118%; object-fit: cover; will-change: transform; }
+.ph-a { grid-column: 7 / span 6; aspect-ratio: 4 / 5; grid-row: 1 / span 2; }
+.ph-b { grid-column: 3 / span 4; aspect-ratio: 4 / 5; margin-top: -140px; }
+.ph figcaption { position: absolute; left: 14px; bottom: 14px; font-family: var(--f-mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--paper); background: rgba(11,16,28,.5); padding: 6px 10px; border-radius: 99px; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+
+/* VISIT */
+.visit { padding-block: 140px; }
+.visit .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; }
+.visit h2 { font-size: clamp(48px, 6vw, 96px); margin: 18px 0 32px; }
+.addr { font-family: var(--f-display); font-size: 32px; line-height: 1.15; }
+.addr small { display: block; font-family: var(--f-body); font-size: 15px; color: var(--mute); margin-top: 10px; }
+.visit .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; }
+.hours { border-top: 1px solid var(--line); font-variant-numeric: tabular-nums; }
+.hours div { display: flex; justify-content: space-between; gap: 16px; padding-block: 15px; border-bottom: 1px solid var(--line); font-size: 15px; }
+.hours div span:last-child { font-family: var(--f-mono); font-size: 14px; }
+.hours div.today { color: var(--brass-hi); }
+.routemap { grid-column: 1 / -1; margin: 8px 0 0; position: relative; aspect-ratio: 1200 / 420; max-width: 100%; border-radius: 6px; overflow: hidden; border: 1px solid var(--line); }
+.routemap svg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.route path { animation: march 1.6s linear infinite; }
+@keyframes march { to { stroke-dashoffset: -24; } }
+.pulse { transform-origin: 560px 205px; animation: ring 2.8s ease-out infinite; }
+@keyframes ring { 0% { transform: scale(.6); opacity: 1; } 100% { transform: scale(1.6); opacity: 0; } }
+.pin, .dest { position: absolute; transform: translate(-50%, 0); pointer-events: none; }
+.pin { transform: translate(-50%, 0); margin-top: 26px; }
+.dest.up { transform: translate(-50%, -100%); margin-top: -14px; flex-direction: column-reverse; }
+.pin img { height: 30px; width: auto; filter: drop-shadow(0 2px 8px rgba(0,0,0,.6)); }
+.dest { display: flex; flex-direction: column; align-items: center; margin-top: 14px; text-align: center; white-space: nowrap; }
+.dest b { font-family: var(--f-display); font-weight: 400; font-size: 24px; line-height: 1.1; }
+.dest span { font-family: var(--f-mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--brass-hi); }
+.routemap figcaption { position: absolute; left: 18px; right: 18px; top: 16px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; font-family: var(--f-mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--mute); }
+.routemap figcaption a { color: var(--paper); border-bottom: 1px solid var(--brass); }
+.mail { user-select: all; cursor: text; }
+
+/* FOOTER */
+footer { border-top: 1px solid var(--line); padding-block: 40px calc(32px + env(safe-area-inset-bottom, 0px)); overflow: hidden; }
+.wordmark { display: flex; align-items: center; }
+.wm-logo { height: 52px; width: auto; max-width: 100%; }
+.wm-pauw { width: clamp(70px, 12vw, 170px); height: auto; opacity: .9; }
+.foot-row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; margin-top: 28px; font-size: 13px; color: var(--mute); }
+
+/* reveal */
+.rv { transition: opacity 1s ease, transform 1.1s var(--ease); }
+.js .rv.wait { opacity: .001; transform: translateY(40px); }
+
+@media (max-width: 960px) {
+  .links { display: none; }
+  .infobar { grid-template-columns: 1fr 1fr; }
+  .statement .wrap, .menu-grid, .visit .wrap { grid-template-columns: 1fr; }
+  .statement .wrap { gap: 20px; }
+  .menu-visual { position: relative; top: 0; order: -1; aspect-ratio: 4 / 3; }
+  .spaces .wrap { grid-template-columns: 1fr 1fr; }
+  .spaces .copy { grid-column: 1 / -1; }
+  .ph-a { grid-column: 1 / -1; grid-row: auto; }
+  .ph-b { grid-column: 1 / span 1; margin-top: -90px; margin-left: 16px; border: 6px solid var(--paper); }
+  .statement, .spaces, .visit { padding-block: 96px; }
+  .menu { padding-bottom: 96px; }
+}
+@media (max-width: 560px) {
+  .nav .btn { padding: 9px 14px; font-size: 13px; }
+  .brand { padding-inline: 10px 6px; }
+  .brand img { height: 28px; }
+  .hero-inner { padding-bottom: 22px; }
+  .hero-lede { font-size: 15.5px; }
+  .infobar { gap: 12px; font-size: 13px; }
+  .infobar > div { flex-direction: column; gap: 2px; }
+  .routemap { aspect-ratio: auto; }
+  .routemap svg { position: relative; aspect-ratio: 1000 / 540; height: auto; }
+  .dest b { font-size: 16px; }
+  .dest span { font-size: 9.5px; letter-spacing: .08em; }
+  .dest { margin-top: 8px; }
+  .dest.up { margin-top: -8px; }
+  .pin { margin-top: 16px; }
+  .pin img { height: 20px; }
+  .routemap figcaption { position: static; flex-direction: column; padding: 14px 16px 16px; border-top: 1px solid var(--line); }
+  .ph-b { grid-column: 1 / -1; width: 62%; }
+}
+/* language menu */
+.langsel { position: relative; font-family: var(--f-mono); font-size: 11.5px; letter-spacing: .06em; }
+.langsel summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 6px; padding: 9px 12px; border-radius: 99px; color: var(--paper); }
+.langsel summary::-webkit-details-marker { display: none; }
+.langsel summary::after { content: ""; width: 5px; height: 5px; border-right: 1.2px solid currentColor; border-bottom: 1.2px solid currentColor; transform: translateY(-2px) rotate(45deg); opacity: .7; transition: transform .3s var(--ease); }
+.langsel[open] summary::after { transform: translateY(1px) rotate(225deg); }
+.langsel summary:hover, .langsel[open] summary { background: rgba(239,232,219,.1); }
+.langsel ul { position: absolute; right: 0; top: calc(100% + 12px); margin: 0; padding: 6px; list-style: none; min-width: 168px; border-radius: 16px; background: rgba(11,16,28,.94); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); border: 1px solid rgba(239,232,219,.14); box-shadow: 0 24px 60px rgba(0,0,0,.45); }
+.langsel li a { display: flex; justify-content: space-between; gap: 16px; padding: 10px 12px; border-radius: 10px; font-family: var(--f-body); font-size: 14px; letter-spacing: 0; color: rgba(239,232,219,.85); }
+.langsel li a span { font-family: var(--f-mono); font-size: 11px; color: var(--mute); }
+.langsel li a:hover { background: rgba(239,232,219,.08); color: var(--paper); }
+.langsel li a[aria-current="true"] { color: var(--brass-hi); }
+.langtip { position: fixed; z-index: 45; left: 50%; bottom: calc(18px + env(safe-area-inset-bottom, 0px)); transform: translate(-50%, 20px); opacity: 0; transition: opacity .5s, transform .6s var(--ease); display: flex; align-items: center; gap: 6px; padding: 6px 6px 6px 18px; border-radius: 99px; background: rgba(11,16,28,.9); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); border: 1px solid rgba(239,232,219,.16); font-size: 14px; white-space: nowrap; max-width: calc(100vw - 32px); }
+.langtip.show { opacity: 1; transform: translate(-50%, 0); }
+.langtip a { color: var(--brass-hi); padding: 6px 4px; }
+.langtip button { all: unset; cursor: pointer; width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center; color: var(--mute); }
+.langtip button:hover { background: rgba(239,232,219,.1); color: var(--paper); }
+
+.hero-eyebrow { margin: 0 0 22px; color: var(--brass-hi); animation: fade 1.2s .2s both; }
+
+/* REVIEWS */
+.reviews { padding-block: 140px; border-bottom: 1px solid var(--line); }
+.reviews .wrap { display: grid; grid-template-columns: 5fr 7fr; gap: 72px; align-items: start; }
+.score { position: sticky; top: 110px; }
+.score h2 { font-size: clamp(40px, 4.6vw, 68px); margin: 18px 0 34px; }
+.score h2 em { color: var(--brass-hi); }
+.score-num { display: flex; align-items: flex-end; gap: 22px; }
+.score-num b { font-family: var(--f-display); font-weight: 300; font-size: clamp(110px, 12vw, 176px); line-height: .78; letter-spacing: -.04em; font-variant-numeric: lining-nums; }
+.score-num div { padding-bottom: 6px; }
+.stars { display: inline-flex; gap: 3px; color: var(--brass); }
+.stars svg { width: 18px; height: 18px; fill: currentColor; }
+.stars .part { position: relative; }
+.stars .part svg + svg { position: absolute; inset: 0; clip-path: inset(0 30% 0 0); }
+.stars .part svg:first-child { fill: rgba(200,164,106,.25); }
+.score-num small { display: block; margin-top: 10px; font-size: 14px; color: var(--mute); }
+.dist { margin: 36px 0 0; padding: 0; list-style: none; max-width: 420px; }
+.dist li { display: grid; grid-template-columns: 14px 1fr 34px; align-items: center; gap: 14px; padding-block: 5px; font-family: var(--f-mono); font-size: 12px; color: var(--mute); }
+.dist i { height: 3px; border-radius: 3px; background: rgba(239,232,219,.1); overflow: hidden; }
+.dist i::before { content: ""; display: block; height: 100%; width: var(--w); background: var(--brass); border-radius: 3px; transform-origin: left; transition: transform 1.4s var(--ease); }
+.js .reviews.wait .dist i::before { transform: scaleX(0); }
+.dist li span:last-child { text-align: right; }
+.quotes { display: grid; gap: 22px; }
+.quote { margin: 0; padding: 40px 40px 34px; border-radius: 6px; background: var(--bg-2); border: 1px solid var(--line); position: relative; overflow: hidden; }
+.quote::before { content: "\201C"; position: absolute; right: 26px; top: -14px; font-family: var(--f-display); font-size: 180px; line-height: 1; color: rgba(200,164,106,.14); }
+.quote .stars svg { width: 15px; height: 15px; }
+.quote blockquote { margin: 18px 0 26px; }
+.quote blockquote p { margin: 0 0 14px; font-family: var(--f-display); font-weight: 300; font-size: clamp(22px, 2.1vw, 30px); line-height: 1.22; letter-spacing: -.005em; }
+.quote blockquote p:first-child { font-style: italic; color: var(--brass-hi); }
+.quote figcaption { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; font-size: 14px; }
+.quote figcaption b { font-weight: 600; }
+.quote figcaption span { font-family: var(--f-mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--mute); }
+.topics { margin-top: 30px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.topics .label { margin-right: 8px; color: var(--mute); }
+.topics span.t { padding: 7px 13px; border-radius: 99px; border: 1px solid var(--line); font-size: 13.5px; }
+.topics span.t small { font-family: var(--f-mono); font-size: 10.5px; color: var(--brass); margin-left: 6px; }
+.reviews .more { margin-top: 30px; }
+
+/* FAQ */
+.faq { background: var(--paper); color: #17201c; padding-block: 140px; }
+.faq .wrap { display: grid; grid-template-columns: 4fr 8fr; gap: 72px; align-items: start; }
+.faq .label { color: #8a6a35; }
+.faq h2 { font-size: clamp(44px, 5.4vw, 84px); margin-top: 18px; }
+.faq h2 em { color: #8a6a35; }
+.faq-list { border-top: 1px solid rgba(23,32,28,.85); }
+.faq details { border-bottom: 1px solid rgba(23,32,28,.14); }
+.faq summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 1fr 28px; gap: 24px; align-items: center; padding-block: 24px; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary h3 { font-variant-numeric: lining-nums; font-size: clamp(24px, 2.3vw, 32px); line-height: 1.15; font-weight: 400; letter-spacing: -.01em; transition: color .3s; }
+.faq summary:hover h3 { color: #8a6a35; }
+.faq summary i { width: 28px; height: 28px; border-radius: 50%; border: 1px solid rgba(23,32,28,.3); position: relative; transition: transform .45s var(--ease), background .3s; }
+.faq summary i::before, .faq summary i::after { content: ""; position: absolute; left: 50%; top: 50%; width: 10px; height: 1.2px; background: currentColor; transform: translate(-50%, -50%); }
+.faq summary i::after { transform: translate(-50%, -50%) rotate(90deg); }
+.faq details[open] summary i { transform: rotate(45deg); background: #17201c; color: var(--paper); border-color: #17201c; }
+.faq details p { margin: 0; padding: 0 56px 28px 0; max-width: 62ch; font-size: 16.5px; color: #43504a; }
+.faq details p a { color: #17201c; border-bottom: 1px solid #8a6a35; }
+
+.foot-langs { display: inline-flex; gap: 4px; font-family: var(--f-mono); font-size: 11.5px; }
+.foot-langs a { padding: 2px 6px; border-radius: 99px; }
+.foot-langs a:hover, .foot-langs a[aria-current] { color: var(--paper); }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+@media (max-width: 960px) {
+  .reviews .wrap, .faq .wrap { grid-template-columns: 1fr; gap: 44px; }
+  .score { position: static; }
+  .reviews, .faq { padding-block: 96px; }
+  .quote { padding: 30px 24px 26px; }
+}
+@media (max-width: 560px) {
+  .langsel summary { padding: 8px 9px; }
+  .faq details p { padding-right: 0; }
+  .langtip { font-size: 13px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; }
+}
+
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)} body{margin:0}
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": [
+    "Restaurant",
+    "CafeOrCoffeeShop"
+   ],
+   "@id": "https://januslikt.github.io/cafe1981/#cafe",
+   "name": "Café1981",
+   "alternateName": [
+    "Cafe1981",
+    "Café 1981",
+    "Cafe 1981"
+   ],
+   "description": "Café-brasserie entre Leidseplein y el Rijksmuseum. Eggs Royale y buen café desde las 8:00, cócteles y cenas desde las 16:30. Abierto todos los días.",
+   "url": "https://januslikt.github.io/cafe1981/",
+   "image": [
+    "https://januslikt.github.io/cafe1981/img/terrace.jpg",
+    "https://januslikt.github.io/cafe1981/img/interior.jpg"
+   ],
+   "logo": "https://januslikt.github.io/cafe1981/img/logo.png",
+   "email": "Reservations@cafe1981.nl",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Korte Leidsedwarsstraat 203",
+    "postalCode": "1017 RB",
+    "addressLocality": "Amsterdam",
+    "addressRegion": "Noord-Holland",
+    "addressCountry": "NL"
+   },
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 52.3623932,
+    "longitude": 4.8862299
+   },
+   "hasMap": "https://maps.google.com/?cid=8676354678998687309",
+   "sameAs": [
+    "https://maps.google.com/?cid=8676354678998687309"
+   ],
+   "openingHoursSpecification": [
+    {
+     "@type": "OpeningHoursSpecification",
+     "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+     ],
+     "opens": "08:00",
+     "closes": "21:00"
+    }
+   ],
+   "servesCuisine": [
+    "Breakfast",
+    "Brunch",
+    "International",
+    "Dutch",
+    "Indian",
+    "Cocktails"
+   ],
+   "priceRange": "€€",
+   "currenciesAccepted": "EUR",
+   "acceptsReservations": true,
+   "amenityFeature": [
+    {
+     "@type": "LocationFeatureSpecification",
+     "name": "Outdoor seating (terrace)",
+     "value": true
+    }
+   ],
+   "containedInPlace": {
+    "@type": "Place",
+    "name": "Leidseplein, Amsterdam"
+   },
+   "hasMenu": {
+    "@type": "Menu",
+    "name": "Café1981 menu",
+    "inLanguage": "en",
+    "url": "https://cafe1981.nl/wp-content/uploads/2026/09/cafe1981_lunch_sep_2026.pdf",
+    "hasMenuSection": [
+     {
+      "@type": "MenuSection",
+      "name": "Breakfast & lunch (from 08:00)",
+      "hasMenuItem": [
+       {
+        "@type": "MenuItem",
+        "name": "Eggs Royale",
+        "description": "Poached eggs, smoked salmon and creamy hollandaise sauce over a toasted English muffin.",
+        "offers": {
+         "@type": "Offer",
+         "price": "17.50",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Eggs Benedict",
+        "description": "Poached eggs, ham and creamy hollandaise over a toasted English muffin.",
+        "offers": {
+         "@type": "Offer",
+         "price": "16.50",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Eggs Florentine",
+        "description": "Poached eggs, avocado, sautéed spinach and creamy hollandaise over a toasted English muffin.",
+        "offers": {
+         "@type": "Offer",
+         "price": "17.00",
+         "priceCurrency": "EUR"
+        },
+        "suitableForDiet": "https://schema.org/VegetarianDiet"
+       },
+       {
+        "@type": "MenuItem",
+        "name": "The Green Omelette",
+        "description": "Fluffy omelette with Gouda cheese, spinach, onions, crispy bacon and sourdough toast.",
+        "offers": {
+         "@type": "Offer",
+         "price": "16.50",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Scrambled Egg",
+        "description": "Creamy scrambled eggs with avocado and smoked salmon on sourdough bread.",
+        "offers": {
+         "@type": "Offer",
+         "price": "16.50",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "\"French\" Toast",
+        "description": "Sweet toast with eggs, vanilla and cinnamon, strawberries, blueberries and clotted cream.",
+        "offers": {
+         "@type": "Offer",
+         "price": "14.50",
+         "priceCurrency": "EUR"
+        },
+        "suitableForDiet": "https://schema.org/VegetarianDiet"
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Stacked American Pancakes",
+        "description": "Thick, fluffy pancakes with maple syrup, strawberries and blueberries.",
+        "offers": {
+         "@type": "Offer",
+         "price": "13.50",
+         "priceCurrency": "EUR"
+        },
+        "suitableForDiet": "https://schema.org/VegetarianDiet"
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Smashed Avocado",
+        "description": "Avocado, cherry tomatoes, radishes, rucola and parmesan on a flatbread with balsamic glaze.",
+        "offers": {
+         "@type": "Offer",
+         "price": "16.50",
+         "priceCurrency": "EUR"
+        },
+        "suitableForDiet": "https://schema.org/VegetarianDiet"
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Hummus & Falafel",
+        "description": "Crispy falafel with hummus, cucumber, rucola and onion on a warm flatbread.",
+        "offers": {
+         "@type": "Offer",
+         "price": "15.50",
+         "priceCurrency": "EUR"
+        },
+        "suitableForDiet": "https://schema.org/VegetarianDiet"
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Fish & Chips",
+        "description": "Crispy battered white fish with golden fries and garlic sauce.",
+        "offers": {
+         "@type": "Offer",
+         "price": "22.50",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Veggie Burger",
+        "description": "Plant-based vegetable patty with tomatoes and cucumber, served with fries.",
+        "offers": {
+         "@type": "Offer",
+         "price": "17.00",
+         "priceCurrency": "EUR"
+        },
+        "suitableForDiet": "https://schema.org/VegetarianDiet"
+       }
+      ]
+     },
+     {
+      "@type": "MenuSection",
+      "name": "Dinner (from 16:30)",
+      "hasMenuItem": [
+       {
+        "@type": "MenuItem",
+        "name": "Vegetable Bitterballen",
+        "description": "Crunchy Dutch bitterballen with a creamy vegetable filling.",
+        "offers": {
+         "@type": "Offer",
+         "price": "10.50",
+         "priceCurrency": "EUR"
+        },
+        "suitableForDiet": "https://schema.org/VegetarianDiet"
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Chicken Sate",
+        "description": "Seasoned chicken skewers with peanut sauce and golden fries.",
+        "offers": {
+         "@type": "Offer",
+         "price": "21.50",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Hutspot with Rookworst",
+        "description": "Traditional Dutch mash of potatoes, carrots and onions with smoked rookworst sausage.",
+        "offers": {
+         "@type": "Offer",
+         "price": "20.50",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Lamb Chops",
+        "description": "Rosemary and garlic grilled lamb chops with fries.",
+        "offers": {
+         "@type": "Offer",
+         "price": "24.50",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Fish & Chips",
+        "description": "Crispy battered white fish with golden fries and garlic sauce.",
+        "offers": {
+         "@type": "Offer",
+         "price": "24.50",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Butter Chicken",
+        "description": "Tandoori chicken in a mild sauce of tomatoes, cream, butter and spices, with naan.",
+        "offers": {
+         "@type": "Offer",
+         "price": "25.50",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Saag Paneer",
+        "description": "Fresh cottage cheese in a delicately spiced spinach purée, with naan.",
+        "offers": {
+         "@type": "Offer",
+         "price": "22.50",
+         "priceCurrency": "EUR"
+        },
+        "suitableForDiet": "https://schema.org/VegetarianDiet"
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Dal",
+        "description": "Black lentils tempered with cumin, with naan.",
+        "offers": {
+         "@type": "Offer",
+         "price": "22.50",
+         "priceCurrency": "EUR"
+        },
+        "suitableForDiet": "https://schema.org/VegetarianDiet"
+       }
+      ]
+     }
+    ]
+   },
+   "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": 4.7,
+    "bestRating": 5,
+    "worstRating": 1,
+    "reviewCount": 355
+   },
+   "review": [
+    {
+     "@type": "Review",
+     "author": {
+      "@type": "Person",
+      "name": "Brian"
+     },
+     "inLanguage": "en",
+     "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": 5,
+      "bestRating": 5
+     },
+     "reviewBody": "Great little find for a classic breakfast feast. Welcomed on arrival with a smile and positive vibe. Great service throught our visit. Eggs Benedict a great classic, well seasoned and silky hollandaise.",
+     "publisher": {
+      "@type": "Organization",
+      "name": "Google"
+     }
+    },
+    {
+     "@type": "Review",
+     "author": {
+      "@type": "Person",
+      "name": "Kirsty Fitzsimons"
+     },
+     "inLanguage": "en",
+     "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": 5,
+      "bestRating": 5
+     },
+     "reviewBody": "Great little cafe. Food was excellent and very well presented. Coffee was also very good. Service was fantastic and the right balance between attentive and leaving us to enjoy our meal. The location is great too. Central but slightly tucked away - great for people watching.",
+     "publisher": {
+      "@type": "Organization",
+      "name": "Google"
+     }
+    }
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://januslikt.github.io/cafe1981/#website",
+   "url": "https://januslikt.github.io/cafe1981/",
+   "name": "Café1981",
+   "inLanguage": [
+    "en",
+    "nl",
+    "de",
+    "fr",
+    "es"
+   ],
+   "publisher": {
+    "@id": "https://januslikt.github.io/cafe1981/#cafe"
+   }
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://januslikt.github.io/cafe1981/es/#page",
+   "url": "https://januslikt.github.io/cafe1981/es/",
+   "name": "Café1981 Ámsterdam · Desayunos, brunch y cócteles en Leidseplein",
+   "description": "Café-brasserie entre Leidseplein y el Rijksmuseum. Eggs Royale y buen café desde las 8:00, cócteles y cenas desde las 16:30. Abierto todos los días.",
+   "inLanguage": "es",
+   "isPartOf": {
+    "@id": "https://januslikt.github.io/cafe1981/#website"
+   },
+   "about": {
+    "@id": "https://januslikt.github.io/cafe1981/#cafe"
+   },
+   "primaryImageOfPage": "https://januslikt.github.io/cafe1981/img/terrace.jpg"
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://januslikt.github.io/cafe1981/es/#faq",
+   "inLanguage": "es",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "¿Cuál es el horario de Café1981?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Abrimos todos los días de 8:00 a 21:00. Servimos desayunos y almuerzos desde las 8:00; la carta de noche, con cenas y cócteles, empieza a las 16:30."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Cómo llego a Café1981?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Estamos en Korte Leidsedwarsstraat 203, 1017 RB Ámsterdam: a 2 minutos a pie de Leidseplein, a 5 del Rijksmuseum y a 8 del Vondelpark. Los tranvías 1, 2, 5, 7 y 19 paran en Leidseplein."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Hace falta reservar?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No, entra sin más. Si venís en grupo, escríbenos a Reservations@cafe1981.nl."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Qué pido para desayunar?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Nuestros platos de huevos: Eggs Royale con salmón ahumado, Eggs Benedict, Eggs Florentine y la Green Omelette. Los Eggs Benedict, la Green Omelette y nuestras torrijas (French toast) son lo más mencionado en las opiniones de Google."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Tenéis opciones vegetarianas?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sí, todos los días: flatbread de hummus y falafel, la hamburguesa vegetal y bitterballen de verduras, y por la noche currys vegetarianos como saag paneer, aloo matar o dal."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Puedo probar comida neerlandesa?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Claro. Pide unas bitterballen con tu bebida y, por la noche, hutspot (puré de patata y zanahoria) con salchicha ahumada rookworst. Nuestros curry bowls de Mayur, con naan recién hecho, también triunfan."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Tenéis terraza?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sí. Nuestra terraza con sombrillas blancas está justo delante del café, en una calle tranquila a la vuelta de Leidseplein."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <nav class="pill" aria-label="Menú principal">
+      <a class="brand" href="#top" aria-label="Café1981"><img src="../img/logo.png" alt="Café1981" width="511" height="137"></a>
+      <div class="links">
+        <a href="#menu">Carta</a>
+        <a href="#spaces">Terraza</a>
+        <a href="#reviews">Opiniones</a>
+        <a href="#visit">Cómo llegar</a>
+      </div>
+    </nav>
+    <div class="pill">
+      <details class="langsel"><summary aria-label="Idioma: Español">ES</summary><ul><li><a href="../" hreflang="en" lang="en">English<span>EN</span></a></li><li><a href="../nl/" hreflang="nl" lang="nl">Nederlands<span>NL</span></a></li><li><a href="../de/" hreflang="de" lang="de">Deutsch<span>DE</span></a></li><li><a href="../fr/" hreflang="fr" lang="fr">Français<span>FR</span></a></li><li><a href="../es/" hreflang="es" lang="es" aria-current="true">Español<span>ES</span></a></li></ul></details>
+      <a class="btn btn-brass" href="https://www.google.com/maps/dir/?api=1&amp;destination=Caf%C3%A91981+Korte+Leidsedwarsstraat+203+Amsterdam" target="_blank" rel="noopener">Cómo llegar <span class="arrow" aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" id="hero" aria-labelledby="hero-h">
+    <div class="hero-media" aria-hidden="true">
+      <img class="day" src="../img/terrace-1800.webp" srcset="../img/terrace-960.webp 960w, ../img/terrace-1280.webp 1280w, ../img/terrace-1800.webp 1800w" sizes="100vw" width="1800" height="1200" alt="" fetchpriority="high">
+      <img class="night" src="../img/interior-1600.webp" srcset="../img/interior-900.webp 900w, ../img/interior-1600.webp 1600w" sizes="100vw" width="1600" height="1098" alt="" loading="lazy">
+    </div>
+    <div class="wrap hero-inner">
+      <p class="label hero-eyebrow">Café-brasserie · Leidseplein, Ámsterdam</p>
+      <h1 id="hero-h">
+        <span class="line"><span class="swap"><span id="h-a1">Eggs Royale</span><span id="h-b1" class="off" aria-hidden="true">Old Fashioned</span></span></span>
+        <span class="line"><span class="swap accent"><span id="h-a2">al amanecer.</span><span id="h-b2" class="off" aria-hidden="true">al atardecer.</span></span></span>
+      </h1>
+      <div class="hero-foot">
+        <p class="hero-lede">Un café-brasserie en una calle tranquila entre el Rijksmuseum y Leidseplein. Desayunos y almuerzos desde las 8:00, cócteles y cenas desde las 16:30.</p>
+        <div class="hero-actions">
+          <div class="daynight" role="group" aria-label="Día o noche">
+            <button type="button" id="b-day" aria-pressed="true">Día</button>
+            <button type="button" id="b-night" aria-pressed="false">Noche</button>
+          </div>
+          <a class="btn btn-line" href="#menu">Ver la carta <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <div class="infobar">
+        <div><span class="k">Ahora</span><span class="status"><i class="dot" id="dot"></i><span id="openText">Abierto todos los días</span></span></div>
+        <div><span class="k">Cada día</span><span>8:00 – 21:00</span></div>
+        <div><span class="k">Dirección</span><span>Korte Leidsedwarsstraat 203</span></div>
+        <div><span class="k">A pie</span><span>A 2 min de Leidseplein</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="track">
+      <span>Eggs Royale</span><span>Old Fashioned</span><span>Pancakes</span><span>Margarita</span><span>Fish &amp; Chips</span><span>Bitterballen</span>
+      <span>Eggs Royale</span><span>Old Fashioned</span><span>Pancakes</span><span>Margarita</span><span>Fish &amp; Chips</span><span>Bitterballen</span>
+    </div>
+  </div>
+
+  <section class="statement" aria-label="De la mañana a la noche">
+    <div class="wrap">
+      <div class="s-side"><img class="s-pauw" src="../img/pauw.svg" alt="" aria-hidden="true" width="112" height="112"><div class="label">De la mañana a la noche</div></div>
+      <p class="big" id="statement"><span class="w">Dos</span> <span class="w">cafés</span> <span class="w">en</span> <span class="w">un</span> <span class="w">mismo</span> <span class="w">día.</span> <span class="w">Mañanas</span> <span class="w">luminosas</span> <span class="w">con</span> <span class="w b">huevos</span> <span class="w b">frescos</span> <span class="w">y</span> <span class="w">buen</span> <span class="w">café,</span> <span class="w">noches</span> <span class="w">doradas</span> <span class="w">con</span> <span class="w b">cócteles</span> <span class="w">en</span> <span class="w">la</span> <span class="w b">barra.</span> <span class="w">Hospitalidad</span> <span class="w">clásica</span> <span class="w">a</span> <span class="w">unos</span> <span class="w">pasos</span> <span class="w">de</span> <span class="w">la</span> <span class="w">plaza</span> <span class="w">más</span> <span class="w">animada</span> <span class="w">de</span> <span class="w">Ámsterdam,</span> <span class="w">en</span> <span class="w">una</span> <span class="w">de</span> <span class="w">sus</span> <span class="w">calles</span> <span class="w">más</span> <span class="w">tranquilas.</span></p>
+    </div>
+  </section>
+
+  <section class="menu" id="menu" aria-labelledby="menu-h">
+    <div class="wrap">
+      <div class="menu-head rv">
+        <div><div class="label">La carta</div><h2 id="menu-h">De la mañana a la <em>noche</em></h2></div>
+        <div class="tabs" role="tablist" aria-label="La carta">
+          <button type="button" role="tab" id="t-day" aria-selected="true" aria-controls="p-day">Desayuno y almuerzo · 08:00</button>
+          <button type="button" role="tab" id="t-night" aria-selected="false" aria-controls="p-night">Cena y copas · 16:30</button>
+        </div>
+      </div>
+      <div class="menu-grid">
+        <div>
+          <ul class="dishes panel" id="p-day" role="tabpanel" aria-labelledby="t-day">
+            <li class="dish active" data-img="eggs"><h3>Eggs <em>Florentine</em></h3><p>Huevos pochados, aguacate, espinacas salteadas y salsa holandesa sobre un English muffin tostado</p><span class="tag">17 €</span></li>
+            <li class="dish" data-img="pancakes"><h3>American <em>Pancakes</em></h3><p>Gruesas y esponjosas, con sirope de arce, fresas y arándanos</p><span class="tag">13,50 €</span></li>
+            <li class="dish" data-img="omelette"><h3>Green <em>Omelette</em></h3><p>Queso gouda, espinacas, cebolla y bacon crujiente, con tostada de masa madre</p><span class="tag">16,50 €</span></li>
+            <li class="dish" data-img="fishchips"><h3>Fish &amp; <em>Chips</em></h3><p>Pescado blanco rebozado y crujiente, patatas fritas y salsa de ajo</p><span class="tag">22,50 €</span></li>
+          </ul>
+          <ul class="dishes panel" id="p-night" role="tabpanel" aria-labelledby="t-night" hidden>
+            <li class="dish" data-img="spritz"><h3>Signature <em>Cocktails</em></h3><p>Del Old Fashioned al Margarita, preparados en la barra desde las 16:00</p><span class="tag">De la casa</span></li>
+            <li class="dish" data-img="lamb"><h3>Lamb <em>Chops</em></h3><p>A la parrilla con romero y ajo, con patatas fritas</p><span class="tag">24,50 €</span></li>
+            <li class="dish" data-img="sate"><h3>Chicken <em>Saté</em></h3><p>Brochetas de pollo especiadas con salsa de cacahuete y patatas fritas</p><span class="tag">21,50 €</span></li>
+            <li class="dish" data-img="bitterballen"><h3>Vegetable <em>Bitterballen</em></h3><p>El picoteo neerlandés de siempre, aquí con un relleno cremoso de verduras</p><span class="tag">10,50 €</span></li>
+          </ul>
+          <div class="menu-note"><span>Carta de noche desde las 16:30. Platos vegetarianos todos los días.</span><a href="https://cafe1981.nl/wp-content/uploads/2026/09/cafe1981_lunch_sep_2026.pdf" target="_blank" rel="noopener">Carta de mediodía (PDF, en inglés)</a><a href="https://cafe1981.nl/wp-content/uploads/2026/09/cafe1981_diner_sep_2026.pdf" target="_blank" rel="noopener">Carta de noche (PDF, en inglés)</a></div>
+        </div>
+        <div class="menu-visual rv">
+          <img data-k="eggs" class="show" src="../img/eggs.webp" width="760" height="1140" alt="Eggs Florentine">
+          <img data-k="pancakes" src="../img/pancakes.webp" width="760" height="1140" alt="American Pancakes" loading="lazy">
+          <img data-k="omelette" src="../img/omelette.webp" width="760" height="1140" alt="Green Omelette" loading="lazy">
+          <img data-k="fishchips" src="../img/fishchips.webp" width="760" height="1140" alt="Fish &amp; Chips" loading="lazy">
+          <img data-k="spritz" src="../img/spritz.webp" width="760" height="1140" alt="Un cóctel en la barra de Café1981" loading="lazy">
+          <img data-k="lamb" src="../img/lamb.webp" width="760" height="1140" alt="Lamb Chops" loading="lazy">
+          <img data-k="sate" src="../img/sate.webp" width="760" height="1140" alt="Chicken Saté" loading="lazy">
+          <img data-k="bitterballen" src="../img/bitterballen.webp" width="760" height="1140" alt="Vegetable Bitterballen" loading="lazy">
+          <span class="cap" id="cap" aria-hidden="true">Eggs Florentine</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="spaces" id="spaces" aria-labelledby="spaces-h">
+    <div class="wrap">
+      <div class="copy rv">
+        <div class="label">Dentro y fuera</div>
+        <h2 id="spaces-h">Una <em>terraza</em> tranquila en pleno centro.</h2>
+        <p>Leidseplein está a la vuelta de la esquina, pero nuestra calle sigue siendo tranquila. Disfruta del sol de la mañana en la terraza, bajo las sombrillas blancas, o vuelve después de los museos a tomar un cóctel en la barra.</p>
+        <div class="walklist">
+          <div class="walk-head">A pie desde nuestra puerta</div>
+          <ol><li><svg class="walk-ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="13" cy="4" r="2"/><path d="M10.5 21l1.6-6.2L14.5 17v4M9 12.5l1.3-4.3 3.2-.7 2.2 3.2 2.8 1.1M10.3 8.2L7 10l-1 3.3M12.1 14.8l1.4-5.1"/></svg><span class="place">Leidseplein</span><span class="lead" aria-hidden="true"></span><span class="mins">2<small> min</small></span></li><li><svg class="walk-ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="13" cy="4" r="2"/><path d="M10.5 21l1.6-6.2L14.5 17v4M9 12.5l1.3-4.3 3.2-.7 2.2 3.2 2.8 1.1M10.3 8.2L7 10l-1 3.3M12.1 14.8l1.4-5.1"/></svg><span class="place">Rijksmuseum</span><span class="lead" aria-hidden="true"></span><span class="mins">5<small> min</small></span></li><li><svg class="walk-ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="13" cy="4" r="2"/><path d="M10.5 21l1.6-6.2L14.5 17v4M9 12.5l1.3-4.3 3.2-.7 2.2 3.2 2.8 1.1M10.3 8.2L7 10l-1 3.3M12.1 14.8l1.4-5.1"/></svg><span class="place">Vondelpark</span><span class="lead" aria-hidden="true"></span><span class="mins">8<small> min</small></span></li></ol>
+        </div>
+      </div>
+      <figure class="ph ph-a" style="margin:0"><img data-par=".12" src="../img/interior-1600.webp" srcset="../img/interior-900.webp 900w, ../img/interior-1600.webp 1600w" sizes="(max-width: 960px) 100vw, 50vw" width="1600" height="1098" loading="lazy" alt="El comedor y la barra de Café1981, con manteles blancos y una vitrina de botellas"><figcaption>La barra y el comedor</figcaption></figure>
+      <figure class="ph ph-b" style="margin:0"><img data-par="-.08" src="../img/terrace-960.webp" srcset="../img/terrace-960.webp 960w, ../img/terrace-1280.webp 1280w" sizes="(max-width: 960px) 62vw, 34vw" width="960" height="640" loading="lazy" alt="La terraza de Café1981 con sombrillas blancas en Korte Leidsedwarsstraat, Ámsterdam"><figcaption>La terraza</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="reviews rv" id="reviews" aria-labelledby="reviews-h">
+    <div class="wrap">
+      <div class="score">
+        <div class="label">Opiniones</div>
+        <h2 id="reviews-h">Lo que dicen nuestros <em>clientes</em></h2>
+        <div class="score-num">
+          <b>4,7</b>
+          <div>
+            <span class="stars" role="img" aria-label="Valoración de 4,7 sobre 5"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><span class="part"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg></span></span>
+            <small>355 opiniones en Google · octubre de 2026</small>
+          </div>
+        </div>
+        <ul class="dist" aria-label="Valoraciones por número de estrellas">
+          <li><span>5</span><i style="--w:80.8%"></i><span>287</span></li>
+          <li><span>4</span><i style="--w:11.3%"></i><span>40</span></li>
+          <li><span>3</span><i style="--w:3.9%"></i><span>14</span></li>
+          <li><span>2</span><i style="--w:2%"></i><span>7</span></li>
+          <li><span>1</span><i style="--w:2%"></i><span>7</span></li>
+        </ul>
+      </div>
+      <div>
+        <div class="quotes">
+          <figure class="quote">
+            <span class="stars" role="img" aria-label="5 de 5 estrellas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg></span>
+            <blockquote lang="en" cite="https://maps.google.com/?cid=8676354678998687309">
+              <p>“Great little find for a classic breakfast feast.”</p>
+              <p>“Welcomed on arrival with a smile and positive vibe. […] Eggs Benedict a great classic, well seasoned and silky hollandaise. […] Overall a great experience, highly recommend.”</p>
+            </blockquote>
+            <figcaption><b>Brian</b><span>Local Guide · Google</span><span>Opinión original en inglés</span></figcaption>
+          </figure>
+          <figure class="quote">
+            <span class="stars" role="img" aria-label="5 de 5 estrellas"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"/></svg></span>
+            <blockquote lang="en" cite="https://maps.google.com/?cid=8676354678998687309">
+              <p>“Great little cafe.”</p>
+              <p>“Food was excellent and very well presented. Coffee was also very good. Service was fantastic and the right balance between attentive and leaving us to enjoy our meal. The location is great too. Central but slightly tucked away - great for people watching.”</p>
+            </blockquote>
+            <figcaption><b>Kirsty Fitzsimons</b><span>Local Guide · Google</span><span>Opinión original en inglés</span></figcaption>
+          </figure>
+        </div>
+        <div class="topics"><span class="label">Lo más mencionado</span><span class="t">Eggs Benedict<small>12</small></span><span class="t">Terraza<small>8</small></span><span class="t">Green Omelette<small>7</small></span><span class="t">French Toast<small>6</small></span></div>
+        <a class="btn btn-line more" href="https://maps.google.com/?cid=8676354678998687309" target="_blank" rel="noopener">Ver todas las opiniones en Google <span class="arrow" aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="visit" id="visit" aria-labelledby="visit-h">
+    <div class="wrap">
+      <div class="rv">
+        <div class="label">Cómo llegar</div>
+        <h2 id="visit-h">Entra sin más. <em>No hace falta reservar.</em></h2>
+        <address class="addr" style="font-style:normal">Korte Leidsedwarsstraat 203<br>1017 RB Amsterdam<small>Entre Leidseplein y el Rijksmuseum. Tranvía 1, 2, 5, 7 o 19 hasta Leidseplein.</small></address>
+        <div class="actions">
+          <a class="btn btn-brass" href="https://www.google.com/maps/dir/?api=1&amp;destination=Caf%C3%A91981+Korte+Leidsedwarsstraat+203+Amsterdam" target="_blank" rel="noopener">Abrir en Google Maps <span class="arrow" aria-hidden="true">↗</span></a>
+          <a class="btn btn-line" href="mailto:Reservations@cafe1981.nl">Reservations@cafe1981.nl</a>
+        </div>
+      </div>
+      <div class="rv">
+        <div class="hours" id="hours"><div><span>Lunes</span><span>8:00 – 21:00</span></div><div><span>Martes</span><span>8:00 – 21:00</span></div><div><span>Miércoles</span><span>8:00 – 21:00</span></div><div><span>Jueves</span><span>8:00 – 21:00</span></div><div><span>Viernes</span><span>8:00 – 21:00</span></div><div><span>Sábado</span><span>8:00 – 21:00</span></div><div><span>Domingo</span><span>8:00 – 21:00</span></div></div>
+      </div>
+      <figure class="routemap rv" aria-label="Rutas a pie desde Café1981 hasta Leidseplein, el Rijksmuseum y el Vondelpark">
+        <svg id="rmap" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+          <defs>
+            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="rgba(239,232,219,.035)"/></pattern>
+          </defs>
+          <rect x="-400" y="-400" width="2000" height="1200" fill="#0e1524"/>
+          <rect x="-400" y="-400" width="2000" height="1200" fill="url(#grid)"/>
+          <path d="M120 470 C 260 330, 380 300, 520 300 S 820 250, 1000 120 S 1180 40, 1260 30" fill="none" stroke="#18233a" stroke-width="34" stroke-linecap="round"/>
+          <path d="M-20 70 C 200 90, 380 60, 560 40" fill="none" stroke="#18233a" stroke-width="22" stroke-linecap="round"/>
+          <g fill="none" stroke="rgba(239,232,219,.07)" stroke-width="10" stroke-linecap="round">
+            <path d="M330 -10 L 470 430"/><path d="M-10 190 L 1210 150"/><path d="M640 -10 L 590 430"/><path d="M850 -10 L 980 430"/><path d="M60 -10 L 200 430"/>
+          </g>
+          <path d="M-40 260 C 40 230, 120 250, 190 300 C 230 340, 210 420, 140 450 L -40 450 Z" fill="#17291f"/>
+          <path d="M832 300 h56 v42 h-56z" fill="rgba(200,164,106,.12)" stroke="rgba(200,164,106,.35)"/>
+          <g fill="none" stroke="#c8a46a" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 11" class="route">
+            <path d="M560 205 C 520 190, 470 160, 430 128"/>
+            <path d="M560 205 C 640 230, 760 270, 830 300"/>
+            <path d="M560 205 C 440 230, 300 260, 170 310"/>
+          </g>
+          <circle cx="430" cy="128" r="7" fill="#efe8db"/>
+          <circle cx="860" cy="321" r="7" fill="#efe8db"/>
+          <circle cx="150" cy="320" r="7" fill="#efe8db"/>
+          <circle cx="560" cy="205" r="34" fill="rgba(200,164,106,.16)" class="pulse"/>
+          <circle cx="560" cy="205" r="13" fill="#c8a46a" stroke="#0e1524" stroke-width="4"/>
+        </svg>
+        <div class="pin" data-x="560" data-y="205"><img src="../img/logo.png" alt="" width="511" height="137"></div>
+        <div class="dest up" data-x="430" data-y="128"><b>Leidseplein</b><span>2 min a pie</span></div>
+        <div class="dest" data-x="860" data-y="321"><b>Rijksmuseum</b><span>5 min a pie</span></div>
+        <div class="dest" data-x="150" data-y="320"><b>Vondelpark</b><span>8 min a pie</span></div>
+        <figcaption><span>Mapa simplificado · sin escala</span><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Caf%C3%A91981+Korte+Leidsedwarsstraat+203+Amsterdam&amp;travelmode=walking" target="_blank" rel="noopener">Ruta a pie en Google Maps ↗</a></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="faq" id="faq" aria-labelledby="faq-h">
+    <div class="wrap">
+      <div class="rv">
+        <div class="label">Información útil</div>
+        <h2 id="faq-h">Preguntas <em>frecuentes</em></h2>
+      </div>
+      <div class="faq-list rv">
+        <details open><summary><h3>¿Cuál es el horario de Café1981?</h3><i aria-hidden="true"></i></summary><p>Abrimos todos los días de 8:00 a 21:00. Servimos desayunos y almuerzos desde las 8:00; la carta de noche, con cenas y cócteles, empieza a las 16:30.</p></details>
+        <details><summary><h3>¿Cómo llego a Café1981?</h3><i aria-hidden="true"></i></summary><p>Estamos en Korte Leidsedwarsstraat 203, 1017 RB Ámsterdam: a 2 minutos a pie de Leidseplein, a 5 del Rijksmuseum y a 8 del Vondelpark. Los tranvías 1, 2, 5, 7 y 19 paran en Leidseplein.</p></details>
+        <details><summary><h3>¿Hace falta reservar?</h3><i aria-hidden="true"></i></summary><p>No, entra sin más. Si venís en grupo, escríbenos a <a href="mailto:Reservations@cafe1981.nl">Reservations@cafe1981.nl</a>.</p></details>
+        <details><summary><h3>¿Qué pido para desayunar?</h3><i aria-hidden="true"></i></summary><p>Nuestros platos de huevos: Eggs Royale con salmón ahumado, Eggs Benedict, Eggs Florentine y la Green Omelette. Los Eggs Benedict, la Green Omelette y nuestras torrijas (French toast) son lo más mencionado en las opiniones de Google.</p></details>
+        <details><summary><h3>¿Tenéis opciones vegetarianas?</h3><i aria-hidden="true"></i></summary><p>Sí, todos los días: flatbread de hummus y falafel, la hamburguesa vegetal y bitterballen de verduras, y por la noche currys vegetarianos como saag paneer, aloo matar o dal.</p></details>
+        <details><summary><h3>¿Puedo probar comida neerlandesa?</h3><i aria-hidden="true"></i></summary><p>Claro. Pide unas bitterballen con tu bebida y, por la noche, hutspot (puré de patata y zanahoria) con salchicha ahumada rookworst. Nuestros curry bowls de Mayur, con naan recién hecho, también triunfan.</p></details>
+        <details><summary><h3>¿Tenéis terraza?</h3><i aria-hidden="true"></i></summary><p>Sí. Nuestra terraza con sombrillas blancas está justo delante del café, en una calle tranquila a la vuelta de Leidseplein.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="wordmark"><img class="wm-logo" src="../img/logo.png" alt="Café1981" width="511" height="137" loading="lazy"></div>
+    <div class="foot-row"><span>Café1981 · Korte Leidsedwarsstraat 203 · 1017 RB Amsterdam</span><span>Abierto todos los días de 8:00 a 21:00</span><span><span class="foot-langs"><a href="../" hreflang="en" lang="en">EN</a><a href="../nl/" hreflang="nl" lang="nl">NL</a><a href="../de/" hreflang="de" lang="de">DE</a><a href="../fr/" hreflang="fr" lang="fr">FR</a><a href="../es/" hreflang="es" lang="es" aria-current="true">ES</a></span></span></div>
+  </div>
+</footer>
+
+<div class="langtip" id="langtip" role="status" hidden><span id="langtip-t"></span><button type="button" id="langtip-x" aria-label="Close">✕</button></div>
+
+<script>
+(() => {
+  const L = {"lang": "es", "open": "Abierto hasta las 21:00", "closed": "Cerrado · abre a las 8:00", "today": "hoy", "langs": {"en": {"ask": "Prefer English?", "cta": "Read in English", "href": "../"}, "nl": {"ask": "Liever Nederlands?", "cta": "Lees in het Nederlands", "href": "../nl/"}, "de": {"ask": "Lieber auf Deutsch?", "cta": "Auf Deutsch lesen", "href": "../de/"}, "fr": {"ask": "Vous préférez le français ?", "cta": "Lire en français", "href": "../fr/"}, "es": {"ask": "¿Prefieres español?", "cta": "Leer en español", "href": "../es/"}}};
+  const root = document.documentElement; root.classList.add('js');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+
+  /* statement words light up on scroll */
+  function paintStatement() {
+    const words = $$('#statement .w'), r = $('#statement').getBoundingClientRect();
+    const prog = reduce ? 1 : Math.min(1, Math.max(0, (innerHeight * .85 - r.top) / (r.height + innerHeight * .35)));
+    const n = Math.round(prog * words.length);
+    words.forEach((w, i) => w.classList.toggle('on', i < n));
+  }
+
+  /* language: remember the choice, and offer the visitor's own language once */
+  const KEY = 'c1981-lang';
+  $$('.langsel a, .foot-langs a').forEach(a => a.addEventListener('click', () => { try { localStorage.setItem(KEY, a.hreflang); } catch (e) {} }));
+  document.addEventListener('click', e => { const d = $('.langsel'); if (d && d.open && !d.contains(e.target)) d.open = false; });
+  (() => {
+    let saved = null; try { saved = localStorage.getItem(KEY); } catch (e) {}
+    if (saved) return;
+    const want = (navigator.languages || [navigator.language || '']).map(l => l.slice(0, 2).toLowerCase()).find(l => L.langs[l]);
+    if (!want || want === L.lang) return;
+    const tip = $('#langtip'), o = L.langs[want];
+    $('#langtip-t').innerHTML = `<span lang="${want}">${o.ask}</span> <a href="${o.href}" hreflang="${want}" lang="${want}">${o.cta} →</a>`;
+    $('#langtip-t a').addEventListener('click', () => { try { localStorage.setItem(KEY, want); } catch (e) {} });
+    $('#langtip-x').addEventListener('click', () => { tip.classList.remove('show'); try { localStorage.setItem(KEY, L.lang); } catch (e) {} });
+    tip.hidden = false; setTimeout(() => tip.classList.add('show'), 2200);
+  })();
+
+  /* open now, Amsterdam time */
+  function ams() {
+    const p = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Amsterdam', hour: '2-digit', minute: '2-digit', weekday: 'short', hour12: false }).formatToParts(new Date());
+    const g = t => p.find(x => x.type === t).value;
+    return { mins: +g('hour') * 60 + +g('minute'), wd: g('weekday') };
+  }
+  function renderStatus() {
+    const n = ams(), open = n.mins >= 480 && n.mins < 1260;
+    $('#dot').classList.toggle('closed', !open);
+    $('#openText').textContent = open ? L.open : L.closed;
+  }
+  function markToday() {
+    const k = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'], i = k.indexOf(ams().wd);
+    $$('#hours > div').forEach((row, j) => { row.classList.toggle('today', j === i); if (j === i) row.firstElementChild.textContent += ' · ' + L.today; });
+  }
+
+  /* day / night hero */
+  const hero = $('#hero');
+  let night = false, auto = !reduce, timer;
+  function setNight(v) {
+    night = v; hero.classList.toggle('is-night', v);
+    $('#b-day').setAttribute('aria-pressed', !v); $('#b-night').setAttribute('aria-pressed', v);
+    [['#h-a1', !v], ['#h-a2', !v], ['#h-b1', v], ['#h-b2', v]].forEach(([s, on]) => { const e = $(s); e.classList.toggle('off', !on); e.setAttribute('aria-hidden', !on); });
+  }
+  function loop() { clearInterval(timer); if (auto) timer = setInterval(() => setNight(!night), 6500); }
+  $('#b-day').addEventListener('click', () => { auto = false; loop(); setNight(false); });
+  $('#b-night').addEventListener('click', () => { auto = false; loop(); setNight(true); });
+
+  /* menu tabs + image preview */
+  const imgs = $$('.menu-visual img');
+  function showImg(k, label) {
+    imgs.forEach(i => i.classList.toggle('show', i.dataset.k === k));
+    $('#cap').textContent = label;
+  }
+  function setCap() { const a = $('.panel:not([hidden]) .dish.active') || $('.panel:not([hidden]) .dish'); if (a) showImg(a.dataset.img, a.querySelector('h3').textContent); }
+  function activate(d) { $$('.dish').forEach(x => x.classList.toggle('active', x === d)); setCap(); }
+  $$('.dish').forEach(d => { d.addEventListener('mouseenter', () => activate(d)); d.addEventListener('click', () => activate(d)); });
+  function tab(which) {
+    ['day', 'night'].forEach(t => { $('#t-' + t).setAttribute('aria-selected', t === which); $('#p-' + t).hidden = t !== which; });
+    activate($('#p-' + which + ' .dish'));
+  }
+  $('#t-day').addEventListener('click', () => tab('day'));
+  $('#t-night').addEventListener('click', () => tab('night'));
+
+  /* reveal, parallax, nav */
+  if (!reduce && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.remove('wait'); io.unobserve(e.target); } }), { threshold: .1 });
+    $$('.rv').forEach(el => { if (el.getBoundingClientRect().top > innerHeight) { el.classList.add('wait'); io.observe(el); } });
+  }
+  const pars = $$('[data-par]');
+  function onScroll() {
+    $('#nav').classList.toggle('solid', scrollY > innerHeight * .6);
+    paintStatement();
+    if (reduce) return;
+    pars.forEach(img => {
+      const r = img.parentElement.getBoundingClientRect(), slack = img.offsetHeight - r.height;
+      let t = Math.min(1, Math.max(0, (innerHeight - r.top) / (innerHeight + r.height)));
+      if (+img.dataset.par < 0) t = 1 - t;
+      img.style.transform = `translate3d(0, ${-slack * t}px, 0)`;
+    });
+  }
+  addEventListener('scroll', onScroll, { passive: true }); addEventListener('resize', onScroll);
+
+  /* route map: switch framing on phones, then pin the HTML labels to SVG coordinates */
+  const rmap = $('#rmap'), narrow = matchMedia('(max-width: 560px)');
+  function placeMap() {
+    rmap.setAttribute('viewBox', narrow.matches ? '0 0 1000 540' : '0 0 1200 420');
+    rmap.setAttribute('preserveAspectRatio', 'xMidYMid meet');
+    const box = rmap.getBoundingClientRect(), m = rmap.getScreenCTM(), pt = rmap.createSVGPoint();
+    if (!m) return;
+    $$('.routemap [data-x]').forEach(el => {
+      pt.x = +el.dataset.x; pt.y = +el.dataset.y; const q = pt.matrixTransform(m);
+      el.style.left = (q.x - box.left) + 'px'; el.style.top = (q.y - box.top) + 'px';
+    });
+  }
+  addEventListener('resize', placeMap); placeMap();
+
+  renderStatus(); markToday(); setCap();
+  const q = new URLSearchParams(location.search);
+  if (q.get('night') === '1') { auto = false; setNight(true); }
+  if (q.get('tab') === 'night') tab('night');
+  loop(); onScroll();
+  setInterval(renderStatus, 60000);
+})();
+</script>
+
+</body>
+</html>

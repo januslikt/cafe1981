@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="{{lang}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+{{HEAD}}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Hanken+Grotesk:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap">
+<link rel="preload" as="image" href="{{R}}img/terrace-1800.webp" imagesrcset="{{R}}img/terrace-960.webp 960w, {{R}}img/terrace-1280.webp 1280w, {{R}}img/terrace-1800.webp 1800w" imagesizes="100vw" fetchpriority="high">
+<style>
+{{CSS}}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)} body{margin:0}
+</style>
+{{JSONLD}}
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <nav class="pill" aria-label="{{nav_aria}}">
+      <a class="brand" href="#top" aria-label="Café1981"><img src="{{R}}img/logo.png" alt="Café1981" width="511" height="137"></a>
+      <div class="links">
+        <a href="#menu">{{nav1}}</a>
+        <a href="#spaces">{{nav2}}</a>
+        <a href="#reviews">{{nav4}}</a>
+        <a href="#visit">{{nav3}}</a>
+      </div>
+    </nav>
+    <div class="pill">
+      {{LANGMENU}}
+      <a class="btn btn-brass" href="https://www.google.com/maps/dir/?api=1&amp;destination=Caf%C3%A91981+Korte+Leidsedwarsstraat+203+Amsterdam" target="_blank" rel="noopener">{{navcta}} <span class="arrow" aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" id="hero" aria-labelledby="hero-h">
+    <div class="hero-media" aria-hidden="true">
+      <img class="day" src="{{R}}img/terrace-1800.webp" srcset="{{R}}img/terrace-960.webp 960w, {{R}}img/terrace-1280.webp 1280w, {{R}}img/terrace-1800.webp 1800w" sizes="100vw" width="1800" height="1200" alt="" fetchpriority="high">
+      <img class="night" src="{{R}}img/interior-1600.webp" srcset="{{R}}img/interior-900.webp 900w, {{R}}img/interior-1600.webp 1600w" sizes="100vw" width="1600" height="1098" alt="" loading="lazy">
+    </div>
+    <div class="wrap hero-inner">
+      <p class="label hero-eyebrow">{{eyebrow}}</p>
+      <h1 id="hero-h">
+        <span class="line"><span class="swap"><span id="h-a1">{{ha1}}</span><span id="h-b1" class="off" aria-hidden="true">{{hb1}}</span></span></span>
+        <span class="line"><span class="swap accent"><span id="h-a2">{{ha2}}</span><span id="h-b2" class="off" aria-hidden="true">{{hb2}}</span></span></span>
+      </h1>
+      <div class="hero-foot">
+        <p class="hero-lede">{{lede}}</p>
+        <div class="hero-actions">
+          <div class="daynight" role="group" aria-label="{{daynight_aria}}">
+            <button type="button" id="b-day" aria-pressed="true">{{day}}</button>
+            <button type="button" id="b-night" aria-pressed="false">{{night}}</button>
+          </div>
+          <a class="btn btn-line" href="#menu">{{cta1}} <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+      </div>
+      <div class="infobar">
+        <div><span class="k">{{k1}}</span><span class="status"><i class="dot" id="dot"></i><span id="openText">{{open_daily}}</span></span></div>
+        <div><span class="k">{{k2}}</span><span>{{hours_short}}</span></div>
+        <div><span class="k">{{k3}}</span><span>Korte Leidsedwarsstraat 203</span></div>
+        <div><span class="k">{{k4}}</span><span>{{v4}}</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="track">
+      <span>Eggs Royale</span><span>Old Fashioned</span><span>Pancakes</span><span>Margarita</span><span>Fish &amp; Chips</span><span>Bitterballen</span>
+      <span>Eggs Royale</span><span>Old Fashioned</span><span>Pancakes</span><span>Margarita</span><span>Fish &amp; Chips</span><span>Bitterballen</span>
+    </div>
+  </div>
+
+  <section class="statement" aria-label="{{s-l}}">
+    <div class="wrap">
+      <div class="s-side"><img class="s-pauw" src="{{R}}img/pauw.svg" alt="" aria-hidden="true" width="112" height="112"><div class="label">{{s-l}}</div></div>
+      <p class="big" id="statement">{{STATEMENT}}</p>
+    </div>
+  </section>
+
+  <section class="menu" id="menu" aria-labelledby="menu-h">
+    <div class="wrap">
+      <div class="menu-head rv">
+        <div><div class="label">{{m-l}}</div><h2 id="menu-h">{{m-h}}</h2></div>
+        <div class="tabs" role="tablist" aria-label="{{m-l}}">
+          <button type="button" role="tab" id="t-day" aria-selected="true" aria-controls="p-day">{{t-day}} · 08:00</button>
+          <button type="button" role="tab" id="t-night" aria-selected="false" aria-controls="p-night">{{t-night}} · 16:30</button>
+        </div>
+      </div>
+      <div class="menu-grid">
+        <div>
+          <ul class="dishes panel" id="p-day" role="tabpanel" aria-labelledby="t-day">
+            <li class="dish active" data-img="eggs"><h3>Eggs <em>Florentine</em></h3><p>{{d1}}</p><span class="tag">{{p_florentine}}</span></li>
+            <li class="dish" data-img="pancakes"><h3>American <em>Pancakes</em></h3><p>{{d2}}</p><span class="tag">{{p_pancakes}}</span></li>
+            <li class="dish" data-img="omelette"><h3>Green <em>Omelette</em></h3><p>{{d3}}</p><span class="tag">{{p_omelette}}</span></li>
+            <li class="dish" data-img="fishchips"><h3>Fish &amp; <em>Chips</em></h3><p>{{d4}}</p><span class="tag">{{p_fish}}</span></li>
+          </ul>
+          <ul class="dishes panel" id="p-night" role="tabpanel" aria-labelledby="t-night" hidden>
+            <li class="dish" data-img="spritz"><h3>Signature <em>Cocktails</em></h3><p>{{n1}}</p><span class="tag">{{tag-sig}}</span></li>
+            <li class="dish" data-img="lamb"><h3>Lamb <em>Chops</em></h3><p>{{n2}}</p><span class="tag">{{p_lamb}}</span></li>
+            <li class="dish" data-img="sate"><h3>Chicken <em>Saté</em></h3><p>{{n3}}</p><span class="tag">{{p_sate}}</span></li>
+            <li class="dish" data-img="bitterballen"><h3>Vegetable <em>Bitterballen</em></h3><p>{{n4}}</p><span class="tag">{{p_bitter}}</span></li>
+          </ul>
+          <div class="menu-note"><span>{{m-note}}</span><a href="https://cafe1981.nl/wp-content/uploads/2026/09/cafe1981_lunch_sep_2026.pdf" target="_blank" rel="noopener">{{m-pdf1}}</a><a href="https://cafe1981.nl/wp-content/uploads/2026/09/cafe1981_diner_sep_2026.pdf" target="_blank" rel="noopener">{{m-pdf2}}</a></div>
+        </div>
+        <div class="menu-visual rv">
+          <img data-k="eggs" class="show" src="{{R}}img/eggs.webp" width="760" height="1140" alt="Eggs Florentine">
+          <img data-k="pancakes" src="{{R}}img/pancakes.webp" width="760" height="1140" alt="American Pancakes" loading="lazy">
+          <img data-k="omelette" src="{{R}}img/omelette.webp" width="760" height="1140" alt="Green Omelette" loading="lazy">
+          <img data-k="fishchips" src="{{R}}img/fishchips.webp" width="760" height="1140" alt="Fish &amp; Chips" loading="lazy">
+          <img data-k="spritz" src="{{R}}img/spritz.webp" width="760" height="1140" alt="{{alt_cocktail}}" loading="lazy">
+          <img data-k="lamb" src="{{R}}img/lamb.webp" width="760" height="1140" alt="Lamb Chops" loading="lazy">
+          <img data-k="sate" src="{{R}}img/sate.webp" width="760" height="1140" alt="Chicken Saté" loading="lazy">
+          <img data-k="bitterballen" src="{{R}}img/bitterballen.webp" width="760" height="1140" alt="Vegetable Bitterballen" loading="lazy">
+          <span class="cap" id="cap" aria-hidden="true">Eggs Florentine</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="spaces" id="spaces" aria-labelledby="spaces-h">
+    <div class="wrap">
+      <div class="copy rv">
+        <div class="label">{{sp-l}}</div>
+        <h2 id="spaces-h">{{sp-h}}</h2>
+        <p>{{sp-p}}</p>
+        <div class="walklist">
+          <div class="walk-head">{{wl-h}}</div>
+          <ol><li><svg class="walk-ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="13" cy="4" r="2"/><path d="M10.5 21l1.6-6.2L14.5 17v4M9 12.5l1.3-4.3 3.2-.7 2.2 3.2 2.8 1.1M10.3 8.2L7 10l-1 3.3M12.1 14.8l1.4-5.1"/></svg><span class="place">{{wl1}}</span><span class="lead" aria-hidden="true"></span><span class="mins">2<small> min</small></span></li><li><svg class="walk-ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="13" cy="4" r="2"/><path d="M10.5 21l1.6-6.2L14.5 17v4M9 12.5l1.3-4.3 3.2-.7 2.2 3.2 2.8 1.1M10.3 8.2L7 10l-1 3.3M12.1 14.8l1.4-5.1"/></svg><span class="place">{{wl2}}</span><span class="lead" aria-hidden="true"></span><span class="mins">5<small> min</small></span></li><li><svg class="walk-ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="13" cy="4" r="2"/><path d="M10.5 21l1.6-6.2L14.5 17v4M9 12.5l1.3-4.3 3.2-.7 2.2 3.2 2.8 1.1M10.3 8.2L7 10l-1 3.3M12.1 14.8l1.4-5.1"/></svg><span class="place">{{wl3}}</span><span class="lead" aria-hidden="true"></span><span class="mins">8<small> min</small></span></li></ol>
+        </div>
+      </div>
+      <figure class="ph ph-a" style="margin:0"><img data-par=".12" src="{{R}}img/interior-1600.webp" srcset="{{R}}img/interior-900.webp 900w, {{R}}img/interior-1600.webp 1600w" sizes="(max-width: 960px) 100vw, 50vw" width="1600" height="1098" loading="lazy" alt="{{alt_interior}}"><figcaption>{{cap1}}</figcaption></figure>
+      <figure class="ph ph-b" style="margin:0"><img data-par="-.08" src="{{R}}img/terrace-960.webp" srcset="{{R}}img/terrace-960.webp 960w, {{R}}img/terrace-1280.webp 1280w" sizes="(max-width: 960px) 62vw, 34vw" width="960" height="640" loading="lazy" alt="{{alt_terrace}}"><figcaption>{{cap2}}</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="reviews rv" id="reviews" aria-labelledby="reviews-h">
+    <div class="wrap">
+      <div class="score">
+        <div class="label">{{r-l}}</div>
+        <h2 id="reviews-h">{{r-h}}</h2>
+        <div class="score-num">
+          <b>{{rating}}</b>
+          <div>
+            <span class="stars" role="img" aria-label="{{r_stars_aria}}">{{STARS_47}}</span>
+            <small>{{r-sub}}</small>
+          </div>
+        </div>
+        <ul class="dist" aria-label="{{r_dist_aria}}">
+          <li><span>5</span><i style="--w:80.8%"></i><span>287</span></li>
+          <li><span>4</span><i style="--w:11.3%"></i><span>40</span></li>
+          <li><span>3</span><i style="--w:3.9%"></i><span>14</span></li>
+          <li><span>2</span><i style="--w:2%"></i><span>7</span></li>
+          <li><span>1</span><i style="--w:2%"></i><span>7</span></li>
+        </ul>
+      </div>
+      <div>
+        <div class="quotes">
+          <figure class="quote">
+            <span class="stars" role="img" aria-label="{{r_5_aria}}">{{STARS_5}}</span>
+            <blockquote lang="en" cite="{{MAPS}}">
+              <p>“Great little find for a classic breakfast feast.”</p>
+              <p>“Welcomed on arrival with a smile and positive vibe. […] Eggs Benedict a great classic, well seasoned and silky hollandaise. […] Overall a great experience, highly recommend.”</p>
+            </blockquote>
+            <figcaption><b>Brian</b><span>Local Guide · Google</span>{{r_orig}}</figcaption>
+          </figure>
+          <figure class="quote">
+            <span class="stars" role="img" aria-label="{{r_5_aria}}">{{STARS_5}}</span>
+            <blockquote lang="en" cite="{{MAPS}}">
+              <p>“Great little cafe.”</p>
+              <p>“Food was excellent and very well presented. Coffee was also very good. Service was fantastic and the right balance between attentive and leaving us to enjoy our meal. The location is great too. Central but slightly tucked away - great for people watching.”</p>
+            </blockquote>
+            <figcaption><b>Kirsty Fitzsimons</b><span>Local Guide · Google</span>{{r_orig}}</figcaption>
+          </figure>
+        </div>
+        <div class="topics"><span class="label">{{r-topics}}</span><span class="t">Eggs Benedict<small>12</small></span><span class="t">{{topic_terrace}}<small>8</small></span><span class="t">Green Omelette<small>7</small></span><span class="t">French Toast<small>6</small></span></div>
+        <a class="btn btn-line more" href="{{MAPS}}" target="_blank" rel="noopener">{{r-cta}} <span class="arrow" aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="visit" id="visit" aria-labelledby="visit-h">
+    <div class="wrap">
+      <div class="rv">
+        <div class="label">{{v-l}}</div>
+        <h2 id="visit-h">{{v-h}}</h2>
+        <address class="addr" style="font-style:normal">Korte Leidsedwarsstraat 203<br>1017 RB Amsterdam<small>{{v-s}}</small></address>
+        <div class="actions">
+          <a class="btn btn-brass" href="https://www.google.com/maps/dir/?api=1&amp;destination=Caf%C3%A91981+Korte+Leidsedwarsstraat+203+Amsterdam" target="_blank" rel="noopener">{{v-cta}} <span class="arrow" aria-hidden="true">↗</span></a>
+          <a class="btn btn-line" href="mailto:Reservations@cafe1981.nl">Reservations@cafe1981.nl</a>
+        </div>
+      </div>
+      <div class="rv">
+        <div class="hours" id="hours">{{HOURS}}</div>
+      </div>
+      <figure class="routemap rv" aria-label="{{map_aria}}">
+        <svg id="rmap" viewBox="0 0 1200 420" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+          <defs>
+            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="rgba(239,232,219,.035)"/></pattern>
+          </defs>
+          <rect x="-400" y="-400" width="2000" height="1200" fill="#0e1524"/>
+          <rect x="-400" y="-400" width="2000" height="1200" fill="url(#grid)"/>
+          <path d="M120 470 C 260 330, 380 300, 520 300 S 820 250, 1000 120 S 1180 40, 1260 30" fill="none" stroke="#18233a" stroke-width="34" stroke-linecap="round"/>
+          <path d="M-20 70 C 200 90, 380 60, 560 40" fill="none" stroke="#18233a" stroke-width="22" stroke-linecap="round"/>
+          <g fill="none" stroke="rgba(239,232,219,.07)" stroke-width="10" stroke-linecap="round">
+            <path d="M330 -10 L 470 430"/><path d="M-10 190 L 1210 150"/><path d="M640 -10 L 590 430"/><path d="M850 -10 L 980 430"/><path d="M60 -10 L 200 430"/>
+          </g>
+          <path d="M-40 260 C 40 230, 120 250, 190 300 C 230 340, 210 420, 140 450 L -40 450 Z" fill="#17291f"/>
+          <path d="M832 300 h56 v42 h-56z" fill="rgba(200,164,106,.12)" stroke="rgba(200,164,106,.35)"/>
+          <g fill="none" stroke="#c8a46a" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 11" class="route">
+            <path d="M560 205 C 520 190, 470 160, 430 128"/>
+            <path d="M560 205 C 640 230, 760 270, 830 300"/>
+            <path d="M560 205 C 440 230, 300 260, 170 310"/>
+          </g>
+          <circle cx="430" cy="128" r="7" fill="#efe8db"/>
+          <circle cx="860" cy="321" r="7" fill="#efe8db"/>
+          <circle cx="150" cy="320" r="7" fill="#efe8db"/>
+          <circle cx="560" cy="205" r="34" fill="rgba(200,164,106,.16)" class="pulse"/>
+          <circle cx="560" cy="205" r="13" fill="#c8a46a" stroke="#0e1524" stroke-width="4"/>
+        </svg>
+        <div class="pin" data-x="560" data-y="205"><img src="{{R}}img/logo.png" alt="" width="511" height="137"></div>
+        <div class="dest up" data-x="430" data-y="128"><b>Leidseplein</b><span>{{w1}}</span></div>
+        <div class="dest" data-x="860" data-y="321"><b>Rijksmuseum</b><span>{{w2}}</span></div>
+        <div class="dest" data-x="150" data-y="320"><b>Vondelpark</b><span>{{w3}}</span></div>
+        <figcaption><span>{{map-note}}</span><a href="https://www.google.com/maps/dir/?api=1&amp;destination=Caf%C3%A91981+Korte+Leidsedwarsstraat+203+Amsterdam&amp;travelmode=walking" target="_blank" rel="noopener">{{map-cta}} ↗</a></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="faq" id="faq" aria-labelledby="faq-h">
+    <div class="wrap">
+      <div class="rv">
+        <div class="label">{{f-l}}</div>
+        <h2 id="faq-h">{{f-h}}</h2>
+      </div>
+      <div class="faq-list rv">
+{{FAQ}}
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="wordmark"><img class="wm-logo" src="{{R}}img/logo.png" alt="Café1981" width="511" height="137" loading="lazy"></div>
+    <div class="foot-row"><span>Café1981 · Korte Leidsedwarsstraat 203 · 1017 RB Amsterdam</span><span>{{foot}}</span><span>{{FOOTLANGS}}</span></div>
+  </div>
+</footer>
+
+<div class="langtip" id="langtip" role="status" hidden><span id="langtip-t"></span><button type="button" id="langtip-x" aria-label="Close">✕</button></div>
+
+<script>
+(() => {
+  const L = {{JS_L}};
+  const root = document.documentElement; root.classList.add('js');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+
+  /* statement words light up on scroll */
+  function paintStatement() {
+    const words = $$('#statement .w'), r = $('#statement').getBoundingClientRect();
+    const prog = reduce ? 1 : Math.min(1, Math.max(0, (innerHeight * .85 - r.top) / (r.height + innerHeight * .35)));
+    const n = Math.round(prog * words.length);
+    words.forEach((w, i) => w.classList.toggle('on', i < n));
+  }
+
+  /* language: remember the choice, and offer the visitor's own language once */
+  const KEY = 'c1981-lang';
+  $$('.langsel a, .foot-langs a').forEach(a => a.addEventListener('click', () => { try { localStorage.setItem(KEY, a.hreflang); } catch (e) {} }));
+  document.addEventListener('click', e => { const d = $('.langsel'); if (d && d.open && !d.contains(e.target)) d.open = false; });
+  (() => {
+    let saved = null; try { saved = localStorage.getItem(KEY); } catch (e) {}
+    if (saved) return;
+    const want = (navigator.languages || [navigator.language || '']).map(l => l.slice(0, 2).toLowerCase()).find(l => L.langs[l]);
+    if (!want || want === L.lang) return;
+    const tip = $('#langtip'), o = L.langs[want];
+    $('#langtip-t').innerHTML = `<span lang="${want}">${o.ask}</span> <a href="${o.href}" hreflang="${want}" lang="${want}">${o.cta} →</a>`;
+    $('#langtip-t a').addEventListener('click', () => { try { localStorage.setItem(KEY, want); } catch (e) {} });
+    $('#langtip-x').addEventListener('click', () => { tip.classList.remove('show'); try { localStorage.setItem(KEY, L.lang); } catch (e) {} });
+    tip.hidden = false; setTimeout(() => tip.classList.add('show'), 2200);
+  })();
+
+  /* open now, Amsterdam time */
+  function ams() {
+    const p = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Amsterdam', hour: '2-digit', minute: '2-digit', weekday: 'short', hour12: false }).formatToParts(new Date());
+    const g = t => p.find(x => x.type === t).value;
+    return { mins: +g('hour') * 60 + +g('minute'), wd: g('weekday') };
+  }
+  function renderStatus() {
+    const n = ams(), open = n.mins >= 480 && n.mins < 1260;
+    $('#dot').classList.toggle('closed', !open);
+    $('#openText').textContent = open ? L.open : L.closed;
+  }
+  function markToday() {
+    const k = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'], i = k.indexOf(ams().wd);
+    $$('#hours > div').forEach((row, j) => { row.classList.toggle('today', j === i); if (j === i) row.firstElementChild.textContent += ' · ' + L.today; });
+  }
+
+  /* day / night hero */
+  const hero = $('#hero');
+  let night = false, auto = !reduce, timer;
+  function setNight(v) {
+    night = v; hero.classList.toggle('is-night', v);
+    $('#b-day').setAttribute('aria-pressed', !v); $('#b-night').setAttribute('aria-pressed', v);
+    [['#h-a1', !v], ['#h-a2', !v], ['#h-b1', v], ['#h-b2', v]].forEach(([s, on]) => { const e = $(s); e.classList.toggle('off', !on); e.setAttribute('aria-hidden', !on); });
+  }
+  function loop() { clearInterval(timer); if (auto) timer = setInterval(() => setNight(!night), 6500); }
+  $('#b-day').addEventListener('click', () => { auto = false; loop(); setNight(false); });
+  $('#b-night').addEventListener('click', () => { auto = false; loop(); setNight(true); });
+
+  /* menu tabs + image preview */
+  const imgs = $$('.menu-visual img');
+  function showImg(k, label) {
+    imgs.forEach(i => i.classList.toggle('show', i.dataset.k === k));
+    $('#cap').textContent = label;
+  }
+  function setCap() { const a = $('.panel:not([hidden]) .dish.active') || $('.panel:not([hidden]) .dish'); if (a) showImg(a.dataset.img, a.querySelector('h3').textContent); }
+  function activate(d) { $$('.dish').forEach(x => x.classList.toggle('active', x === d)); setCap(); }
+  $$('.dish').forEach(d => { d.addEventListener('mouseenter', () => activate(d)); d.addEventListener('click', () => activate(d)); });
+  function tab(which) {
+    ['day', 'night'].forEach(t => { $('#t-' + t).setAttribute('aria-selected', t === which); $('#p-' + t).hidden = t !== which; });
+    activate($('#p-' + which + ' .dish'));
+  }
+  $('#t-day').addEventListener('click', () => tab('day'));
+  $('#t-night').addEventListener('click', () => tab('night'));
+
+  /* reveal, parallax, nav */
+  if (!reduce && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.remove('wait'); io.unobserve(e.target); } }), { threshold: .1 });
+    $$('.rv').forEach(el => { if (el.getBoundingClientRect().top > innerHeight) { el.classList.add('wait'); io.observe(el); } });
+  }
+  const pars = $$('[data-par]');
+  function onScroll() {
+    $('#nav').classList.toggle('solid', scrollY > innerHeight * .6);
+    paintStatement();
+    if (reduce) return;
+    pars.forEach(img => {
+      const r = img.parentElement.getBoundingClientRect(), slack = img.offsetHeight - r.height;
+      let t = Math.min(1, Math.max(0, (innerHeight - r.top) / (innerHeight + r.height)));
+      if (+img.dataset.par < 0) t = 1 - t;
+      img.style.transform = `translate3d(0, ${-slack * t}px, 0)`;
+    });
+  }
+  addEventListener('scroll', onScroll, { passive: true }); addEventListener('resize', onScroll);
+
+  /* route map: switch framing on phones, then pin the HTML labels to SVG coordinates */
+  const rmap = $('#rmap'), narrow = matchMedia('(max-width: 560px)');
+  function placeMap() {
+    rmap.setAttribute('viewBox', narrow.matches ? '0 0 1000 540' : '0 0 1200 420');
+    rmap.setAttribute('preserveAspectRatio', 'xMidYMid meet');
+    const box = rmap.getBoundingClientRect(), m = rmap.getScreenCTM(), pt = rmap.createSVGPoint();
+    if (!m) return;
+    $$('.routemap [data-x]').forEach(el => {
+      pt.x = +el.dataset.x; pt.y = +el.dataset.y; const q = pt.matrixTransform(m);
+      el.style.left = (q.x - box.left) + 'px'; el.style.top = (q.y - box.top) + 'px';
+    });
+  }
+  addEventListener('resize', placeMap); placeMap();
+
+  renderStatus(); markToday(); setCap();
+  const q = new URLSearchParams(location.search);
+  if (q.get('night') === '1') { auto = false; setNight(true); }
+  if (q.get('tab') === 'night') tab('night');
+  loop(); onScroll();
+  setInterval(renderStatus, 60000);
+})();
+</script>
+
+</body>
+</html>

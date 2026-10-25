@@ -1,0 +1,75 @@
+# Café1981
+
+> Café-brasserie in Amsterdam at Korte Leidsedwarsstraat 203, on a quiet street between Leidseplein (2 min walk) and the Rijksmuseum (5 min walk). Open every day 08:00–21:00: breakfast and lunch from 08:00 (Eggs Royale, Eggs Benedict, omelettes, pancakes), cocktails and dinner from 16:30 (international, Dutch and Indian dishes). Terrace out front. Walk-ins welcome. Rated 4.7 out of 5 from 355 Google reviews (October 2026).
+
+## Key facts
+
+- Name: Café1981 (also written Cafe1981, Café 1981)
+- Address: Korte Leidsedwarsstraat 203, 1017 RB Amsterdam, Netherlands
+- Coordinates: 52.3623932, 4.8862299
+- Opening hours: Monday to Sunday, 08:00–21:00
+- Breakfast and lunch: from 08:00. Evening menu, dinner and cocktails: from 16:30
+- Reservations: not needed; groups can email Reservations@cafe1981.nl
+- Getting there: tram 1, 2, 5, 7 or 19 to Leidseplein. Walking: Leidseplein 2 min, Rijksmuseum 5 min, Vondelpark 8 min
+- Price range: €€ (breakfast dishes €13.50–€17.50, dinner mains €20.50–€25.50)
+- Vegetarian dishes every day
+- Google rating: 4.7/5 from 355 reviews; guests most often mention the Eggs Benedict, the terrace, the Green Omelette and the French toast
+- Google Maps: https://maps.google.com/?cid=8676354678998687309
+
+## Menu highlights (September 2026)
+
+### Breakfast & lunch (from 08:00)
+- Eggs Royale (€17.50): Poached eggs, smoked salmon and creamy hollandaise sauce over a toasted English muffin.
+- Eggs Benedict (€16.50): Poached eggs, ham and creamy hollandaise over a toasted English muffin.
+- Eggs Florentine (€17.00) · vegetarian: Poached eggs, avocado, sautéed spinach and creamy hollandaise over a toasted English muffin.
+- The Green Omelette (€16.50): Fluffy omelette with Gouda cheese, spinach, onions, crispy bacon and sourdough toast.
+- Scrambled Egg (€16.50): Creamy scrambled eggs with avocado and smoked salmon on sourdough bread.
+- "French" Toast (€14.50) · vegetarian: Sweet toast with eggs, vanilla and cinnamon, strawberries, blueberries and clotted cream.
+- Stacked American Pancakes (€13.50) · vegetarian: Thick, fluffy pancakes with maple syrup, strawberries and blueberries.
+- Smashed Avocado (€16.50) · vegetarian: Avocado, cherry tomatoes, radishes, rucola and parmesan on a flatbread with balsamic glaze.
+- Hummus & Falafel (€15.50) · vegetarian: Crispy falafel with hummus, cucumber, rucola and onion on a warm flatbread.
+- Fish & Chips (€22.50): Crispy battered white fish with golden fries and garlic sauce.
+- Veggie Burger (€17.00) · vegetarian: Plant-based vegetable patty with tomatoes and cucumber, served with fries.
+
+### Dinner (from 16:30)
+- Vegetable Bitterballen (€10.50) · vegetarian: Crunchy Dutch bitterballen with a creamy vegetable filling.
+- Chicken Sate (€21.50): Seasoned chicken skewers with peanut sauce and golden fries.
+- Hutspot with Rookworst (€20.50): Traditional Dutch mash of potatoes, carrots and onions with smoked rookworst sausage.
+- Lamb Chops (€24.50): Rosemary and garlic grilled lamb chops with fries.
+- Fish & Chips (€24.50): Crispy battered white fish with golden fries and garlic sauce.
+- Butter Chicken (€25.50): Tandoori chicken in a mild sauce of tomatoes, cream, butter and spices, with naan.
+- Saag Paneer (€22.50) · vegetarian: Fresh cottage cheese in a delicately spiced spinach purée, with naan.
+- Dal (€22.50) · vegetarian: Black lentils tempered with cumin, with naan.
+
+Full menus: [Lunch (PDF)](https://cafe1981.nl/wp-content/uploads/2026/09/cafe1981_lunch_sep_2026.pdf) · [Dinner (PDF)](https://cafe1981.nl/wp-content/uploads/2026/09/cafe1981_diner_sep_2026.pdf)
+
+## Frequently asked questions
+
+### What are the opening hours of Café1981?
+We’re open every day from 08:00 to 21:00. Breakfast and lunch are served from 08:00; the evening menu with dinner and cocktails starts at 16:30.
+
+### How do I get to Café1981?
+You’ll find us at Korte Leidsedwarsstraat 203, 1017 RB Amsterdam: a 2-minute walk from Leidseplein, 5 minutes from the Rijksmuseum and 8 minutes from Vondelpark. Trams 1, 2, 5, 7 and 19 stop at Leidseplein.
+
+### Do I need to book a table?
+No, just walk in. For groups, email us at Reservations@cafe1981.nl.
+
+### What should I order for breakfast?
+Our egg dishes: Eggs Royale with smoked salmon, Eggs Benedict, Eggs Florentine and the Green Omelette. Eggs Benedict, the Green Omelette and our French toast are what guests mention most in their Google reviews.
+
+### Are there vegetarian options?
+Yes, every day. Think hummus & falafel flatbread, the veggie burger and vegetable bitterballen, and in the evening vegetarian curries such as saag paneer, aloo matar and dal.
+
+### Can I try Dutch food here?
+Yes. Order bitterballen with your drink, and in the evening hutspot (Dutch mash) with smoked rookworst sausage. Our curry bowls by Mayur, served with fresh naan, are a favourite too.
+
+### Is there a terrace?
+Yes. Our terrace with white parasols sits right in front of the café, on a quiet street just around the corner from Leidseplein.
+
+## Pages
+
+- [English](https://januslikt.github.io/cafe1981/)
+- [Nederlands](https://januslikt.github.io/cafe1981/nl/)
+- [Deutsch](https://januslikt.github.io/cafe1981/de/)
+- [Français](https://januslikt.github.io/cafe1981/fr/)
+- [Español](https://januslikt.github.io/cafe1981/es/)

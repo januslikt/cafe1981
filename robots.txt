@@ -1,2 +1,3 @@
+# Design preview: keep out of search engines. Run build.py --production for the live site.
 User-agent: *
 Disallow: /
