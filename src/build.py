@@ -66,6 +66,22 @@ REVIEWS = [
 ]
 
 
+# On the English home page only: send a first-time visitor to their browser language, or back to the
+# language they picked before. Crawlers, ?lang= links and English browsers stay put, so every page stays indexable.
+REDIRECT = """<script>
+(function () {
+  try {
+    if (navigator.webdriver || /bot|crawl|spider|slurp|preview|lighthouse/i.test(navigator.userAgent) || /[?&]lang=/.test(location.search)) return;
+    var pages = { nl: 'nl/', de: 'de/', fr: 'fr/', es: 'es/' }, saved = null;
+    try { saved = localStorage.getItem('c1981-lang'); } catch (e) {}
+    var want = saved, list = navigator.languages || [navigator.language || ''];
+    for (var i = 0; !want && i < list.length; i++) { var c = String(list[i]).slice(0, 2).toLowerCase(); if (c === 'en' || pages[c]) want = c; }
+    if (pages[want]) location.replace(pages[want] + location.hash);
+  } catch (e) {}
+})();
+</script>"""
+
+
 def page_path(l):
     return '' if l == 'en' else l + '/'
 
@@ -226,6 +242,7 @@ def build():
         v = {k: x for k, x in t.items() if isinstance(x, str)}
         v.update({
             'lang': l, 'R': '' if l == 'en' else '../', 'CSS': css, 'MAPS': MAPS,
+            'REDIRECT': REDIRECT if l == 'en' else '',
             'HEAD': head(l, t), 'JSONLD': jsonld(l, t), 'LANGMENU': langmenu(l, t), 'FOOTLANGS': footlangs(l),
             'STATEMENT': statement(t['s-p']), 'FAQ': faq(t), 'HOURS': hours(l, t),
             'STARS_5': STARS_5, 'STARS_47': STARS_47,

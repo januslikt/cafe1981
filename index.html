@@ -3,6 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script>
+(function () {
+  try {
+    if (navigator.webdriver || /bot|crawl|spider|slurp|preview|lighthouse/i.test(navigator.userAgent) || /[?&]lang=/.test(location.search)) return;
+    var pages = { nl: 'nl/', de: 'de/', fr: 'fr/', es: 'es/' }, saved = null;
+    try { saved = localStorage.getItem('c1981-lang'); } catch (e) {}
+    var want = saved, list = navigator.languages || [navigator.language || ''];
+    for (var i = 0; !want && i < list.length; i++) { var c = String(list[i]).slice(0, 2).toLowerCase(); if (c === 'en' || pages[c]) want = c; }
+    if (pages[want]) location.replace(pages[want] + location.hash);
+  } catch (e) {}
+})();
+</script>
 <meta name="robots" content="noindex, nofollow">
 <title>Café1981 Amsterdam · Breakfast, Lunch &amp; Cocktails by Leidseplein</title>
 <meta name="description" content="Café-brasserie between Leidseplein and the Rijksmuseum. Eggs Royale and good coffee from 08:00, cocktails and dinner from 16:30. Open daily, walk-ins welcome.">
