@@ -1,0 +1,937 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Restaurant mit Terrasse am Leidseplein · Café1981 Amsterdam</title>
+<meta name="description" content="Ruhige Terrasse zwei Minuten vom Leidseplein, unter weißen Sonnenschirmen in einer Seitenstraße. Frühstück, Lunch und Cocktails, täglich 8–21 Uhr.">
+<link rel="canonical" href="https://januslikt.github.io/cafe1981/de/terrasse-leidseplein/">
+<link rel="alternate" hreflang="en" href="https://januslikt.github.io/cafe1981/terrace-leidseplein/">
+<link rel="alternate" hreflang="nl" href="https://januslikt.github.io/cafe1981/nl/terras-leidseplein/">
+<link rel="alternate" hreflang="de" href="https://januslikt.github.io/cafe1981/de/terrasse-leidseplein/">
+<link rel="alternate" hreflang="fr" href="https://januslikt.github.io/cafe1981/fr/terrasse-leidseplein/">
+<link rel="alternate" hreflang="es" href="https://januslikt.github.io/cafe1981/es/terraza-leidseplein/">
+<link rel="alternate" hreflang="x-default" href="https://januslikt.github.io/cafe1981/terrace-leidseplein/">
+<meta name="theme-color" content="#0b101c">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" href="https://januslikt.github.io/cafe1981/img/pauw.svg" type="image/svg+xml">
+<meta property="og:type" content="restaurant">
+<meta property="og:site_name" content="Café1981">
+<meta property="og:title" content="Restaurant mit Terrasse am Leidseplein · Café1981 Amsterdam">
+<meta property="og:description" content="Ruhige Terrasse zwei Minuten vom Leidseplein, unter weißen Sonnenschirmen in einer Seitenstraße. Frühstück, Lunch und Cocktails, täglich 8–21 Uhr.">
+<meta property="og:url" content="https://januslikt.github.io/cafe1981/de/terrasse-leidseplein/">
+<meta property="og:image" content="https://januslikt.github.io/cafe1981/img/terrace-1280.webp">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="853">
+<meta property="og:image:alt" content="Eine ruhige Terrasse am Leidseplein">
+<meta property="og:locale" content="de_DE">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:locale:alternate" content="nl_NL">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="geo.region" content="NL-NH">
+<meta name="geo.placename" content="Amsterdam">
+<meta name="geo.position" content="52.3623932;4.8862299">
+<meta name="ICBM" content="52.3623932, 4.8862299">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Hanken+Grotesk:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: cinematic full-bleed hero that turns from the terrace by day to the bar by night, then an editorial midnight-navy page with brass details taken from the real facade */
+:root {
+  --bg: #0b101c;          /* midnight navy, like the awning */
+  --bg-2: #121a2b;
+  --paper: #efe8db;       /* linen */
+  --brass: #c8a46a;
+  --brass-hi: #e2c48f;
+  --mute: #98a0b0;
+  --line: rgba(239,232,219,.13);
+  --f-display: "Cormorant", "Cormorant Garamond", Garamond, "Times New Roman", serif;
+  --f-body: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono: "DM Mono", ui-monospace, Menlo, monospace;
+  --ease: cubic-bezier(.2,.7,.1,1);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background: var(--bg); color: var(--paper); font-family: var(--f-body); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: clip; }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+:focus-visible { outline: 2px solid var(--brass); outline-offset: 3px; border-radius: 3px; }
+.wrap { max-width: 1320px; margin: 0 auto; padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+.label { font-family: var(--f-mono); font-size: 11.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--brass); }
+h1, h2, h3 { font-family: var(--f-display); font-weight: 300; margin: 0; line-height: .95; letter-spacing: -.02em; text-wrap: balance; }
+em { font-style: italic; }
+
+/* grain */
+.grain { position: fixed; inset: -50%; z-index: 50; pointer-events: none; opacity: .07; mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  animation: grain 1s steps(4) infinite; }
+@keyframes grain { 25% { transform: translate(-3%, 2%); } 50% { transform: translate(2%, -3%); } 75% { transform: translate(-1%, 3%); } }
+
+/* NAV: floating pill */
+.nav { position: fixed; z-index: 40; left: 0; right: 0; top: 0; padding-top: calc(16px + env(safe-area-inset-top, 0px)); pointer-events: none; }
+.nav .wrap { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.pill { pointer-events: auto; display: flex; align-items: center; gap: 6px; padding: 6px; border-radius: 99px; background: rgba(11,16,28,.42); backdrop-filter: blur(18px) saturate(1.3); -webkit-backdrop-filter: blur(18px) saturate(1.3); border: 1px solid rgba(239,232,219,.12); transition: background .4s; }
+.nav.solid .pill { background: rgba(11,16,28,.82); }
+.brand, .wordmark { font-variant-numeric: lining-nums; }
+.brand { display: block; padding: 2px 12px 2px 14px; }
+.brand img { height: 40px; width: auto; display: block; }
+.brand i { color: var(--brass); }
+.links { display: flex; gap: 2px; }
+.links a { font-size: 14px; padding: 8px 14px; border-radius: 99px; color: rgba(239,232,219,.85); transition: background .25s, color .25s; }
+.links a:hover { background: rgba(239,232,219,.1); color: var(--paper); }
+.btn { display: inline-flex; align-items: center; gap: 10px; padding: 12px 20px; border-radius: 99px; font-weight: 600; font-size: 14px; white-space: nowrap; transition: transform .35s var(--ease), background .3s, color .3s; }
+.btn:hover { transform: translateY(-2px); }
+.btn-brass { background: var(--brass); color: #1a140b; }
+.btn-brass:hover { background: var(--brass-hi); }
+.btn-line { border: 1px solid rgba(239,232,219,.35); }
+.btn-line:hover { background: var(--paper); color: var(--bg); }
+.arrow { display: inline-block; transition: transform .35s var(--ease); }
+.btn:hover .arrow { transform: translateX(3px); }
+
+/* HERO */
+.hero { position: relative; height: 100svh; min-height: 640px; max-height: 1100px; overflow: hidden; isolation: isolate; }
+.hero-media { position: absolute; inset: 0; z-index: -2; clip-path: inset(0 0 0 0 round 0); animation: open 1.6s var(--ease) both; }
+@keyframes open { from { clip-path: inset(14% 10% 14% 10% round 28px); } }
+.hero-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity 2.4s ease; animation: drift 24s ease-in-out infinite alternate; }
+.hero-media img.night { opacity: 0; }
+.hero.is-night .hero-media img.night { opacity: 1; }
+@keyframes drift { from { transform: scale(1.06) translate3d(0,0,0); } to { transform: scale(1.14) translate3d(-1.5%, -1%, 0); } }
+.hero::after { content: ""; position: absolute; inset: 0; z-index: -1; background:
+  linear-gradient(180deg, rgba(11,16,28,.55) 0%, rgba(11,16,28,0) 26%),
+  linear-gradient(0deg, rgba(11,16,28,.92) 0%, rgba(11,16,28,.35) 38%, rgba(11,16,28,0) 62%),
+  linear-gradient(90deg, rgba(11,16,28,.45) 0%, rgba(11,16,28,0) 55%); }
+.hero-inner { height: 100%; display: flex; flex-direction: column; justify-content: flex-end; padding-block: 120px 28px; }
+.hero h1 { font-size: clamp(58px, 10.5vw, 168px); }
+.line { display: block; overflow: hidden; padding-bottom: .06em; }
+.line > span { display: block; animation: rise 1.3s var(--ease) both; }
+.line:nth-child(2) > span { animation-delay: .12s; }
+@keyframes rise { from { transform: translateY(105%); } }
+.hero h1 .swap { display: grid; }
+.hero h1 .swap > span { grid-area: 1 / 1; transition: opacity 1.1s ease, transform 1.1s var(--ease), filter 1.1s; }
+.hero h1 .swap .off { opacity: 0; transform: translateY(18%); filter: blur(10px); }
+.hero h1 .accent { font-style: italic; color: var(--brass-hi); }
+.hero-foot { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px; margin-top: 30px; }
+.hero-lede { max-width: 42ch; font-size: 17px; color: rgba(239,232,219,.86); margin: 0; animation: fade 1.2s .5s both; }
+@keyframes fade { from { opacity: 0; transform: translateY(14px); } }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; animation: fade 1.2s .65s both; }
+.daynight { display: inline-flex; align-items: center; gap: 4px; padding: 4px; border-radius: 99px; border: 1px solid rgba(239,232,219,.25); background: rgba(11,16,28,.35); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+.daynight button { all: unset; cursor: pointer; font-family: var(--f-mono); font-size: 11.5px; letter-spacing: .08em; padding: 8px 12px; border-radius: 99px; color: var(--mute); transition: background .4s, color .4s; }
+.daynight button[aria-pressed="true"] { background: var(--paper); color: var(--bg); }
+
+/* info bar */
+.infobar { margin-top: 34px; display: grid; grid-template-columns: repeat(4, auto); justify-content: space-between; gap: 20px; padding-top: 18px; border-top: 1px solid rgba(239,232,219,.2); font-size: 14px; animation: fade 1.2s .8s both; }
+.infobar > div { display: flex; gap: 10px; align-items: baseline; min-width: 0; }
+.infobar .k { font-family: var(--f-mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--mute); }
+.status { display: inline-flex; align-items: center; gap: 8px; }
+.dot { width: 7px; height: 7px; border-radius: 50%; background: #7fd49b; box-shadow: 0 0 0 0 rgba(127,212,155,.6); animation: pulse 2.2s infinite; flex: none; align-self: center; }
+.dot.closed { background: #d9846f; animation: none; }
+@keyframes pulse { 70% { box-shadow: 0 0 0 8px rgba(127,212,155,0); } 100% { box-shadow: 0 0 0 0 rgba(127,212,155,0); } }
+
+/* MARQUEE */
+.marquee { border-block: 1px solid var(--line); overflow: hidden; padding-block: 22px; background: var(--bg); }
+.track { display: flex; gap: 48px; width: max-content; animation: scroll 38s linear infinite; font-family: var(--f-display); font-size: clamp(28px, 3.2vw, 44px); font-weight: 300; white-space: nowrap; }
+.track span { display: inline-flex; align-items: center; gap: 48px; }
+.track span::after { content: "✦"; font-size: .4em; color: var(--brass); }
+.track span:nth-child(even) { font-style: italic; color: var(--brass-hi); }
+@keyframes scroll { to { transform: translateX(-50%); } }
+
+/* STATEMENT: words light up on scroll */
+.statement { padding-block: 140px 120px; }
+.statement .wrap { display: grid; grid-template-columns: 220px 1fr; gap: 40px; }
+.s-pauw { width: 112px; height: auto; margin-bottom: 22px; }
+.statement p.big { font-family: var(--f-display); font-weight: 300; font-size: clamp(32px, 4.3vw, 64px); line-height: 1.08; letter-spacing: -.015em; margin: 0; }
+.statement .w { color: rgba(239,232,219,.2); transition: color .5s ease; }
+.statement .w.on { color: var(--paper); }
+.statement .w.b.on { color: var(--brass-hi); font-style: italic; }
+
+/* MENU */
+.menu { padding-block: 40px 140px; }
+.menu-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 48px; }
+.menu-head h2 { font-size: clamp(48px, 7vw, 110px); }
+.tabs { display: inline-flex; padding: 4px; border-radius: 99px; border: 1px solid var(--line); }
+.tabs button { all: unset; cursor: pointer; padding: 10px 18px; border-radius: 99px; font-size: 14px; color: var(--mute); transition: background .35s, color .35s; }
+.tabs button[aria-selected="true"] { background: var(--paper); color: var(--bg); }
+.menu-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 64px; align-items: start; }
+.dishes { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.dish { display: grid; grid-template-columns: 1fr auto; gap: 6px 24px; padding-block: 24px; border-bottom: 1px solid var(--line); cursor: default; transition: padding .45s var(--ease); }
+.dish h3 { font-size: clamp(30px, 3vw, 44px); transition: color .3s, transform .45s var(--ease); }
+.dish p { margin: 0; color: var(--mute); font-size: 15px; grid-column: 1; }
+.dish .tag { grid-row: 1 / span 2; grid-column: 2; align-self: center; font-family: var(--f-mono); font-size: 11.5px; letter-spacing: .1em; color: var(--mute); text-transform: uppercase; }
+.dish:hover h3, .dish.active h3 { color: var(--brass-hi); transform: translateX(10px); }
+.dish:hover h3 em, .dish.active h3 em { font-style: italic; }
+.menu-visual { position: sticky; top: 100px; aspect-ratio: 4 / 5; max-width: 100%; border-radius: 6px; overflow: hidden; background: var(--bg-2); }
+.menu-visual img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transform: scale(1.08); transition: opacity .8s ease, transform 1.4s var(--ease); }
+.menu-visual img.show { opacity: 1; transform: scale(1); }
+.menu-visual .cap { position: absolute; left: 16px; bottom: 16px; z-index: 2; font-family: var(--f-mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; padding: 7px 11px; border-radius: 99px; background: rgba(11,16,28,.55); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+.menu-note { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 10px 24px; align-items: center; color: var(--mute); font-size: 14px; }
+.menu-note a { color: var(--paper); border-bottom: 1px solid var(--brass); padding-bottom: 2px; }
+.panel[hidden] { display: none !important; }
+
+/* SPACES: asymmetric image pair with parallax */
+.spaces { background: var(--paper); color: #17201c; padding-block: 140px; }
+.spaces .label { color: #8a6a35; }
+.spaces .wrap { display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px; align-items: end; }
+.spaces .copy { grid-column: 1 / span 5; align-self: start; }
+.spaces h2 { font-size: clamp(44px, 5.6vw, 88px); margin: 18px 0 26px; }
+.spaces h2 em { color: #8a6a35; }
+.spaces p { max-width: 40ch; color: #43504a; font-size: 17px; margin: 0; }
+.walklist { margin-top: 44px; max-width: 440px; }
+.walk-head { font-family: var(--f-mono); font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: #8a6a35; padding-bottom: 12px; border-bottom: 1px solid rgba(23,32,28,.85); }
+.walklist ol { list-style: none; margin: 0; padding: 0; }
+.walklist li { display: flex; align-items: baseline; gap: 14px; padding-block: 16px; border-bottom: 1px solid rgba(23,32,28,.14); }
+.walk-ic { width: 17px; height: 17px; flex: none; align-self: center; fill: none; stroke: #8a6a35; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.walk-ic circle { fill: #8a6a35; stroke: none; }
+.walklist .place { font-size: 16px; color: #17201c; }
+.walklist .lead { flex: 1; min-width: 20px; border-bottom: 1px dotted rgba(23,32,28,.3); transform: translateY(-4px); }
+.walklist .mins { font-family: var(--f-display); font-size: 30px; line-height: 1; color: #17201c; font-variant-numeric: lining-nums; }
+.walklist .mins small { font-size: 18px; font-style: italic; color: #8a6a35; }
+.ph { overflow: hidden; border-radius: 4px; position: relative; max-width: 100%; }
+.ph img { width: 100%; height: 118%; object-fit: cover; will-change: transform; }
+.ph-a { grid-column: 7 / span 6; aspect-ratio: 4 / 5; grid-row: 1 / span 2; }
+.ph-b { grid-column: 3 / span 4; aspect-ratio: 4 / 5; margin-top: -140px; }
+.ph figcaption { position: absolute; left: 14px; bottom: 14px; font-family: var(--f-mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--paper); background: rgba(11,16,28,.5); padding: 6px 10px; border-radius: 99px; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+
+/* VISIT */
+.visit { padding-block: 140px; }
+.visit .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; }
+.visit h2 { font-size: clamp(48px, 6vw, 96px); margin: 18px 0 32px; }
+.addr { font-family: var(--f-display); font-size: 32px; line-height: 1.15; }
+.addr small { display: block; font-family: var(--f-body); font-size: 15px; color: var(--mute); margin-top: 10px; }
+.visit .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; }
+.hours { border-top: 1px solid var(--line); font-variant-numeric: tabular-nums; }
+.hours div { display: flex; justify-content: space-between; gap: 16px; padding-block: 15px; border-bottom: 1px solid var(--line); font-size: 15px; }
+.hours div span:last-child { font-family: var(--f-mono); font-size: 14px; }
+.hours div.today { color: var(--brass-hi); }
+.routemap { grid-column: 1 / -1; margin: 8px 0 0; position: relative; aspect-ratio: 1200 / 420; max-width: 100%; border-radius: 6px; overflow: hidden; border: 1px solid var(--line); }
+.routemap svg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.route path { animation: march 1.6s linear infinite; }
+@keyframes march { to { stroke-dashoffset: -24; } }
+.pulse { transform-origin: 560px 205px; animation: ring 2.8s ease-out infinite; }
+@keyframes ring { 0% { transform: scale(.6); opacity: 1; } 100% { transform: scale(1.6); opacity: 0; } }
+.pin, .dest { position: absolute; transform: translate(-50%, 0); pointer-events: none; }
+.pin { transform: translate(-50%, 0); margin-top: 26px; }
+.dest.up { transform: translate(-50%, -100%); margin-top: -14px; flex-direction: column-reverse; }
+.pin img { height: 30px; width: auto; filter: drop-shadow(0 2px 8px rgba(0,0,0,.6)); }
+.dest { display: flex; flex-direction: column; align-items: center; margin-top: 14px; text-align: center; white-space: nowrap; }
+.dest b { font-family: var(--f-display); font-weight: 400; font-size: 24px; line-height: 1.1; }
+.dest span { font-family: var(--f-mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--brass-hi); }
+.routemap figcaption { position: absolute; left: 18px; right: 18px; top: 16px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; font-family: var(--f-mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--mute); }
+.routemap figcaption a { color: var(--paper); border-bottom: 1px solid var(--brass); }
+.mail { user-select: all; cursor: text; }
+
+/* FOOTER */
+footer { border-top: 1px solid var(--line); padding-block: 40px calc(32px + env(safe-area-inset-bottom, 0px)); overflow: hidden; }
+.wordmark { display: flex; align-items: center; }
+.wm-logo { height: 52px; width: auto; max-width: 100%; }
+.wm-pauw { width: clamp(70px, 12vw, 170px); height: auto; opacity: .9; }
+.foot-row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; margin-top: 28px; font-size: 13px; color: var(--mute); }
+
+/* reveal */
+.rv { transition: opacity 1s ease, transform 1.1s var(--ease); }
+.js .rv.wait { opacity: .001; transform: translateY(40px); }
+
+@media (max-width: 960px) {
+  .links { display: none; }
+  .infobar { grid-template-columns: 1fr 1fr; }
+  .statement .wrap, .menu-grid, .visit .wrap { grid-template-columns: 1fr; }
+  .statement .wrap { gap: 20px; }
+  .menu-visual { position: relative; top: 0; order: -1; aspect-ratio: 4 / 3; }
+  .spaces .wrap { grid-template-columns: 1fr 1fr; }
+  .spaces .copy { grid-column: 1 / -1; }
+  .ph-a { grid-column: 1 / -1; grid-row: auto; }
+  .ph-b { grid-column: 1 / span 1; margin-top: -90px; margin-left: 16px; border: 6px solid var(--paper); }
+  .statement, .spaces, .visit { padding-block: 96px; }
+  .menu { padding-bottom: 96px; }
+}
+@media (max-width: 560px) {
+  .nav .btn { padding: 9px 14px; font-size: 13px; }
+  .brand { padding-inline: 10px 6px; }
+  .brand img { height: 28px; }
+  .hero-inner { padding-bottom: 22px; }
+  .hero-lede { font-size: 15.5px; }
+  .infobar { gap: 12px; font-size: 13px; }
+  .infobar > div { flex-direction: column; gap: 2px; }
+  .routemap { aspect-ratio: auto; }
+  .routemap svg { position: relative; aspect-ratio: 1000 / 540; height: auto; }
+  .dest b { font-size: 16px; }
+  .dest span { font-size: 9.5px; letter-spacing: .08em; }
+  .dest { margin-top: 8px; }
+  .dest.up { margin-top: -8px; }
+  .pin { margin-top: 16px; }
+  .pin img { height: 20px; }
+  .routemap figcaption { position: static; flex-direction: column; padding: 14px 16px 16px; border-top: 1px solid var(--line); }
+  .ph-b { grid-column: 1 / -1; width: 62%; }
+}
+/* language menu */
+.langsel { position: relative; font-family: var(--f-mono); font-size: 11.5px; letter-spacing: .06em; }
+.langsel summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 6px; padding: 9px 12px; border-radius: 99px; color: var(--paper); }
+.langsel summary::-webkit-details-marker { display: none; }
+.langsel summary::after { content: ""; width: 5px; height: 5px; border-right: 1.2px solid currentColor; border-bottom: 1.2px solid currentColor; transform: translateY(-2px) rotate(45deg); opacity: .7; transition: transform .3s var(--ease); }
+.langsel[open] summary::after { transform: translateY(1px) rotate(225deg); }
+.langsel summary:hover, .langsel[open] summary { background: rgba(239,232,219,.1); }
+.langsel ul { position: absolute; right: 0; top: calc(100% + 12px); margin: 0; padding: 6px; list-style: none; min-width: 168px; border-radius: 16px; background: rgba(11,16,28,.94); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); border: 1px solid rgba(239,232,219,.14); box-shadow: 0 24px 60px rgba(0,0,0,.45); }
+.langsel li a { display: flex; justify-content: space-between; gap: 16px; padding: 10px 12px; border-radius: 10px; font-family: var(--f-body); font-size: 14px; letter-spacing: 0; color: rgba(239,232,219,.85); }
+.langsel li a span { font-family: var(--f-mono); font-size: 11px; color: var(--mute); }
+.langsel li a:hover { background: rgba(239,232,219,.08); color: var(--paper); }
+.langsel li a[aria-current="true"] { color: var(--brass-hi); }
+.langtip { position: fixed; z-index: 45; left: 50%; bottom: calc(18px + env(safe-area-inset-bottom, 0px)); transform: translate(-50%, 20px); opacity: 0; transition: opacity .5s, transform .6s var(--ease); display: flex; align-items: center; gap: 6px; padding: 6px 6px 6px 18px; border-radius: 99px; background: rgba(11,16,28,.9); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); border: 1px solid rgba(239,232,219,.16); font-size: 14px; white-space: nowrap; max-width: calc(100vw - 32px); }
+.langtip.show { opacity: 1; transform: translate(-50%, 0); }
+.langtip a { color: var(--brass-hi); padding: 6px 4px; }
+.langtip button { all: unset; cursor: pointer; width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center; color: var(--mute); }
+.langtip button:hover { background: rgba(239,232,219,.1); color: var(--paper); }
+
+.hero-eyebrow { margin: 0 0 22px; color: var(--brass-hi); animation: fade 1.2s .2s both; }
+
+/* REVIEWS */
+.reviews { padding-block: 140px; border-bottom: 1px solid var(--line); }
+.reviews .wrap { display: grid; grid-template-columns: 5fr 7fr; gap: 72px; align-items: start; }
+.score { position: sticky; top: 110px; }
+.score h2 { font-size: clamp(40px, 4.6vw, 68px); margin: 18px 0 34px; }
+.score h2 em { color: var(--brass-hi); }
+.score-num { display: flex; align-items: flex-end; gap: 22px; }
+.score-num b { font-family: var(--f-display); font-weight: 300; font-size: clamp(110px, 12vw, 176px); line-height: .78; letter-spacing: -.04em; font-variant-numeric: lining-nums; }
+.score-num div { padding-bottom: 6px; }
+.stars { display: inline-flex; gap: 3px; color: var(--brass); }
+.stars svg { width: 18px; height: 18px; fill: currentColor; }
+.stars .part { position: relative; }
+.stars .part svg + svg { position: absolute; inset: 0; clip-path: inset(0 30% 0 0); }
+.stars .part svg:first-child { fill: rgba(200,164,106,.25); }
+.score-num small { display: block; margin-top: 10px; font-size: 14px; color: var(--mute); }
+.dist { margin: 36px 0 0; padding: 0; list-style: none; max-width: 420px; }
+.dist li { display: grid; grid-template-columns: 14px 1fr 34px; align-items: center; gap: 14px; padding-block: 5px; font-family: var(--f-mono); font-size: 12px; color: var(--mute); }
+.dist i { height: 3px; border-radius: 3px; background: rgba(239,232,219,.1); overflow: hidden; }
+.dist i::before { content: ""; display: block; height: 100%; width: var(--w); background: var(--brass); border-radius: 3px; transform-origin: left; transition: transform 1.4s var(--ease); }
+.js .reviews.wait .dist i::before { transform: scaleX(0); }
+.dist li span:last-child { text-align: right; }
+.quotes { display: grid; gap: 22px; }
+.quote { margin: 0; padding: 40px 40px 34px; border-radius: 6px; background: var(--bg-2); border: 1px solid var(--line); position: relative; overflow: hidden; }
+.quote::before { content: "\201C"; position: absolute; right: 26px; top: -14px; font-family: var(--f-display); font-size: 180px; line-height: 1; color: rgba(200,164,106,.14); }
+.quote .stars svg { width: 15px; height: 15px; }
+.quote blockquote { margin: 18px 0 26px; }
+.quote blockquote p { margin: 0 0 14px; font-family: var(--f-display); font-weight: 300; font-size: clamp(22px, 2.1vw, 30px); line-height: 1.22; letter-spacing: -.005em; }
+.quote blockquote p:first-child { font-style: italic; color: var(--brass-hi); }
+.quote figcaption { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; font-size: 14px; }
+.quote figcaption b { font-weight: 600; }
+.quote figcaption span { font-family: var(--f-mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--mute); }
+.topics { margin-top: 30px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.topics .label { margin-right: 8px; color: var(--mute); }
+.topics span.t { padding: 7px 13px; border-radius: 99px; border: 1px solid var(--line); font-size: 13.5px; }
+.topics span.t small { font-family: var(--f-mono); font-size: 10.5px; color: var(--brass); margin-left: 6px; }
+.reviews .more { margin-top: 30px; }
+
+/* FAQ */
+.faq { background: var(--paper); color: #17201c; padding-block: 140px; }
+.faq .wrap { display: grid; grid-template-columns: 4fr 8fr; gap: 72px; align-items: start; }
+.faq .label { color: #8a6a35; }
+.faq h2 { font-size: clamp(44px, 5.4vw, 84px); margin-top: 18px; }
+.faq h2 em { color: #8a6a35; }
+.faq-list { border-top: 1px solid rgba(23,32,28,.85); }
+.faq details { border-bottom: 1px solid rgba(23,32,28,.14); }
+.faq summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 1fr 28px; gap: 24px; align-items: center; padding-block: 24px; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary h3 { font-variant-numeric: lining-nums; font-size: clamp(24px, 2.3vw, 32px); line-height: 1.15; font-weight: 400; letter-spacing: -.01em; transition: color .3s; }
+.faq summary:hover h3 { color: #8a6a35; }
+.faq summary i { width: 28px; height: 28px; border-radius: 50%; border: 1px solid rgba(23,32,28,.3); position: relative; transition: transform .45s var(--ease), background .3s; }
+.faq summary i::before, .faq summary i::after { content: ""; position: absolute; left: 50%; top: 50%; width: 10px; height: 1.2px; background: currentColor; transform: translate(-50%, -50%); }
+.faq summary i::after { transform: translate(-50%, -50%) rotate(90deg); }
+.faq details[open] summary i { transform: rotate(45deg); background: #17201c; color: var(--paper); border-color: #17201c; }
+.faq details p { margin: 0; padding: 0 56px 28px 0; max-width: 62ch; font-size: 16.5px; color: #43504a; }
+.faq details p a { color: #17201c; border-bottom: 1px solid #8a6a35; }
+
+.foot-langs { display: inline-flex; gap: 4px; font-family: var(--f-mono); font-size: 11.5px; }
+.foot-langs a { padding: 2px 6px; border-radius: 99px; }
+.foot-langs a:hover, .foot-langs a[aria-current] { color: var(--paper); }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+@media (max-width: 960px) {
+  .reviews .wrap, .faq .wrap { grid-template-columns: 1fr; gap: 44px; }
+  .score { position: static; }
+  .reviews, .faq { padding-block: 96px; }
+  .quote { padding: 30px 24px 26px; }
+}
+@media (max-width: 560px) {
+  .langsel summary { padding: 8px 9px; }
+  .faq details p { padding-right: 0; }
+  .langtip { font-size: 13px; }
+}
+
+/* footer: landing page links */
+.explore { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 24px; margin-top: 30px; }
+.explore .label { color: var(--mute); margin-right: 4px; }
+.explore a { font-size: 14.5px; color: rgba(239,232,219,.85); border-bottom: 1px solid transparent; transition: border-color .3s, color .3s; }
+.explore a:hover { color: var(--paper); border-color: var(--brass); }
+
+/* LANDING PAGES */
+.lp-hero { padding: calc(150px + env(safe-area-inset-top, 0px)) 0 110px; }
+.lp-grid { display: grid; grid-template-columns: 7fr 5fr; gap: 64px; align-items: end; }
+.crumbs { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; font-family: var(--f-mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--mute); }
+.crumbs a { color: var(--paper); border-bottom: 1px solid var(--brass); }
+.lp-copy h1 { font-size: clamp(50px, 6.6vw, 108px); margin: 18px 0 30px; animation: fade 1.2s .1s both; }
+.lp-copy h1 em { color: var(--brass-hi); }
+.lp-lede { max-width: 46ch; font-size: 18px; color: rgba(239,232,219,.86); margin: 0 0 32px; }
+.lp-copy .actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.lp-facts { margin: 44px 0 0; padding-top: 18px; border-top: 1px solid var(--line); display: grid; grid-template-columns: repeat(3, auto); justify-content: start; gap: 14px 44px; font-size: 14.5px; }
+.lp-facts dt { font-family: var(--f-mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--mute); }
+.lp-facts dd { margin: 4px 0 0; }
+.lp-img { margin: 0; aspect-ratio: 4 / 5; border-radius: 6px; overflow: hidden; background: var(--bg-2); animation: open 1.6s var(--ease) both; }
+.lp-img img { width: 100%; height: 100%; object-fit: cover; }
+.lp-body { padding-block: 30px 140px; }
+.lp-body .wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+.lp-prose p { margin: 0 0 26px; font-family: var(--f-display); font-weight: 300; font-size: clamp(22px, 2vw, 29px); line-height: 1.32; color: rgba(239,232,219,.78); }
+.lp-prose p:first-child { color: var(--paper); }
+.lp-menu .label { margin-bottom: 18px; }
+.lp-menu .dish h3 { font-size: clamp(26px, 2.4vw, 36px); }
+.lp-menu .dish:hover h3 { transform: translateX(6px); }
+.lp-more { padding-block: 120px; border-bottom: 1px solid var(--line); }
+.lp-more h2 { font-variant-numeric: lining-nums; font-size: clamp(40px, 4.6vw, 68px); margin-bottom: 40px; }
+.more-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.more-card { position: relative; display: flex; flex-direction: column; gap: 14px; min-height: 190px; padding: 26px 24px; border-radius: 6px; border: 1px solid var(--line); background: var(--bg-2); transition: border-color .3s, transform .45s var(--ease); }
+.more-card:hover { border-color: rgba(200,164,106,.6); transform: translateY(-4px); }
+.more-card .label { font-size: 10.5px; }
+.more-card b { font-variant-numeric: lining-nums; font-family: var(--f-display); font-weight: 400; font-size: 30px; line-height: 1.05; }
+.more-card i { position: absolute; right: 22px; bottom: 18px; font-style: normal; color: var(--brass); transition: transform .35s var(--ease); }
+.more-card:hover i { transform: translateX(4px); }
+@media (max-width: 960px) {
+  .lp-grid, .lp-body .wrap { grid-template-columns: 1fr; gap: 40px; }
+  .lp-img { aspect-ratio: 4 / 3; }
+  .lp-hero { padding-bottom: 80px; }
+  .lp-body { padding-bottom: 96px; }
+  .more-grid { grid-template-columns: 1fr 1fr; }
+  .lp-more { padding-block: 90px; }
+}
+@media (max-width: 560px) {
+  .lp-hero { padding-top: calc(110px + env(safe-area-inset-top, 0px)); }
+  .lp-facts { grid-template-columns: 1fr 1fr; }
+  .more-grid { grid-template-columns: 1fr; }
+  .more-card { min-height: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; }
+}
+
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)} body{margin:0}
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": [
+    "Restaurant",
+    "CafeOrCoffeeShop"
+   ],
+   "@id": "https://januslikt.github.io/cafe1981/#cafe",
+   "name": "Café1981",
+   "alternateName": [
+    "Cafe1981",
+    "Café 1981",
+    "Cafe 1981"
+   ],
+   "description": "Café-Brasserie zwischen Leidseplein und Rijksmuseum. Ab 8 Uhr Eggs Royale und guter Kaffee, ab 16:30 Uhr Cocktails und Dinner. Täglich geöffnet.",
+   "url": "https://januslikt.github.io/cafe1981/",
+   "image": [
+    "https://januslikt.github.io/cafe1981/img/terrace.jpg",
+    "https://januslikt.github.io/cafe1981/img/interior.jpg"
+   ],
+   "logo": "https://januslikt.github.io/cafe1981/img/logo.png",
+   "email": "Reservations@cafe1981.nl",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Korte Leidsedwarsstraat 203",
+    "postalCode": "1017 RB",
+    "addressLocality": "Amsterdam",
+    "addressRegion": "Noord-Holland",
+    "addressCountry": "NL"
+   },
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 52.3623932,
+    "longitude": 4.8862299
+   },
+   "hasMap": "https://maps.google.com/?cid=8676354678998687309",
+   "sameAs": [
+    "https://maps.google.com/?cid=8676354678998687309"
+   ],
+   "openingHoursSpecification": [
+    {
+     "@type": "OpeningHoursSpecification",
+     "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+     ],
+     "opens": "08:00",
+     "closes": "21:00"
+    }
+   ],
+   "servesCuisine": [
+    "Breakfast",
+    "Brunch",
+    "International",
+    "Dutch",
+    "Indian",
+    "Cocktails"
+   ],
+   "priceRange": "€€",
+   "currenciesAccepted": "EUR",
+   "acceptsReservations": true,
+   "amenityFeature": [
+    {
+     "@type": "LocationFeatureSpecification",
+     "name": "Outdoor seating (terrace)",
+     "value": true
+    }
+   ],
+   "containedInPlace": {
+    "@type": "Place",
+    "name": "Leidseplein, Amsterdam"
+   },
+   "hasMenu": {
+    "@type": "Menu",
+    "name": "Café1981 menu",
+    "inLanguage": "en",
+    "url": "https://cafe1981.nl/wp-content/uploads/2026/09/cafe1981_lunch_sep_2026.pdf",
+    "hasMenuSection": [
+     {
+      "@type": "MenuSection",
+      "name": "Breakfast & lunch (from 08:00)",
+      "hasMenuItem": [
+       {
+        "@type": "MenuItem",
+        "name": "Eggs Royale",
+        "description": "Poached eggs, smoked salmon and creamy hollandaise sauce over a toasted English muffin.",
+        "offers": {
+         "@type": "Offer",
+         "price": "17.50",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Eggs Benedict",
+        "description": "Poached eggs, ham and creamy hollandaise over a toasted English muffin.",
+        "offers": {
+         "@type": "Offer",
+         "price": "16.50",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Eggs Florentine",
+        "description": "Poached eggs, avocado, sautéed spinach and creamy hollandaise over a toasted English muffin.",
+        "offers": {
+         "@type": "Offer",
+         "price": "17.00",
+         "priceCurrency": "EUR"
+        },
+        "suitableForDiet": "https://schema.org/VegetarianDiet"
+       },
+       {
+        "@type": "MenuItem",
+        "name": "The Green Omelette",
+        "description": "Fluffy omelette with Gouda cheese, spinach, onions, crispy bacon and sourdough toast.",
+        "offers": {
+         "@type": "Offer",
+         "price": "16.50",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Scrambled Egg",
+        "description": "Creamy scrambled eggs with avocado and smoked salmon on sourdough bread.",
+        "offers": {
+         "@type": "Offer",
+         "price": "16.50",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "\"French\" Toast",
+        "description": "Sweet toast with eggs, vanilla and cinnamon, strawberries, blueberries and clotted cream.",
+        "offers": {
+         "@type": "Offer",
+         "price": "14.50",
+         "priceCurrency": "EUR"
+        },
+        "suitableForDiet": "https://schema.org/VegetarianDiet"
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Stacked American Pancakes",
+        "description": "Thick, fluffy pancakes with maple syrup, strawberries and blueberries.",
+        "offers": {
+         "@type": "Offer",
+         "price": "13.50",
+         "priceCurrency": "EUR"
+        },
+        "suitableForDiet": "https://schema.org/VegetarianDiet"
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Smashed Avocado",
+        "description": "Avocado, cherry tomatoes, radishes, rucola and parmesan on a flatbread with balsamic glaze.",
+        "offers": {
+         "@type": "Offer",
+         "price": "16.50",
+         "priceCurrency": "EUR"
+        },
+        "suitableForDiet": "https://schema.org/VegetarianDiet"
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Hummus & Falafel",
+        "description": "Crispy falafel with hummus, cucumber, rucola and onion on a warm flatbread.",
+        "offers": {
+         "@type": "Offer",
+         "price": "15.50",
+         "priceCurrency": "EUR"
+        },
+        "suitableForDiet": "https://schema.org/VegetarianDiet"
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Fish & Chips",
+        "description": "Crispy battered white fish with golden fries and garlic sauce.",
+        "offers": {
+         "@type": "Offer",
+         "price": "22.50",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Veggie Burger",
+        "description": "Plant-based vegetable patty with tomatoes and cucumber, served with fries.",
+        "offers": {
+         "@type": "Offer",
+         "price": "17.00",
+         "priceCurrency": "EUR"
+        },
+        "suitableForDiet": "https://schema.org/VegetarianDiet"
+       }
+      ]
+     },
+     {
+      "@type": "MenuSection",
+      "name": "Dinner (from 16:30)",
+      "hasMenuItem": [
+       {
+        "@type": "MenuItem",
+        "name": "Vegetable Bitterballen",
+        "description": "Crunchy Dutch bitterballen with a creamy vegetable filling.",
+        "offers": {
+         "@type": "Offer",
+         "price": "10.50",
+         "priceCurrency": "EUR"
+        },
+        "suitableForDiet": "https://schema.org/VegetarianDiet"
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Chicken Sate",
+        "description": "Seasoned chicken skewers with peanut sauce and golden fries.",
+        "offers": {
+         "@type": "Offer",
+         "price": "21.50",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Hutspot with Rookworst",
+        "description": "Traditional Dutch mash of potatoes, carrots and onions with smoked rookworst sausage.",
+        "offers": {
+         "@type": "Offer",
+         "price": "20.50",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Lamb Chops",
+        "description": "Rosemary and garlic grilled lamb chops with fries.",
+        "offers": {
+         "@type": "Offer",
+         "price": "24.50",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Fish & Chips",
+        "description": "Crispy battered white fish with golden fries and garlic sauce.",
+        "offers": {
+         "@type": "Offer",
+         "price": "24.50",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Butter Chicken",
+        "description": "Tandoori chicken in a mild sauce of tomatoes, cream, butter and spices, with naan.",
+        "offers": {
+         "@type": "Offer",
+         "price": "25.50",
+         "priceCurrency": "EUR"
+        }
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Saag Paneer",
+        "description": "Fresh cottage cheese in a delicately spiced spinach purée, with naan.",
+        "offers": {
+         "@type": "Offer",
+         "price": "22.50",
+         "priceCurrency": "EUR"
+        },
+        "suitableForDiet": "https://schema.org/VegetarianDiet"
+       },
+       {
+        "@type": "MenuItem",
+        "name": "Dal",
+        "description": "Black lentils tempered with cumin, with naan.",
+        "offers": {
+         "@type": "Offer",
+         "price": "22.50",
+         "priceCurrency": "EUR"
+        },
+        "suitableForDiet": "https://schema.org/VegetarianDiet"
+       }
+      ]
+     }
+    ]
+   },
+   "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": 4.7,
+    "bestRating": 5,
+    "worstRating": 1,
+    "reviewCount": 355
+   },
+   "review": [
+    {
+     "@type": "Review",
+     "author": {
+      "@type": "Person",
+      "name": "Brian"
+     },
+     "inLanguage": "en",
+     "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": 5,
+      "bestRating": 5
+     },
+     "reviewBody": "Great little find for a classic breakfast feast. Welcomed on arrival with a smile and positive vibe. Great service throught our visit. Eggs Benedict a great classic, well seasoned and silky hollandaise.",
+     "publisher": {
+      "@type": "Organization",
+      "name": "Google"
+     }
+    },
+    {
+     "@type": "Review",
+     "author": {
+      "@type": "Person",
+      "name": "Kirsty Fitzsimons"
+     },
+     "inLanguage": "en",
+     "reviewRating": {
+      "@type": "Rating",
+      "ratingValue": 5,
+      "bestRating": 5
+     },
+     "reviewBody": "Great little cafe. Food was excellent and very well presented. Coffee was also very good. Service was fantastic and the right balance between attentive and leaving us to enjoy our meal. The location is great too. Central but slightly tucked away - great for people watching.",
+     "publisher": {
+      "@type": "Organization",
+      "name": "Google"
+     }
+    }
+   ]
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://januslikt.github.io/cafe1981/de/terrasse-leidseplein/#page",
+   "url": "https://januslikt.github.io/cafe1981/de/terrasse-leidseplein/",
+   "name": "Restaurant mit Terrasse am Leidseplein · Café1981 Amsterdam",
+   "description": "Ruhige Terrasse zwei Minuten vom Leidseplein, unter weißen Sonnenschirmen in einer Seitenstraße. Frühstück, Lunch und Cocktails, täglich 8–21 Uhr.",
+   "inLanguage": "de",
+   "isPartOf": {
+    "@id": "https://januslikt.github.io/cafe1981/#website"
+   },
+   "about": {
+    "@id": "https://januslikt.github.io/cafe1981/#cafe"
+   },
+   "primaryImageOfPage": "https://januslikt.github.io/cafe1981/img/terrace-1280.webp",
+   "breadcrumb": {
+    "@id": "https://januslikt.github.io/cafe1981/de/terrasse-leidseplein/#crumbs"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://januslikt.github.io/cafe1981/de/terrasse-leidseplein/#crumbs",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Café1981",
+     "item": "https://januslikt.github.io/cafe1981/de/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Terrasse am Leidseplein",
+     "item": "https://januslikt.github.io/cafe1981/de/terrasse-leidseplein/"
+    }
+   ]
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://januslikt.github.io/cafe1981/de/terrasse-leidseplein/#faq",
+   "inLanguage": "de",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Ist die Terrasse jeden Tag geöffnet?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Das Café1981 hat täglich von 8 bis 21 Uhr geöffnet. Ob die Terrasse aufgebaut ist, hängt vom Wetter ab."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Kann ich einen Tisch auf der Terrasse reservieren?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Kommen Sie einfach vorbei. Für Gruppen schreiben Sie uns vorher an Reservations@cafe1981.nl."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Wo genau liegt die Terrasse?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Direkt vor dem Café in der Korte Leidsedwarsstraat 203, 1017 RB Amsterdam, zwei Gehminuten vom Leidseplein."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Kann ich auf der Terrasse auch nur etwas trinken?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ja. Kaffee ab 8 Uhr, Cocktails ab 16 Uhr, gern mit Bitterballen dazu."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body class="lp">
+
+<div class="grain" aria-hidden="true"></div>
+
+<header class="nav solid" id="nav">
+  <div class="wrap">
+    <nav class="pill" aria-label="Hauptmenü">
+      <a class="brand" href="../../de/" aria-label="Café1981 Startseite"><img src="../../img/logo.png" alt="Café1981" width="511" height="137"></a>
+      <div class="links">
+        <a href="../../de/#menu">Speisekarte</a>
+        <a href="../../de/#spaces">Terrasse</a>
+        <a href="../../de/#reviews">Bewertungen</a>
+        <a href="../../de/#visit">Anfahrt</a>
+      </div>
+    </nav>
+    <div class="pill">
+      <details class="langsel"><summary aria-label="Sprache: Deutsch">DE</summary><ul><li><a href="../../terrace-leidseplein/" hreflang="en" lang="en">English<span>EN</span></a></li><li><a href="../../nl/terras-leidseplein/" hreflang="nl" lang="nl">Nederlands<span>NL</span></a></li><li><a href="../../de/terrasse-leidseplein/" hreflang="de" lang="de" aria-current="true">Deutsch<span>DE</span></a></li><li><a href="../../fr/terrasse-leidseplein/" hreflang="fr" lang="fr">Français<span>FR</span></a></li><li><a href="../../es/terraza-leidseplein/" hreflang="es" lang="es">Español<span>ES</span></a></li></ul></details>
+      <a class="btn btn-brass" href="https://www.google.com/maps/dir/?api=1&amp;destination=Caf%C3%A91981+Korte+Leidsedwarsstraat+203+Amsterdam" target="_blank" rel="noopener">Route <span class="arrow" aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="lp-hero" aria-labelledby="lp-h">
+    <div class="wrap lp-grid">
+      <div class="lp-copy">
+        <nav class="crumbs" aria-label="Breadcrumb"><a href="../../de/">Café1981</a><span aria-hidden="true">/</span><span aria-current="page">Terrasse am Leidseplein</span></nav>
+        <p class="label">Terrasse · Korte Leidsedwarsstraat</p>
+        <h1 id="lp-h">Eine ruhige Terrasse am <em>Leidseplein</em></h1>
+        <p class="lp-lede">Der Leidseplein mit all seinem Trubel ist zwei Minuten entfernt. Unsere Terrasse liegt in der ruhigeren Korte Leidsedwarsstraat, unter weißen Café1981-Sonnenschirmen.</p>
+        <div class="actions">
+          <a class="btn btn-brass" href="https://www.google.com/maps/dir/?api=1&amp;destination=Caf%C3%A91981+Korte+Leidsedwarsstraat+203+Amsterdam" target="_blank" rel="noopener">In Google Maps öffnen <span class="arrow" aria-hidden="true">↗</span></a>
+          <a class="btn btn-line" href="../../de/#menu">Zur Speisekarte <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+        <dl class="lp-facts">
+          <div><dt>Täglich</dt><dd>8 – 21 Uhr</dd></div>
+          <div><dt>Adresse</dt><dd>Korte Leidsedwarsstraat 203</dd></div>
+          <div><dt>Zu Fuß</dt><dd>2 Min. vom Leidseplein</dd></div>
+        </dl>
+      </div>
+      <figure class="lp-img"><img src="../../img/terrace-1280.webp" width="1280" height="853" alt="Eine ruhige Terrasse am Leidseplein · Café1981" fetchpriority="high"></figure>
+    </div>
+  </section>
+
+  <section class="lp-body" aria-label="Auf der Karte">
+    <div class="wrap">
+      <div class="lp-prose"><p>Auf der Terrasse beginnt der Morgen mit Kaffee und Eiern. Mittags gibt es Lunch oder ein Stück Apfelkuchen von Holtkamp, und ab 16 Uhr mixt die Bar Cocktails: genau der richtige Moment für einen Old Fashioned und eine Portion Bitterballen.</p><p>Ein schöner Ort, um Amsterdam vorbeiziehen zu sehen. Oder wie ein Gast auf Google schrieb: „Central but slightly tucked away - great for people watching.“</p></div>
+      <div class="lp-menu">
+        <div class="label">Auf der Karte</div>
+        <ul class="dishes"><li class="dish"><h3>French Toast</h3><p>Süßer Toast mit Vanille und Zimt, Beeren und Clotted Cream</p><span class="tag">14,50 €</span></li><li class="dish"><h3>Smashed Avocado</h3><p>Avocado, Kirschtomaten, Radieschen, Rucola und Parmesan auf warmem Fladenbrot</p><span class="tag">16,50 €</span></li><li class="dish"><h3>Vegetable Bitterballen</h3><p>Der niederländische Kneipen-Snack, hier mit cremiger Gemüsefüllung</p><span class="tag">10,50 €</span></li><li class="dish"><h3>Signature Cocktails</h3><p>Vom Old Fashioned bis zur Margarita, ab 16 Uhr an der Bar gemixt</p><span class="tag">Signature</span></li></ul>
+        <div class="menu-note"><span>Preise laut Karte vom September 2026.</span><a href="https://cafe1981.nl/wp-content/uploads/2026/09/cafe1981_lunch_sep_2026.pdf" target="_blank" rel="noopener">Lunchkarte (PDF, Englisch)</a><a href="https://cafe1981.nl/wp-content/uploads/2026/09/cafe1981_diner_sep_2026.pdf" target="_blank" rel="noopener">Abendkarte (PDF, Englisch)</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" id="faq" aria-labelledby="faq-h">
+    <div class="wrap">
+      <div>
+        <div class="label">Gut zu wissen</div>
+        <h2 id="faq-h">Häufige <em>Fragen</em></h2>
+      </div>
+      <div class="faq-list">
+        <details open><summary><h3>Ist die Terrasse jeden Tag geöffnet?</h3><i aria-hidden="true"></i></summary><p>Das Café1981 hat täglich von 8 bis 21 Uhr geöffnet. Ob die Terrasse aufgebaut ist, hängt vom Wetter ab.</p></details>
+        <details><summary><h3>Kann ich einen Tisch auf der Terrasse reservieren?</h3><i aria-hidden="true"></i></summary><p>Kommen Sie einfach vorbei. Für Gruppen schreiben Sie uns vorher an <a href="mailto:Reservations@cafe1981.nl">Reservations@cafe1981.nl</a>.</p></details>
+        <details><summary><h3>Wo genau liegt die Terrasse?</h3><i aria-hidden="true"></i></summary><p>Direkt vor dem Café in der Korte Leidsedwarsstraat 203, 1017 RB Amsterdam, zwei Gehminuten vom Leidseplein.</p></details>
+        <details><summary><h3>Kann ich auf der Terrasse auch nur etwas trinken?</h3><i aria-hidden="true"></i></summary><p>Ja. Kaffee ab 8 Uhr, Cocktails ab 16 Uhr, gern mit Bitterballen dazu.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-more" aria-labelledby="more-h">
+    <div class="wrap">
+      <h2 id="more-h">Mehr vom Café1981</h2>
+      <div class="more-grid"><a class="more-card" href="../../de/fruehstueck-amsterdam/"><span class="label">Frühstück &amp; Brunch · ab 8 Uhr</span><b>Frühstück in Amsterdam</b><i aria-hidden="true">→</i></a><a class="more-card" href="../../de/restaurant-naehe-rijksmuseum/"><span class="label">Lunch · 5 Min. vom Rijksmuseum</span><b>Restaurant nahe Rijksmuseum</b><i aria-hidden="true">→</i></a><a class="more-card" href="../../de/abendessen-cocktails-leidseplein/"><span class="label">Dinner &amp; Cocktails · ab 16:30 Uhr</span><b>Abendessen &amp; Cocktails</b><i aria-hidden="true">→</i></a><a class="more-card" href="../../de/"><span class="label">Café1981</span><b>Startseite</b><i aria-hidden="true">→</i></a></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="wordmark"><img class="wm-logo" src="../../img/logo.png" alt="Café1981" width="511" height="137" loading="lazy"></div>
+    <nav class="explore" aria-label="Entdecken"><span class="label">Entdecken</span><a href="../../de/fruehstueck-amsterdam/">Frühstück in Amsterdam</a><a href="../../de/restaurant-naehe-rijksmuseum/">Restaurant nahe Rijksmuseum</a><a href="../../de/terrasse-leidseplein/">Terrasse am Leidseplein</a><a href="../../de/abendessen-cocktails-leidseplein/">Abendessen &amp; Cocktails</a></nav>
+    <div class="foot-row"><span>Café1981 · Korte Leidsedwarsstraat 203 · 1017 RB Amsterdam</span><span>Täglich geöffnet, 8 – 21 Uhr</span><span><span class="foot-langs"><a href="../../terrace-leidseplein/" hreflang="en" lang="en">EN</a><a href="../../nl/terras-leidseplein/" hreflang="nl" lang="nl">NL</a><a href="../../de/terrasse-leidseplein/" hreflang="de" lang="de" aria-current="true">DE</a><a href="../../fr/terrasse-leidseplein/" hreflang="fr" lang="fr">FR</a><a href="../../es/terraza-leidseplein/" hreflang="es" lang="es">ES</a></span></span></div>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const $$ = s => [...document.querySelectorAll(s)];
+  $$('.langsel a, .foot-langs a').forEach(a => a.addEventListener('click', () => { try { localStorage.setItem('c1981-lang', a.hreflang); } catch (e) {} }));
+  document.addEventListener('click', e => { const d = document.querySelector('.langsel'); if (d && d.open && !d.contains(e.target)) d.open = false; });
+})();
+</script>
+
+</body>
+</html>

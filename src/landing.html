@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="{{lang}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+{{HEAD}}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Hanken+Grotesk:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap">
+<style>
+{{CSS}}
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)} body{margin:0}
+</style>
+{{JSONLD}}
+</head>
+<body class="lp">
+
+<div class="grain" aria-hidden="true"></div>
+
+<header class="nav solid" id="nav">
+  <div class="wrap">
+    <nav class="pill" aria-label="{{nav_aria}}">
+      <a class="brand" href="{{HOME}}" aria-label="Café1981 {{home}}"><img src="{{R}}img/logo.png" alt="Café1981" width="511" height="137"></a>
+      <div class="links">
+        <a href="{{HOME}}#menu">{{nav1}}</a>
+        <a href="{{HOME}}#spaces">{{nav2}}</a>
+        <a href="{{HOME}}#reviews">{{nav4}}</a>
+        <a href="{{HOME}}#visit">{{nav3}}</a>
+      </div>
+    </nav>
+    <div class="pill">
+      {{LANGMENU}}
+      <a class="btn btn-brass" href="https://www.google.com/maps/dir/?api=1&amp;destination=Caf%C3%A91981+Korte+Leidsedwarsstraat+203+Amsterdam" target="_blank" rel="noopener">{{navcta}} <span class="arrow" aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="lp-hero" aria-labelledby="lp-h">
+    <div class="wrap lp-grid">
+      <div class="lp-copy">
+        <nav class="crumbs" aria-label="Breadcrumb"><a href="{{HOME}}">Café1981</a><span aria-hidden="true">/</span><span aria-current="page">{{crumb}}</span></nav>
+        <p class="label">{{eyebrow}}</p>
+        <h1 id="lp-h">{{h1}}</h1>
+        <p class="lp-lede">{{lede}}</p>
+        <div class="actions">
+          <a class="btn btn-brass" href="https://www.google.com/maps/dir/?api=1&amp;destination=Caf%C3%A91981+Korte+Leidsedwarsstraat+203+Amsterdam" target="_blank" rel="noopener">{{v-cta}} <span class="arrow" aria-hidden="true">↗</span></a>
+          <a class="btn btn-line" href="{{HOME}}#menu">{{cta1}} <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+        <dl class="lp-facts">
+          <div><dt>{{k2}}</dt><dd>{{hours_short}}</dd></div>
+          <div><dt>{{k3}}</dt><dd>Korte Leidsedwarsstraat 203</dd></div>
+          <div><dt>{{k4}}</dt><dd>{{v4}}</dd></div>
+        </dl>
+      </div>
+      <figure class="lp-img"><img src="{{IMG}}" width="{{IW}}" height="{{IH}}" alt="{{img_alt}}" fetchpriority="high"></figure>
+    </div>
+  </section>
+
+  <section class="lp-body" aria-label="{{menu_head}}">
+    <div class="wrap">
+      <div class="lp-prose">{{BODY}}</div>
+      <div class="lp-menu">
+        <div class="label">{{menu_head}}</div>
+        <ul class="dishes">{{DISHES}}</ul>
+        <div class="menu-note"><span>{{price_note}}</span><a href="https://cafe1981.nl/wp-content/uploads/2026/09/cafe1981_lunch_sep_2026.pdf" target="_blank" rel="noopener">{{m-pdf1}}</a><a href="https://cafe1981.nl/wp-content/uploads/2026/09/cafe1981_diner_sep_2026.pdf" target="_blank" rel="noopener">{{m-pdf2}}</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq" id="faq" aria-labelledby="faq-h">
+    <div class="wrap">
+      <div>
+        <div class="label">{{faq_l}}</div>
+        <h2 id="faq-h">{{f-h}}</h2>
+      </div>
+      <div class="faq-list">
+{{FAQ}}
+      </div>
+    </div>
+  </section>
+
+  <section class="lp-more" aria-labelledby="more-h">
+    <div class="wrap">
+      <h2 id="more-h">{{more_head}}</h2>
+      <div class="more-grid">{{MORE}}</div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="wordmark"><img class="wm-logo" src="{{R}}img/logo.png" alt="Café1981" width="511" height="137" loading="lazy"></div>
+    {{EXPLORE}}
+    <div class="foot-row"><span>Café1981 · Korte Leidsedwarsstraat 203 · 1017 RB Amsterdam</span><span>{{foot}}</span><span>{{FOOTLANGS}}</span></div>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const $$ = s => [...document.querySelectorAll(s)];
+  $$('.langsel a, .foot-langs a').forEach(a => a.addEventListener('click', () => { try { localStorage.setItem('c1981-lang', a.hreflang); } catch (e) {} }));
+  document.addEventListener('click', e => { const d = document.querySelector('.langsel'); if (d && d.open && !d.contains(e.target)) d.open = false; });
+})();
+</script>
+
+</body>
+</html>

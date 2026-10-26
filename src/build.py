@@ -12,6 +12,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(__file__))
 from strings import LANGS, S  # noqa: E402
+import landings as LP  # noqa: E402
 
 PRODUCTION = '--production' in sys.argv
 BASE = 'https://cafe1981.nl/' if PRODUCTION else 'https://januslikt.github.io/cafe1981/'
@@ -86,10 +87,22 @@ def page_path(l):
     return '' if l == 'en' else l + '/'
 
 
+def relpath(frm, to):
+    """Relative link between two site paths such as '' (home), 'de/' or 'de/terrasse-leidseplein/'."""
+    return ('../' * frm.count('/') + to) or './'
+
+
 def rel(frm, to):
-    """Relative link from the page of language `frm` to the page of language `to`."""
-    up = '' if frm == 'en' else '../'
-    return (up + page_path(to)) or './'
+    """Relative link from the home page of language `frm` to the home page of language `to`."""
+    return relpath(page_path(frm), page_path(to))
+
+
+def home_paths():
+    return {o: page_path(o) for o in LANGS}
+
+
+def landing_paths(topic):
+    return {o: page_path(o) + LP.P[o][topic]['slug'] + '/' for o in LANGS}
 
 
 def price(v, l):
@@ -114,32 +127,34 @@ def strip_tags(s):
     return html.unescape(re.sub(r'<[^>]+>', '', s))
 
 
-def head(l, t):
-    url = BASE + page_path(l)
+def head(l, t, paths=None, title=None, desc=None, img=('img/terrace.jpg', 1800, 1200), img_alt=None):
+    paths = paths or home_paths()
+    title, desc, img_alt = title or t['title'], desc or t['desc'], img_alt or t['alt_terrace']
+    url = BASE + paths[l]
     lines = []
     if not PRODUCTION:
         lines.append('<meta name="robots" content="noindex, nofollow">')
     lines += [
-        f'<title>{html.escape(t["title"])}</title>',
-        f'<meta name="description" content="{html.escape(t["desc"])}">',
+        f'<title>{html.escape(title)}</title>',
+        f'<meta name="description" content="{html.escape(desc)}">',
         f'<link rel="canonical" href="{url}">',
     ]
     for o in LANGS:
-        lines.append(f'<link rel="alternate" hreflang="{o}" href="{BASE + page_path(o)}">')
-    lines.append(f'<link rel="alternate" hreflang="x-default" href="{BASE}">')
+        lines.append(f'<link rel="alternate" hreflang="{o}" href="{BASE + paths[o]}">')
+    lines.append(f'<link rel="alternate" hreflang="x-default" href="{BASE + paths["en"]}">')
     lines += [
         '<meta name="theme-color" content="#0b101c">',
         '<meta name="format-detection" content="telephone=no">',
         f'<link rel="icon" href="{BASE}img/pauw.svg" type="image/svg+xml">',
         '<meta property="og:type" content="restaurant">',
         '<meta property="og:site_name" content="Café1981">',
-        f'<meta property="og:title" content="{html.escape(t["title"])}">',
-        f'<meta property="og:description" content="{html.escape(t["desc"])}">',
+        f'<meta property="og:title" content="{html.escape(title)}">',
+        f'<meta property="og:description" content="{html.escape(desc)}">',
         f'<meta property="og:url" content="{url}">',
-        f'<meta property="og:image" content="{BASE}img/terrace.jpg">',
-        '<meta property="og:image:width" content="1800">',
-        '<meta property="og:image:height" content="1200">',
-        f'<meta property="og:image:alt" content="{html.escape(t["alt_terrace"])}">',
+        f'<meta property="og:image" content="{BASE}{img[0]}">',
+        f'<meta property="og:image:width" content="{img[1]}">',
+        f'<meta property="og:image:height" content="{img[2]}">',
+        f'<meta property="og:image:alt" content="{html.escape(img_alt)}">',
         f'<meta property="og:locale" content="{t["locale"]}">',
     ]
     for o in LANGS:
@@ -155,9 +170,8 @@ def head(l, t):
     return '\n'.join(lines)
 
 
-def jsonld(l, t):
-    url = BASE + page_path(l)
-    cafe = {
+def cafe_node(t):
+    return {
         '@type': ['Restaurant', 'CafeOrCoffeeShop'],
         '@id': BASE + '#cafe',
         'name': 'Café1981',
@@ -196,38 +210,121 @@ def jsonld(l, t):
                     'reviewRating': {'@type': 'Rating', 'ratingValue': 5, 'bestRating': 5},
                     'reviewBody': b, 'publisher': {'@type': 'Organization', 'name': 'Google'}} for n, b in REVIEWS],
     }
+
+
+def faq_node(url, l, items):
+    return {'@type': 'FAQPage', '@id': url + '#faq', 'inLanguage': l, 'mainEntity': [
+        {'@type': 'Question', 'name': strip_tags(q), 'acceptedAnswer': {'@type': 'Answer', 'text': strip_tags(a)}} for q, a in items]}
+
+
+def ld_script(graph):
+    data = json.dumps({'@context': 'https://schema.org', '@graph': graph}, ensure_ascii=False, indent=1)
+    return '<script type="application/ld+json">\n' + data.replace('</', '<\\/') + '\n</script>'
+
+
+def jsonld(l, t):
+    url = BASE + page_path(l)
     graph = [
-        cafe,
+        cafe_node(t),
         {'@type': 'WebSite', '@id': BASE + '#website', 'url': BASE, 'name': 'Café1981', 'inLanguage': LANGS,
          'publisher': {'@id': BASE + '#cafe'}},
         {'@type': 'WebPage', '@id': url + '#page', 'url': url, 'name': t['title'], 'description': t['desc'],
          'inLanguage': l, 'isPartOf': {'@id': BASE + '#website'}, 'about': {'@id': BASE + '#cafe'},
          'primaryImageOfPage': BASE + 'img/terrace.jpg'},
-        {'@type': 'FAQPage', '@id': url + '#faq', 'inLanguage': l, 'mainEntity': [
-            {'@type': 'Question', 'name': q, 'acceptedAnswer': {'@type': 'Answer', 'text': strip_tags(a)}} for q, a in t['faq']]},
+        faq_node(url, l, t['faq']),
     ]
-    data = json.dumps({'@context': 'https://schema.org', '@graph': graph}, ensure_ascii=False, indent=1)
-    return '<script type="application/ld+json">\n' + data.replace('</', '<\\/') + '\n</script>'
+    return ld_script(graph)
 
 
-def langmenu(l, t):
+def landing_jsonld(l, topic):
+    t, lp, paths = S[l], LP.P[l][topic], landing_paths(topic)
+    url, home = BASE + paths[l], BASE + page_path(l)
+    graph = [
+        cafe_node(t),
+        {'@type': 'WebPage', '@id': url + '#page', 'url': url, 'name': lp['title'], 'description': lp['desc'],
+         'inLanguage': l, 'isPartOf': {'@id': BASE + '#website'}, 'about': {'@id': BASE + '#cafe'},
+         'primaryImageOfPage': BASE + 'img/' + LP.IMAGES[topic][0], 'breadcrumb': {'@id': url + '#crumbs'}},
+        {'@type': 'BreadcrumbList', '@id': url + '#crumbs', 'itemListElement': [
+            {'@type': 'ListItem', 'position': 1, 'name': 'Café1981', 'item': home},
+            {'@type': 'ListItem', 'position': 2, 'name': strip_tags(lp['link']), 'item': url}]},
+        faq_node(url, l, lp['faq']),
+    ]
+    return ld_script(graph)
+
+
+def langmenu(l, t, paths=None):
+    paths = paths or home_paths()
     items = ''.join(
-        f'<li><a href="{rel(l, o)}" hreflang="{o}" lang="{o}"{" aria-current=\"true\"" if o == l else ""}>{S[o]["name"]}<span>{o.upper()}</span></a></li>'
+        f'<li><a href="{relpath(paths[l], paths[o])}" hreflang="{o}" lang="{o}"{" aria-current=\"true\"" if o == l else ""}>{S[o]["name"]}<span>{o.upper()}</span></a></li>'
         for o in LANGS)
     return (f'<details class="langsel"><summary aria-label="{t["lang_label"]}: {t["name"]}">{l.upper()}</summary>'
             f'<ul>{items}</ul></details>')
 
 
-def footlangs(l):
+def footlangs(l, paths=None):
+    paths = paths or home_paths()
     return '<span class="foot-langs">' + ''.join(
-        f'<a href="{rel(l, o)}" hreflang="{o}" lang="{o}"{" aria-current=\"true\"" if o == l else ""}>{o.upper()}</a>'
+        f'<a href="{relpath(paths[l], paths[o])}" hreflang="{o}" lang="{o}"{" aria-current=\"true\"" if o == l else ""}>{o.upper()}</a>'
         for o in LANGS) + '</span>'
 
 
-def faq(t):
+def faq(items):
     return '\n'.join(
         f'        <details{" open" if i == 0 else ""}><summary><h3>{q}</h3><i aria-hidden="true"></i></summary><p>{a}</p></details>'
-        for i, (q, a) in enumerate(t['faq']))
+        for i, (q, a) in enumerate(items))
+
+
+def explore(l, here):
+    """Footer links to the landing pages of language `l`, relative to the page at path `here`."""
+    links = ''.join(f'<a href="{relpath(here, landing_paths(tp)[l])}">{LP.P[l][tp]["link"]}</a>' for tp in LP.TOPICS)
+    return f'<nav class="explore" aria-label="{LP.UI[l]["explore"]}"><span class="label">{LP.UI[l]["explore"]}</span>{links}</nav>'
+
+
+def fill(tpl, v, where):
+    def sub(m):
+        k = m.group(1)
+        if k not in v:
+            raise KeyError(f'{where}: missing {k}')
+        return v[k]
+    return re.sub(r'\{\{([\w-]+)\}\}', sub, tpl)
+
+
+def write(path, text):
+    full = os.path.join(OUT, path, 'index.html')
+    os.makedirs(os.path.dirname(full), exist_ok=True)
+    open(full, 'w', encoding='utf-8').write(text)
+
+
+def build_landings(css):
+    tpl = open(os.path.join(HERE, 'landing.html'), encoding='utf-8').read()
+    for topic in LP.TOPICS:
+        paths = landing_paths(topic)
+        img, iw, ih = LP.IMAGES[topic]
+        for l in LANGS:
+            t, lp, ui = S[l], LP.P[l][topic], LP.UI[l]
+            here = paths[l]
+            R = '../' * here.count('/')
+            home = relpath(here, page_path(l))
+            dishes = ''.join(
+                f'<li class="dish"><h3>{html.escape(LP.DISHES[d][0])}</h3><p>{LP.DISH_DESC[l][d]}</p>'
+                f'<span class="tag">{price(LP.DISHES[d][1], l) if LP.DISHES[d][1] else t["tag-sig"]}</span></li>'
+                for d in LP.TOPIC_DISHES[topic])
+            more = ''.join(
+                f'<a class="more-card" href="{relpath(here, landing_paths(o)[l])}"><span class="label">{LP.P[l][o]["eyebrow"]}</span><b>{LP.P[l][o]["link"]}</b><i aria-hidden="true">→</i></a>'
+                for o in LP.TOPICS if o != topic)
+            more += f'<a class="more-card" href="{home}"><span class="label">Café1981</span><b>{ui["home"]}</b><i aria-hidden="true">→</i></a>'
+            v = {k: x for k, x in t.items() if isinstance(x, str)}
+            v.update({k: x for k, x in lp.items() if isinstance(x, str)})
+            v.update(ui)
+            v.update({
+                'lang': l, 'R': R, 'HOME': home, 'CSS': css,
+                'HEAD': head(l, t, paths, lp['title'], lp['desc'], ('img/' + img, iw, ih), strip_tags(lp['h1'])),
+                'JSONLD': landing_jsonld(l, topic), 'LANGMENU': langmenu(l, t, paths), 'FOOTLANGS': footlangs(l, paths),
+                'EXPLORE': explore(l, here), 'FAQ': faq(lp['faq']), 'crumb': lp['link'],
+                'BODY': ''.join(f'<p>{x}</p>' for x in lp['body']), 'DISHES': dishes, 'MORE': more,
+                'img_alt': html.escape(strip_tags(lp['h1'])) + ' · Café1981', 'IMG': R + 'img/' + img, 'IW': str(iw), 'IH': str(ih),
+            })
+            write(here, fill(tpl, v, f'{l}/{topic}'))
 
 
 def hours(l, t):
@@ -244,7 +341,8 @@ def build():
             'lang': l, 'R': '' if l == 'en' else '../', 'CSS': css, 'MAPS': MAPS,
             'REDIRECT': REDIRECT if l == 'en' else '',
             'HEAD': head(l, t), 'JSONLD': jsonld(l, t), 'LANGMENU': langmenu(l, t), 'FOOTLANGS': footlangs(l),
-            'STATEMENT': statement(t['s-p']), 'FAQ': faq(t), 'HOURS': hours(l, t),
+            'STATEMENT': statement(t['s-p']), 'FAQ': faq(t['faq']), 'HOURS': hours(l, t),
+            'EXPLORE': explore(l, page_path(l)),
             'STARS_5': STARS_5, 'STARS_47': STARS_47,
             'JS_L': json.dumps({'lang': l, 'open': t['open'], 'closed': t['closed'], 'today': t['today'],
                                 'langs': {o: {'ask': S[o]['ask'], 'cta': S[o]['cta'], 'href': rel(l, o)} for o in LANGS}},
@@ -252,20 +350,15 @@ def build():
         })
         v.update({'p_' + k: price(p, l) for k, p in PRICES.items()})
 
-        def sub(m):
-            k = m.group(1)
-            if k not in v:
-                raise KeyError(f'{l}: missing {k}')
-            return v[k]
-        out = re.sub(r'\{\{([\w-]+)\}\}', sub, tpl)
-        path = os.path.join(OUT, page_path(l), 'index.html')
-        os.makedirs(os.path.dirname(path), exist_ok=True)
-        open(path, 'w', encoding='utf-8').write(out)
+        write(page_path(l), fill(tpl, v, l))
+    build_landings(css)
 
     # sitemap with language alternates
-    alts = ''.join(f'\n    <xhtml:link rel="alternate" hreflang="{o}" href="{BASE + page_path(o)}"/>' for o in LANGS)
-    alts += f'\n    <xhtml:link rel="alternate" hreflang="x-default" href="{BASE}"/>'
-    urls = ''.join(f'\n  <url>\n    <loc>{BASE + page_path(l)}</loc>{alts}\n  </url>' for l in LANGS)
+    urls = ''
+    for paths in [home_paths()] + [landing_paths(tp) for tp in LP.TOPICS]:
+        alts = ''.join(f'\n    <xhtml:link rel="alternate" hreflang="{o}" href="{BASE + paths[o]}"/>' for o in LANGS)
+        alts += f'\n    <xhtml:link rel="alternate" hreflang="x-default" href="{BASE + paths["en"]}"/>'
+        urls += ''.join(f'\n  <url>\n    <loc>{BASE + paths[l]}</loc>{alts}\n  </url>' for l in LANGS)
     open(os.path.join(OUT, 'sitemap.xml'), 'w').write(
         '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
         f'xmlns:xhtml="http://www.w3.org/1999/xhtml">{urls}\n</urlset>\n')
@@ -285,6 +378,7 @@ def build():
                         for sec, items in MENU.items())
     faq_md = '\n'.join(f'\n### {q}\n{strip_tags(a)}' for q, a in en['faq'])
     langs_md = '\n'.join(f'- [{S[o]["name"]}]({BASE + page_path(o)})' for o in LANGS)
+    langs_md += '\n' + '\n'.join(f'- [{strip_tags(LP.P["en"][tp]["link"])}]({BASE + landing_paths(tp)["en"]}): {LP.P["en"][tp]["desc"]}' for tp in LP.TOPICS)
     open(os.path.join(OUT, 'llms.txt'), 'w', encoding='utf-8').write(f'''# Café1981
 
 > Café-brasserie in Amsterdam at Korte Leidsedwarsstraat 203, on a quiet street between Leidseplein (2 min walk) and the Rijksmuseum (5 min walk). Open every day 08:00–21:00: breakfast and lunch from 08:00 (Eggs Royale, Eggs Benedict, omelettes, pancakes), cocktails and dinner from 16:30 (international, Dutch and Indian dishes). Terrace out front. Walk-ins welcome. Rated 4.7 out of 5 from 355 Google reviews (October 2026).
