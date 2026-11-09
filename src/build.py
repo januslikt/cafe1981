@@ -6,12 +6,13 @@
 """
 import html
 import json
+import urllib.parse
 import os
 import re
 import sys
 
 sys.path.insert(0, os.path.dirname(__file__))
-from strings import LANGS, S  # noqa: E402
+from strings import LANGS, S, GROUPS  # noqa: E402
 import landings as LP  # noqa: E402
 
 PRODUCTION = '--production' in sys.argv
@@ -194,6 +195,10 @@ def cafe_node(t):
         'priceRange': '€€',
         'currenciesAccepted': 'EUR',
         'acceptsReservations': True,
+        'potentialAction': {
+            '@type': 'ReserveAction', 'name': 'Group reservation for 6 to 10 guests, by email at least 12 hours ahead',
+            'target': {'@type': 'EntryPoint', 'urlTemplate': 'mailto:Reservations@cafe1981.nl'},
+            'result': {'@type': 'FoodEstablishmentReservation', 'name': 'Group reservation (6–10 guests, €25 minimum spend per person, 90 minutes)'}},
         'amenityFeature': [{'@type': 'LocationFeatureSpecification', 'name': 'Outdoor seating (terrace)', 'value': True}],
         'containedInPlace': {'@type': 'Place', 'name': 'Leidseplein, Amsterdam'},
         'hasMenu': {
@@ -268,6 +273,30 @@ def footlangs(l, paths=None):
         for o in LANGS) + '</span>'
 
 
+def groups(l):
+    g = GROUPS[l]
+    mail = ('mailto:Reservations@cafe1981.nl?subject=' + urllib.parse.quote(g['subject'] + ' · Café1981')
+            + '&amp;body=' + urllib.parse.quote(g['body']))
+    facts = ''.join(f'<li><b>{n}</b><span>{x}</span></li>' for n, x in g['facts'])
+    notes = ''.join(f'<li>{x}</li>' for x in g['notes'])
+    return f'''  <section class="groups" id="groups" aria-labelledby="groups-h">
+    <div class="wrap">
+      <div class="g-intro rv">
+        <div class="label">{g['label']}</div>
+        <h2 id="groups-h">{g['h']}</h2>
+        <p>{g['p']}</p>
+        <a class="btn btn-brass" href="{mail}">{g['cta']} <span class="arrow" aria-hidden="true">↗</span></a>
+        <p class="g-mail">Reservations@cafe1981.nl</p>
+      </div>
+      <div class="g-side rv">
+        <ul class="g-facts">{facts}</ul>
+        <ul class="g-notes">{notes}</ul>
+        <p class="g-walk">{g['walk']}</p>
+      </div>
+    </div>
+  </section>'''
+
+
 def faq(items):
     return '\n'.join(
         f'        <details{" open" if i == 0 else ""}><summary><h3>{q}</h3><i aria-hidden="true"></i></summary><p>{a}</p></details>'
@@ -277,6 +306,7 @@ def faq(items):
 def explore(l, here):
     """Footer links to the landing pages of language `l`, relative to the page at path `here`."""
     links = ''.join(f'<a href="{relpath(here, landing_paths(tp)[l])}">{LP.P[l][tp]["link"]}</a>' for tp in LP.TOPICS)
+    links += f'<a href="{relpath(here, page_path(l))}#groups">{GROUPS[l]["nav"]}</a>'
     return f'<nav class="explore" aria-label="{LP.UI[l]["explore"]}"><span class="label">{LP.UI[l]["explore"]}</span>{links}</nav>'
 
 
@@ -342,7 +372,7 @@ def build():
             'REDIRECT': REDIRECT if l == 'en' else '',
             'HEAD': head(l, t), 'JSONLD': jsonld(l, t), 'LANGMENU': langmenu(l, t), 'FOOTLANGS': footlangs(l),
             'STATEMENT': statement(t['s-p']), 'FAQ': faq(t['faq']), 'HOURS': hours(l, t),
-            'EXPLORE': explore(l, page_path(l)),
+            'EXPLORE': explore(l, page_path(l)), 'GROUPS': groups(l), 'GROUP_NAV': GROUPS[l]['nav'],
             'STARS_5': STARS_5, 'STARS_47': STARS_47,
             'JS_L': json.dumps({'lang': l, 'open': t['open'], 'closed': t['closed'], 'today': t['today'],
                                 'langs': {o: {'ask': S[o]['ask'], 'cta': S[o]['cta'], 'href': rel(l, o)} for o in LANGS}},
@@ -390,7 +420,7 @@ def build():
 - Coordinates: 52.3623932, 4.8862299
 - Opening hours: Monday to Sunday, 08:00–21:00
 - Breakfast and lunch: from 08:00. Evening menu, dinner and cocktails: from 16:30
-- Reservations: not needed; groups can email Reservations@cafe1981.nl
+- Reservations: not needed for fewer than 6 guests (walk in, subject to availability). Groups of 6 to 10 book by email at Reservations@cafe1981.nl at least 12 hours ahead; minimum spend €25 per person, table reserved for 90 minutes, a fixed menu may apply on some days, subject to availability
 - Getting there: tram 1, 2, 5, 7 or 19 to Leidseplein. Walking: Leidseplein 2 min, Rijksmuseum 5 min, Vondelpark 8 min
 - Price range: €€ (breakfast dishes €13.50–€17.50, dinner mains €20.50–€25.50)
 - Vegetarian dishes every day

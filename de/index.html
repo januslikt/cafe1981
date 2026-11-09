@@ -412,6 +412,30 @@ footer { border-top: 1px solid var(--line); padding-block: 40px calc(32px + env(
   .more-card { min-height: 0; }
 }
 
+/* GROUPS */
+.groups { padding-block: 130px; background: var(--bg-2); border-block: 1px solid var(--line); }
+.groups .wrap { display: grid; grid-template-columns: 5fr 7fr; gap: 72px; align-items: start; }
+.groups h2 { font-variant-numeric: lining-nums; font-size: clamp(46px, 5.6vw, 88px); margin: 18px 0 26px; }
+.groups h2 em { color: var(--brass-hi); }
+.g-intro > p { max-width: 42ch; font-size: 17px; color: rgba(239,232,219,.86); margin: 0 0 30px; }
+.g-intro .g-mail { margin: 16px 0 0; font-family: var(--f-mono); font-size: 12px; letter-spacing: .06em; color: var(--mute); user-select: all; }
+.g-facts { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.g-facts li { display: flex; flex-direction: column; gap: 10px; padding: 26px 24px 24px; border-radius: 6px; border: 1px solid var(--line); background: var(--bg); }
+.g-facts b { font-family: var(--f-display); font-weight: 300; font-size: clamp(46px, 4.4vw, 64px); line-height: .9; letter-spacing: -.02em; color: var(--brass-hi); font-variant-numeric: lining-nums; }
+.g-facts span { font-size: 15px; color: rgba(239,232,219,.8); }
+.g-notes { list-style: none; margin: 26px 0 0; padding: 0; border-top: 1px solid var(--line); }
+.g-notes li { position: relative; padding: 14px 0 14px 22px; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--mute); }
+.g-notes li::before { content: "✦"; position: absolute; left: 0; top: 15px; font-size: 9px; color: var(--brass); }
+.g-walk { margin: 22px 0 0; font-family: var(--f-display); font-style: italic; font-size: 24px; line-height: 1.25; color: var(--paper); }
+@media (max-width: 960px) {
+  .groups { padding-block: 96px; }
+  .groups .wrap { grid-template-columns: 1fr; gap: 40px; }
+}
+@media (max-width: 560px) {
+  .g-facts { gap: 10px; }
+  .g-facts li { padding: 20px 16px 18px; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; }
 }
@@ -486,6 +510,18 @@ footer { border-top: 1px solid var(--line); padding-block: 40px calc(32px + env(
    "priceRange": "€€",
    "currenciesAccepted": "EUR",
    "acceptsReservations": true,
+   "potentialAction": {
+    "@type": "ReserveAction",
+    "name": "Group reservation for 6 to 10 guests, by email at least 12 hours ahead",
+    "target": {
+     "@type": "EntryPoint",
+     "urlTemplate": "mailto:Reservations@cafe1981.nl"
+    },
+    "result": {
+     "@type": "FoodEstablishmentReservation",
+     "name": "Group reservation (6–10 guests, €25 minimum spend per person, 90 minutes)"
+    }
+   },
    "amenityFeature": [
     {
      "@type": "LocationFeatureSpecification",
@@ -819,7 +855,15 @@ footer { border-top: 1px solid var(--line); padding-block: 40px calc(32px + env(
      "name": "Muss ich einen Tisch reservieren?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Nein, kommen Sie einfach vorbei. Für Gruppen schreiben Sie uns gern an Reservations@cafe1981.nl."
+      "text": "Unter 6 Personen nicht: Kommen Sie einfach vorbei, je nach Verfügbarkeit. Gruppen von 6 bis 10 Personen reservieren mindestens 12 Stunden vorher per E-Mail; siehe Gruppenreservierungen."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Kann ich für eine Gruppe reservieren?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ja, für 6 bis 10 Personen. Schreiben Sie mindestens 12 Stunden vorher an Reservations@cafe1981.nl. Der Mindestverzehr beträgt 25 € pro Person, der Tisch ist 90 Minuten für Sie reserviert, und an manchen Tagen gilt ein festes Menü, das wir vorab mit Ihnen besprechen. Alle Reservierungen vorbehaltlich Verfügbarkeit."
      }
     },
     {
@@ -1036,7 +1080,7 @@ footer { border-top: 1px solid var(--line); padding-block: 40px calc(32px + env(
         <address class="addr" style="font-style:normal">Korte Leidsedwarsstraat 203<br>1017 RB Amsterdam<small>Zwischen Leidseplein und Rijksmuseum. Mit der Tram 1, 2, 5, 7 oder 19 bis Leidseplein.</small></address>
         <div class="actions">
           <a class="btn btn-brass" href="https://www.google.com/maps/dir/?api=1&amp;destination=Caf%C3%A91981+Korte+Leidsedwarsstraat+203+Amsterdam" target="_blank" rel="noopener">In Google Maps öffnen <span class="arrow" aria-hidden="true">↗</span></a>
-          <a class="btn btn-line" href="mailto:Reservations@cafe1981.nl">Reservations@cafe1981.nl</a>
+          <a class="btn btn-line" href="#groups">Gruppen reservieren <span class="arrow" aria-hidden="true">↓</span></a>
         </div>
       </div>
       <div class="rv">
@@ -1076,6 +1120,23 @@ footer { border-top: 1px solid var(--line); padding-block: 40px calc(32px + env(
     </div>
   </section>
 
+  <section class="groups" id="groups" aria-labelledby="groups-h">
+    <div class="wrap">
+      <div class="g-intro rv">
+        <div class="label">Gruppen</div>
+        <h2 id="groups-h">Sie kommen zu <em>6 bis 10</em>?</h2>
+        <p>Wir freuen uns auf Sie und Ihre Gäste. Für Gruppen von 6 bis 10 Personen reservieren wir gern einen Tisch. Schreiben Sie uns einfach eine E-Mail.</p>
+        <a class="btn btn-brass" href="mailto:Reservations@cafe1981.nl?subject=Gruppenreservierung%20%C2%B7%20Caf%C3%A91981&amp;body=Datum%3A%0AUhrzeit%3A%0AAnzahl%20Personen%3A%0AName%3A%0A">Gruppenreservierung anfragen <span class="arrow" aria-hidden="true">↗</span></a>
+        <p class="g-mail">Reservations@cafe1981.nl</p>
+      </div>
+      <div class="g-side rv">
+        <ul class="g-facts"><li><b>6–10</b><span>Personen pro Reservierung</span></li><li><b>12 Std.</b><span>mindestens 12 Stunden vorher per E-Mail reservieren</span></li><li><b>25 €</b><span>Mindestverzehr pro Person</span></li><li><b>90 Min.</b><span>Ihr Tisch ist 90 Minuten für Sie reserviert</span></li></ul>
+        <ul class="g-notes"><li>Je nach Tag kann ein festes Menü gelten; das besprechen wir vorab mit Ihnen.</li><li>Alle Reservierungen vorbehaltlich Verfügbarkeit.</li></ul>
+        <p class="g-walk">Weniger als 6 Personen? Kommen Sie einfach vorbei, je nach Verfügbarkeit.</p>
+      </div>
+    </div>
+  </section>
+
   <section class="faq" id="faq" aria-labelledby="faq-h">
     <div class="wrap">
       <div class="rv">
@@ -1085,7 +1146,8 @@ footer { border-top: 1px solid var(--line); padding-block: 40px calc(32px + env(
       <div class="faq-list rv">
         <details open><summary><h3>Wann hat das Café1981 geöffnet?</h3><i aria-hidden="true"></i></summary><p>Wir haben täglich von 8 bis 21 Uhr geöffnet. Frühstück und Lunch gibt es ab 8 Uhr, die Abendkarte mit Dinner und Cocktails ab 16:30 Uhr.</p></details>
         <details><summary><h3>Wie komme ich zum Café1981?</h3><i aria-hidden="true"></i></summary><p>Sie finden uns in der Korte Leidsedwarsstraat 203, 1017 RB Amsterdam: 2 Gehminuten vom Leidseplein, 5 Minuten vom Rijksmuseum und 8 Minuten vom Vondelpark. Die Trams 1, 2, 5, 7 und 19 halten am Leidseplein.</p></details>
-        <details><summary><h3>Muss ich einen Tisch reservieren?</h3><i aria-hidden="true"></i></summary><p>Nein, kommen Sie einfach vorbei. Für Gruppen schreiben Sie uns gern an <a href="mailto:Reservations@cafe1981.nl">Reservations@cafe1981.nl</a>.</p></details>
+        <details><summary><h3>Muss ich einen Tisch reservieren?</h3><i aria-hidden="true"></i></summary><p>Unter 6 Personen nicht: Kommen Sie einfach vorbei, je nach Verfügbarkeit. Gruppen von 6 bis 10 Personen reservieren mindestens 12 Stunden vorher per E-Mail; siehe <a href="#groups">Gruppenreservierungen</a>.</p></details>
+        <details><summary><h3>Kann ich für eine Gruppe reservieren?</h3><i aria-hidden="true"></i></summary><p>Ja, für 6 bis 10 Personen. Schreiben Sie mindestens 12 Stunden vorher an <a href="mailto:Reservations@cafe1981.nl">Reservations@cafe1981.nl</a>. Der Mindestverzehr beträgt 25 € pro Person, der Tisch ist 90 Minuten für Sie reserviert, und an manchen Tagen gilt ein festes Menü, das wir vorab mit Ihnen besprechen. Alle Reservierungen vorbehaltlich Verfügbarkeit.</p></details>
         <details><summary><h3>Was empfehlen Sie zum Frühstück?</h3><i aria-hidden="true"></i></summary><p>Unsere Eiergerichte: Eggs Royale mit Räucherlachs, Eggs Benedict, Eggs Florentine und das Green Omelette. Eggs Benedict, das Green Omelette und unser French Toast werden in den Google-Bewertungen am häufigsten erwähnt.</p></details>
         <details><summary><h3>Gibt es vegetarische Gerichte?</h3><i aria-hidden="true"></i></summary><p>Ja, jeden Tag. Zum Beispiel Fladenbrot mit Hummus und Falafel, den Veggie-Burger und Gemüse-Bitterballen, abends außerdem vegetarische Currys wie Saag Paneer, Aloo Matar und Dal.</p></details>
         <details><summary><h3>Kann ich hier niederländisch essen?</h3><i aria-hidden="true"></i></summary><p>Ja. Probieren Sie Bitterballen zum Getränk und abends Hutspot (niederländischer Kartoffel-Möhren-Stampf) mit Rookworst. Beliebt sind auch unsere Curry Bowls von Mayur mit frischem Naan.</p></details>
@@ -1098,7 +1160,7 @@ footer { border-top: 1px solid var(--line); padding-block: 40px calc(32px + env(
 <footer>
   <div class="wrap">
     <div class="wordmark"><img class="wm-logo" src="../img/logo.png" alt="Café1981" width="511" height="137" loading="lazy"></div>
-    <nav class="explore" aria-label="Entdecken"><span class="label">Entdecken</span><a href="../de/fruehstueck-amsterdam/">Frühstück in Amsterdam</a><a href="../de/restaurant-naehe-rijksmuseum/">Restaurant nahe Rijksmuseum</a><a href="../de/terrasse-leidseplein/">Terrasse am Leidseplein</a><a href="../de/abendessen-cocktails-leidseplein/">Abendessen &amp; Cocktails</a></nav>
+    <nav class="explore" aria-label="Entdecken"><span class="label">Entdecken</span><a href="../de/fruehstueck-amsterdam/">Frühstück in Amsterdam</a><a href="../de/restaurant-naehe-rijksmuseum/">Restaurant nahe Rijksmuseum</a><a href="../de/terrasse-leidseplein/">Terrasse am Leidseplein</a><a href="../de/abendessen-cocktails-leidseplein/">Abendessen &amp; Cocktails</a><a href="../de/#groups">Gruppen reservieren</a></nav>
     <div class="foot-row"><span>Café1981 · Korte Leidsedwarsstraat 203 · 1017 RB Amsterdam</span><span>Täglich geöffnet, 8 – 21 Uhr</span><span><span class="foot-langs"><a href="../" hreflang="en" lang="en">EN</a><a href="../nl/" hreflang="nl" lang="nl">NL</a><a href="../de/" hreflang="de" lang="de" aria-current="true">DE</a><a href="../fr/" hreflang="fr" lang="fr">FR</a><a href="../es/" hreflang="es" lang="es">ES</a></span></span></div>
   </div>
 </footer>

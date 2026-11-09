@@ -55,7 +55,7 @@ S['en'] = dict(
         ('How do I get to Café1981?',
          'You’ll find us at Korte Leidsedwarsstraat 203, 1017 RB Amsterdam: a 2-minute walk from Leidseplein, 5 minutes from the Rijksmuseum and 8 minutes from Vondelpark. Trams 1, 2, 5, 7 and 19 stop at Leidseplein.'),
         ('Do I need to book a table?',
-         'No, just walk in. For groups, email us at <a href="mailto:Reservations@cafe1981.nl">Reservations@cafe1981.nl</a>.'),
+         'Not if you’re fewer than 6: just walk in, subject to availability. Groups of 6 to 10 book by email at least 12 hours ahead; see <a href="#groups">group reservations</a>.'),
         ('What should I order for breakfast?',
          'Our egg dishes: Eggs Royale with smoked salmon, Eggs Benedict, Eggs Florentine and the Green Omelette. Eggs Benedict, the Green Omelette and our French toast are what guests mention most in their Google reviews.'),
         ('Are there vegetarian options?',
@@ -116,7 +116,7 @@ S['nl'] = dict(
         ('Hoe kom ik bij Café1981?',
          'Je vindt ons aan de Korte Leidsedwarsstraat 203, 1017 RB Amsterdam: 2 minuten lopen van het Leidseplein, 5 minuten van het Rijksmuseum en 8 minuten van het Vondelpark. Tram 1, 2, 5, 7 en 19 stoppen op het Leidseplein.'),
         ('Moet ik reserveren?',
-         'Nee, loop gewoon binnen. Kom je met een groep, mail dan naar <a href="mailto:Reservations@cafe1981.nl">Reservations@cafe1981.nl</a>.'),
+         'Met minder dan 6 personen niet: loop gewoon binnen, zolang er plek is. Groepen van 6 tot 10 personen reserveren minstens 12 uur vooraf per mail; zie <a href="#groups">groepsreserveringen</a>.'),
         ('Wat kan ik het beste bestellen bij het ontbijt?',
          'Onze eiergerechten: Eggs Royale met gerookte zalm, Eggs Benedict, Eggs Florentine en de Green Omelette. Eggs Benedict, de Green Omelette en onze French toast worden het vaakst genoemd in de Google-reviews.'),
         ('Hebben jullie vegetarische gerechten?',
@@ -177,7 +177,7 @@ S['de'] = dict(
         ('Wie komme ich zum Café1981?',
          'Sie finden uns in der Korte Leidsedwarsstraat 203, 1017 RB Amsterdam: 2 Gehminuten vom Leidseplein, 5 Minuten vom Rijksmuseum und 8 Minuten vom Vondelpark. Die Trams 1, 2, 5, 7 und 19 halten am Leidseplein.'),
         ('Muss ich einen Tisch reservieren?',
-         'Nein, kommen Sie einfach vorbei. Für Gruppen schreiben Sie uns gern an <a href="mailto:Reservations@cafe1981.nl">Reservations@cafe1981.nl</a>.'),
+         'Unter 6 Personen nicht: Kommen Sie einfach vorbei, je nach Verfügbarkeit. Gruppen von 6 bis 10 Personen reservieren mindestens 12 Stunden vorher per E-Mail; siehe <a href="#groups">Gruppenreservierungen</a>.'),
         ('Was empfehlen Sie zum Frühstück?',
          'Unsere Eiergerichte: Eggs Royale mit Räucherlachs, Eggs Benedict, Eggs Florentine und das Green Omelette. Eggs Benedict, das Green Omelette und unser French Toast werden in den Google-Bewertungen am häufigsten erwähnt.'),
         ('Gibt es vegetarische Gerichte?',
@@ -238,7 +238,7 @@ S['fr'] = dict(
         ('Comment venir au Café1981 ?',
          'Nous sommes au Korte Leidsedwarsstraat 203, 1017 RB Amsterdam : à 2 minutes à pied de Leidseplein, 5 minutes du Rijksmuseum et 8 minutes du Vondelpark. Les trams 1, 2, 5, 7 et 19 s’arrêtent à Leidseplein.'),
         ('Faut-il réserver ?',
-         'Non, entrez simplement. Pour les groupes, écrivez-nous à <a href="mailto:Reservations@cafe1981.nl">Reservations@cafe1981.nl</a>.'),
+         'Pas en dessous de 6 personnes : entrez simplement, selon les places disponibles. Les groupes de 6 à 10 personnes réservent par e-mail au moins 12 heures à l’avance ; voir <a href="#groups">réservations de groupe</a>.'),
         ('Que commander au petit-déjeuner ?',
          'Nos plats aux œufs : Eggs Royale au saumon fumé (des œufs Bénédicte au saumon), Eggs Benedict, Eggs Florentine et la Green Omelette. Les Eggs Benedict, la Green Omelette et notre pain perdu sont les plus cités dans les avis Google.'),
         ('Y a-t-il des plats végétariens ?',
@@ -299,7 +299,7 @@ S['es'] = dict(
         ('¿Cómo llego a Café1981?',
          'Estamos en Korte Leidsedwarsstraat 203, 1017 RB Ámsterdam: a 2 minutos a pie de Leidseplein, a 5 del Rijksmuseum y a 8 del Vondelpark. Los tranvías 1, 2, 5, 7 y 19 paran en Leidseplein.'),
         ('¿Hace falta reservar?',
-         'No, entra sin más. Si venís en grupo, escríbenos a <a href="mailto:Reservations@cafe1981.nl">Reservations@cafe1981.nl</a>.'),
+         'Si sois menos de 6, no: entrad sin más, según disponibilidad. Los grupos de 6 a 10 personas reservan por email con al menos 12 horas de antelación; consulta las <a href="#groups">reservas de grupo</a>.'),
         ('¿Qué pido para desayunar?',
          'Nuestros platos de huevos: Eggs Royale con salmón ahumado, Eggs Benedict, Eggs Florentine y la Green Omelette. Los Eggs Benedict, la Green Omelette y nuestras torrijas (French toast) son lo más mencionado en las opiniones de Google.'),
         ('¿Tenéis opciones vegetarianas?',
@@ -310,3 +310,57 @@ S['es'] = dict(
          'Sí. Nuestra terraza con sombrillas blancas está justo delante del café, en una calle tranquila a la vuelta de Leidseplein.'),
     ],
 )
+
+
+# Group reservations (from the café, November 2026)
+_M = '<a href="mailto:Reservations@cafe1981.nl">Reservations@cafe1981.nl</a>'
+GROUPS = {
+    'en': dict(
+        nav='Group bookings', label='Groups', h='Coming with <em>6 to 10</em>?',
+        p='We look forward to welcoming you and your guests. For groups of 6 to 10 we gladly reserve a table: just send us an email.',
+        cta='Request a group booking', subject='Group reservation', body='Date:\nTime:\nNumber of guests:\nName:\n',
+        facts=[('6–10', 'guests per reservation'), ('12 h', 'book by email at least 12 hours ahead'),
+               ('€25', 'minimum spend per person'), ('90 min', 'your table is reserved for 90 minutes')],
+        notes=['Depending on the day, a fixed menu may apply; we’ll discuss it with you in advance.', 'All reservations are subject to availability.'],
+        walk='Fewer than 6 guests? Simply walk in, subject to availability.',
+        faq=('Can I book a table for a group?', f'Yes, for 6 to 10 guests. Email {_M} at least 12 hours ahead. There is a minimum spend of €25 per person, the table is yours for 90 minutes, and on some days a fixed menu applies, which we discuss with you in advance. All reservations are subject to availability.')),
+    'nl': dict(
+        nav='Groepen reserveren', label='Groepen', h='Kom je met <em>6 tot 10</em>?',
+        p='We verwelkomen jou en je gezelschap graag. Voor groepen van 6 tot 10 personen reserveren we met plezier een tafel: stuur ons gewoon een mail.',
+        cta='Groepsreservering aanvragen', subject='Groepsreservering', body='Datum:\nTijd:\nAantal personen:\nNaam:\n',
+        facts=[('6–10', 'personen per reservering'), ('12 uur', 'minstens 12 uur vooraf reserveren per mail'),
+               ('€ 25', 'minimale besteding per persoon'), ('90 min', 'jullie tafel is 90 minuten gereserveerd')],
+        notes=['Afhankelijk van de dag kan er een vast menu gelden; dat bespreken we vooraf met je.', 'Alle reserveringen zijn onder voorbehoud van beschikbaarheid.'],
+        walk='Met minder dan 6 personen? Loop gewoon binnen, zolang er plek is.',
+        faq=('Kan ik reserveren voor een groep?', f'Ja, voor 6 tot 10 personen. Mail minstens 12 uur vooraf naar {_M}. De minimale besteding is € 25 per persoon, de tafel is 90 minuten voor jullie, en op sommige dagen geldt een vast menu, dat we vooraf met je bespreken. Alle reserveringen zijn onder voorbehoud van beschikbaarheid.')),
+    'de': dict(
+        nav='Gruppen reservieren', label='Gruppen', h='Sie kommen zu <em>6 bis 10</em>?',
+        p='Wir freuen uns auf Sie und Ihre Gäste. Für Gruppen von 6 bis 10 Personen reservieren wir gern einen Tisch. Schreiben Sie uns einfach eine E-Mail.',
+        cta='Gruppenreservierung anfragen', subject='Gruppenreservierung', body='Datum:\nUhrzeit:\nAnzahl Personen:\nName:\n',
+        facts=[('6–10', 'Personen pro Reservierung'), ('12 Std.', 'mindestens 12 Stunden vorher per E-Mail reservieren'),
+               ('25 €', 'Mindestverzehr pro Person'), ('90 Min.', 'Ihr Tisch ist 90 Minuten für Sie reserviert')],
+        notes=['Je nach Tag kann ein festes Menü gelten; das besprechen wir vorab mit Ihnen.', 'Alle Reservierungen vorbehaltlich Verfügbarkeit.'],
+        walk='Weniger als 6 Personen? Kommen Sie einfach vorbei, je nach Verfügbarkeit.',
+        faq=('Kann ich für eine Gruppe reservieren?', f'Ja, für 6 bis 10 Personen. Schreiben Sie mindestens 12 Stunden vorher an {_M}. Der Mindestverzehr beträgt 25 € pro Person, der Tisch ist 90 Minuten für Sie reserviert, und an manchen Tagen gilt ein festes Menü, das wir vorab mit Ihnen besprechen. Alle Reservierungen vorbehaltlich Verfügbarkeit.')),
+    'fr': dict(
+        nav='Réserver pour un groupe', label='Groupes', h='Vous êtes <em>6 à 10</em> ?',
+        p='Nous serons ravis de vous accueillir, vous et vos invités. Pour les groupes de 6 à 10 personnes, nous réservons volontiers une table : il suffit de nous écrire.',
+        cta='Demander une réservation de groupe', subject='Réservation de groupe', body='Date :\nHeure :\nNombre de personnes :\nNom :\n',
+        facts=[('6–10', 'personnes par réservation'), ('12 h', 'réservation par e-mail au moins 12 heures à l’avance'),
+               ('25 €', 'dépense minimum par personne'), ('90 min', 'votre table vous est réservée pendant 90 minutes')],
+        notes=['Selon le jour, un menu unique peut s’appliquer ; nous en parlons avec vous à l’avance.', 'Toutes les réservations sont sous réserve de disponibilité.'],
+        walk='Moins de 6 personnes ? Entrez simplement, selon les places disponibles.',
+        faq=('Peut-on réserver pour un groupe ?', f'Oui, de 6 à 10 personnes. Écrivez à {_M} au moins 12 heures à l’avance. Une dépense minimum de 25 € par personne s’applique, la table vous est réservée 90 minutes et, certains jours, un menu unique est proposé, dont nous parlons avec vous à l’avance. Toutes les réservations sont sous réserve de disponibilité.')),
+    'es': dict(
+        nav='Reservas de grupo', label='Grupos', h='¿Venís <em>de 6 a 10</em>?',
+        p='Será un placer recibirte a ti y a tus invitados. Para grupos de 6 a 10 personas reservamos mesa con mucho gusto: solo tienes que escribirnos.',
+        cta='Solicitar reserva de grupo', subject='Reserva de grupo', body='Fecha:\nHora:\nNúmero de personas:\nNombre:\n',
+        facts=[('6–10', 'personas por reserva'), ('12 h', 'reserva por email con al menos 12 horas de antelación'),
+               ('25 €', 'consumo mínimo por persona'), ('90 min', 'la mesa es vuestra durante 90 minutos')],
+        notes=['Según el día, puede aplicarse un menú cerrado; lo hablamos contigo con antelación.', 'Todas las reservas están sujetas a disponibilidad.'],
+        walk='¿Sois menos de 6? Entrad sin más, según disponibilidad.',
+        faq=('¿Puedo reservar para un grupo?', f'Sí, para 6 a 10 personas. Escribe a {_M} con al menos 12 horas de antelación. Hay un consumo mínimo de 25 € por persona, la mesa es vuestra durante 90 minutos y algunos días se aplica un menú cerrado, que hablamos contigo antes. Todas las reservas están sujetas a disponibilidad.')),
+}
+for _l, _g in GROUPS.items():
+    _faq = S[_l]['faq']
+    _faq.insert(3, _g['faq'])  # right after "Do I need to book?"

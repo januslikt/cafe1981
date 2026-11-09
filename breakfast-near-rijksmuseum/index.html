@@ -410,6 +410,30 @@ footer { border-top: 1px solid var(--line); padding-block: 40px calc(32px + env(
   .more-card { min-height: 0; }
 }
 
+/* GROUPS */
+.groups { padding-block: 130px; background: var(--bg-2); border-block: 1px solid var(--line); }
+.groups .wrap { display: grid; grid-template-columns: 5fr 7fr; gap: 72px; align-items: start; }
+.groups h2 { font-variant-numeric: lining-nums; font-size: clamp(46px, 5.6vw, 88px); margin: 18px 0 26px; }
+.groups h2 em { color: var(--brass-hi); }
+.g-intro > p { max-width: 42ch; font-size: 17px; color: rgba(239,232,219,.86); margin: 0 0 30px; }
+.g-intro .g-mail { margin: 16px 0 0; font-family: var(--f-mono); font-size: 12px; letter-spacing: .06em; color: var(--mute); user-select: all; }
+.g-facts { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.g-facts li { display: flex; flex-direction: column; gap: 10px; padding: 26px 24px 24px; border-radius: 6px; border: 1px solid var(--line); background: var(--bg); }
+.g-facts b { font-family: var(--f-display); font-weight: 300; font-size: clamp(46px, 4.4vw, 64px); line-height: .9; letter-spacing: -.02em; color: var(--brass-hi); font-variant-numeric: lining-nums; }
+.g-facts span { font-size: 15px; color: rgba(239,232,219,.8); }
+.g-notes { list-style: none; margin: 26px 0 0; padding: 0; border-top: 1px solid var(--line); }
+.g-notes li { position: relative; padding: 14px 0 14px 22px; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--mute); }
+.g-notes li::before { content: "✦"; position: absolute; left: 0; top: 15px; font-size: 9px; color: var(--brass); }
+.g-walk { margin: 22px 0 0; font-family: var(--f-display); font-style: italic; font-size: 24px; line-height: 1.25; color: var(--paper); }
+@media (max-width: 960px) {
+  .groups { padding-block: 96px; }
+  .groups .wrap { grid-template-columns: 1fr; gap: 40px; }
+}
+@media (max-width: 560px) {
+  .g-facts { gap: 10px; }
+  .g-facts li { padding: 20px 16px 18px; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; }
 }
@@ -484,6 +508,18 @@ footer { border-top: 1px solid var(--line); padding-block: 40px calc(32px + env(
    "priceRange": "€€",
    "currenciesAccepted": "EUR",
    "acceptsReservations": true,
+   "potentialAction": {
+    "@type": "ReserveAction",
+    "name": "Group reservation for 6 to 10 guests, by email at least 12 hours ahead",
+    "target": {
+     "@type": "EntryPoint",
+     "urlTemplate": "mailto:Reservations@cafe1981.nl"
+    },
+    "result": {
+     "@type": "FoodEstablishmentReservation",
+     "name": "Group reservation (6–10 guests, €25 minimum spend per person, 90 minutes)"
+    }
+   },
    "amenityFeature": [
     {
      "@type": "LocationFeatureSpecification",
@@ -822,7 +858,7 @@ footer { border-top: 1px solid var(--line); padding-block: 40px calc(32px + env(
      "name": "Do I need to book for breakfast?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "No, just walk in. For groups, email Reservations@cafe1981.nl."
+      "text": "No, just walk in. Groups of 6 to 10 can book by email at least 12 hours ahead: Reservations@cafe1981.nl."
      }
     },
     {
@@ -903,7 +939,7 @@ footer { border-top: 1px solid var(--line); padding-block: 40px calc(32px + env(
       <div class="faq-list">
         <details open><summary><h3>What time is breakfast served?</h3><i aria-hidden="true"></i></summary><p>From 08:00, every day. Breakfast dishes are on the day menu, which runs until the evening menu starts at 16:30.</p></details>
         <details><summary><h3>Is there a vegetarian breakfast?</h3><i aria-hidden="true"></i></summary><p>Yes: Eggs Florentine, the American pancakes, French toast, smashed avocado on flatbread and hummus &amp; falafel are all vegetarian.</p></details>
-        <details><summary><h3>Do I need to book for breakfast?</h3><i aria-hidden="true"></i></summary><p>No, just walk in. For groups, email <a href="mailto:Reservations@cafe1981.nl">Reservations@cafe1981.nl</a>.</p></details>
+        <details><summary><h3>Do I need to book for breakfast?</h3><i aria-hidden="true"></i></summary><p>No, just walk in. Groups of 6 to 10 can book by email at least 12 hours ahead: <a href="mailto:Reservations@cafe1981.nl">Reservations@cafe1981.nl</a>.</p></details>
         <details><summary><h3>How far is it from the Rijksmuseum?</h3><i aria-hidden="true"></i></summary><p>About five minutes on foot. We are at Korte Leidsedwarsstraat 203, two minutes from Leidseplein.</p></details>
       </div>
     </div>
@@ -920,7 +956,7 @@ footer { border-top: 1px solid var(--line); padding-block: 40px calc(32px + env(
 <footer>
   <div class="wrap">
     <div class="wordmark"><img class="wm-logo" src="../img/logo.png" alt="Café1981" width="511" height="137" loading="lazy"></div>
-    <nav class="explore" aria-label="Explore"><span class="label">Explore</span><a href="../breakfast-near-rijksmuseum/">Breakfast near the Rijksmuseum</a><a href="../lunch-near-rijksmuseum/">Lunch near the Rijksmuseum</a><a href="../terrace-leidseplein/">Terrace by Leidseplein</a><a href="../dinner-cocktails-leidseplein/">Dinner &amp; cocktails</a></nav>
+    <nav class="explore" aria-label="Explore"><span class="label">Explore</span><a href="../breakfast-near-rijksmuseum/">Breakfast near the Rijksmuseum</a><a href="../lunch-near-rijksmuseum/">Lunch near the Rijksmuseum</a><a href="../terrace-leidseplein/">Terrace by Leidseplein</a><a href="../dinner-cocktails-leidseplein/">Dinner &amp; cocktails</a><a href="../#groups">Group bookings</a></nav>
     <div class="foot-row"><span>Café1981 · Korte Leidsedwarsstraat 203 · 1017 RB Amsterdam</span><span>Open daily 08:00 – 21:00</span><span><span class="foot-langs"><a href="../breakfast-near-rijksmuseum/" hreflang="en" lang="en" aria-current="true">EN</a><a href="../nl/ontbijt-leidseplein/" hreflang="nl" lang="nl">NL</a><a href="../de/fruehstueck-amsterdam/" hreflang="de" lang="de">DE</a><a href="../fr/petit-dejeuner-amsterdam/" hreflang="fr" lang="fr">FR</a><a href="../es/desayunar-amsterdam/" hreflang="es" lang="es">ES</a></span></span></div>
   </div>
 </footer>

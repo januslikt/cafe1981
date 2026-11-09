@@ -410,6 +410,30 @@ footer { border-top: 1px solid var(--line); padding-block: 40px calc(32px + env(
   .more-card { min-height: 0; }
 }
 
+/* GROUPS */
+.groups { padding-block: 130px; background: var(--bg-2); border-block: 1px solid var(--line); }
+.groups .wrap { display: grid; grid-template-columns: 5fr 7fr; gap: 72px; align-items: start; }
+.groups h2 { font-variant-numeric: lining-nums; font-size: clamp(46px, 5.6vw, 88px); margin: 18px 0 26px; }
+.groups h2 em { color: var(--brass-hi); }
+.g-intro > p { max-width: 42ch; font-size: 17px; color: rgba(239,232,219,.86); margin: 0 0 30px; }
+.g-intro .g-mail { margin: 16px 0 0; font-family: var(--f-mono); font-size: 12px; letter-spacing: .06em; color: var(--mute); user-select: all; }
+.g-facts { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.g-facts li { display: flex; flex-direction: column; gap: 10px; padding: 26px 24px 24px; border-radius: 6px; border: 1px solid var(--line); background: var(--bg); }
+.g-facts b { font-family: var(--f-display); font-weight: 300; font-size: clamp(46px, 4.4vw, 64px); line-height: .9; letter-spacing: -.02em; color: var(--brass-hi); font-variant-numeric: lining-nums; }
+.g-facts span { font-size: 15px; color: rgba(239,232,219,.8); }
+.g-notes { list-style: none; margin: 26px 0 0; padding: 0; border-top: 1px solid var(--line); }
+.g-notes li { position: relative; padding: 14px 0 14px 22px; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--mute); }
+.g-notes li::before { content: "✦"; position: absolute; left: 0; top: 15px; font-size: 9px; color: var(--brass); }
+.g-walk { margin: 22px 0 0; font-family: var(--f-display); font-style: italic; font-size: 24px; line-height: 1.25; color: var(--paper); }
+@media (max-width: 960px) {
+  .groups { padding-block: 96px; }
+  .groups .wrap { grid-template-columns: 1fr; gap: 40px; }
+}
+@media (max-width: 560px) {
+  .g-facts { gap: 10px; }
+  .g-facts li { padding: 20px 16px 18px; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; }
 }
@@ -484,6 +508,18 @@ footer { border-top: 1px solid var(--line); padding-block: 40px calc(32px + env(
    "priceRange": "€€",
    "currenciesAccepted": "EUR",
    "acceptsReservations": true,
+   "potentialAction": {
+    "@type": "ReserveAction",
+    "name": "Group reservation for 6 to 10 guests, by email at least 12 hours ahead",
+    "target": {
+     "@type": "EntryPoint",
+     "urlTemplate": "mailto:Reservations@cafe1981.nl"
+    },
+    "result": {
+     "@type": "FoodEstablishmentReservation",
+     "name": "Group reservation (6–10 guests, €25 minimum spend per person, 90 minutes)"
+    }
+   },
    "amenityFeature": [
     {
      "@type": "LocationFeatureSpecification",
@@ -830,7 +866,7 @@ footer { border-top: 1px solid var(--line); padding-block: 40px calc(32px + env(
      "name": "Muss ich fürs Abendessen reservieren?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Nein, kommen Sie einfach vorbei. Für Gruppen schreiben Sie uns an Reservations@cafe1981.nl."
+      "text": "Nein, kommen Sie einfach vorbei. Gruppen von 6 bis 10 Personen reservieren mindestens 12 Stunden vorher per E-Mail: Reservations@cafe1981.nl."
      }
     }
    ]
@@ -904,7 +940,7 @@ footer { border-top: 1px solid var(--line); padding-block: 40px calc(32px + env(
         <details open><summary><h3>Ab wann gibt es die Abendkarte?</h3><i aria-hidden="true"></i></summary><p>Täglich ab 16:30 Uhr. Cocktails gibt es an der Bar ab 16 Uhr, wir schließen um 21 Uhr.</p></details>
         <details><summary><h3>Gibt es indisches Essen?</h3><i aria-hidden="true"></i></summary><p>Ja. Auf der Abendkarte stehen die Curry Bowls von Mayur: Butter Chicken, Lammcurry, Chicken Tikka Masala, Saag Paneer, Aloo Matar und Dal, mit frischem Naan oder Knoblauch-Naan.</p></details>
         <details><summary><h3>Kann ich abends niederländisch essen?</h3><i aria-hidden="true"></i></summary><p>Ja: Hutspot mit Rookworst, Hähnchen-Saté mit Erdnusssauce und Gemüse-Bitterballen zum Getränk.</p></details>
-        <details><summary><h3>Muss ich fürs Abendessen reservieren?</h3><i aria-hidden="true"></i></summary><p>Nein, kommen Sie einfach vorbei. Für Gruppen schreiben Sie uns an <a href="mailto:Reservations@cafe1981.nl">Reservations@cafe1981.nl</a>.</p></details>
+        <details><summary><h3>Muss ich fürs Abendessen reservieren?</h3><i aria-hidden="true"></i></summary><p>Nein, kommen Sie einfach vorbei. Gruppen von 6 bis 10 Personen reservieren mindestens 12 Stunden vorher per E-Mail: <a href="mailto:Reservations@cafe1981.nl">Reservations@cafe1981.nl</a>.</p></details>
       </div>
     </div>
   </section>
@@ -920,7 +956,7 @@ footer { border-top: 1px solid var(--line); padding-block: 40px calc(32px + env(
 <footer>
   <div class="wrap">
     <div class="wordmark"><img class="wm-logo" src="../../img/logo.png" alt="Café1981" width="511" height="137" loading="lazy"></div>
-    <nav class="explore" aria-label="Entdecken"><span class="label">Entdecken</span><a href="../../de/fruehstueck-amsterdam/">Frühstück in Amsterdam</a><a href="../../de/restaurant-naehe-rijksmuseum/">Restaurant nahe Rijksmuseum</a><a href="../../de/terrasse-leidseplein/">Terrasse am Leidseplein</a><a href="../../de/abendessen-cocktails-leidseplein/">Abendessen &amp; Cocktails</a></nav>
+    <nav class="explore" aria-label="Entdecken"><span class="label">Entdecken</span><a href="../../de/fruehstueck-amsterdam/">Frühstück in Amsterdam</a><a href="../../de/restaurant-naehe-rijksmuseum/">Restaurant nahe Rijksmuseum</a><a href="../../de/terrasse-leidseplein/">Terrasse am Leidseplein</a><a href="../../de/abendessen-cocktails-leidseplein/">Abendessen &amp; Cocktails</a><a href="../../de/#groups">Gruppen reservieren</a></nav>
     <div class="foot-row"><span>Café1981 · Korte Leidsedwarsstraat 203 · 1017 RB Amsterdam</span><span>Täglich geöffnet, 8 – 21 Uhr</span><span><span class="foot-langs"><a href="../../dinner-cocktails-leidseplein/" hreflang="en" lang="en">EN</a><a href="../../nl/diner-cocktails-leidseplein/" hreflang="nl" lang="nl">NL</a><a href="../../de/abendessen-cocktails-leidseplein/" hreflang="de" lang="de" aria-current="true">DE</a><a href="../../fr/diner-cocktails-leidseplein/" hreflang="fr" lang="fr">FR</a><a href="../../es/cenar-leidseplein/" hreflang="es" lang="es">ES</a></span></span></div>
   </div>
 </footer>

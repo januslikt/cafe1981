@@ -423,6 +423,30 @@ footer { border-top: 1px solid var(--line); padding-block: 40px calc(32px + env(
   .more-card { min-height: 0; }
 }
 
+/* GROUPS */
+.groups { padding-block: 130px; background: var(--bg-2); border-block: 1px solid var(--line); }
+.groups .wrap { display: grid; grid-template-columns: 5fr 7fr; gap: 72px; align-items: start; }
+.groups h2 { font-variant-numeric: lining-nums; font-size: clamp(46px, 5.6vw, 88px); margin: 18px 0 26px; }
+.groups h2 em { color: var(--brass-hi); }
+.g-intro > p { max-width: 42ch; font-size: 17px; color: rgba(239,232,219,.86); margin: 0 0 30px; }
+.g-intro .g-mail { margin: 16px 0 0; font-family: var(--f-mono); font-size: 12px; letter-spacing: .06em; color: var(--mute); user-select: all; }
+.g-facts { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.g-facts li { display: flex; flex-direction: column; gap: 10px; padding: 26px 24px 24px; border-radius: 6px; border: 1px solid var(--line); background: var(--bg); }
+.g-facts b { font-family: var(--f-display); font-weight: 300; font-size: clamp(46px, 4.4vw, 64px); line-height: .9; letter-spacing: -.02em; color: var(--brass-hi); font-variant-numeric: lining-nums; }
+.g-facts span { font-size: 15px; color: rgba(239,232,219,.8); }
+.g-notes { list-style: none; margin: 26px 0 0; padding: 0; border-top: 1px solid var(--line); }
+.g-notes li { position: relative; padding: 14px 0 14px 22px; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--mute); }
+.g-notes li::before { content: "✦"; position: absolute; left: 0; top: 15px; font-size: 9px; color: var(--brass); }
+.g-walk { margin: 22px 0 0; font-family: var(--f-display); font-style: italic; font-size: 24px; line-height: 1.25; color: var(--paper); }
+@media (max-width: 960px) {
+  .groups { padding-block: 96px; }
+  .groups .wrap { grid-template-columns: 1fr; gap: 40px; }
+}
+@media (max-width: 560px) {
+  .g-facts { gap: 10px; }
+  .g-facts li { padding: 20px 16px 18px; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; }
 }
@@ -497,6 +521,18 @@ footer { border-top: 1px solid var(--line); padding-block: 40px calc(32px + env(
    "priceRange": "€€",
    "currenciesAccepted": "EUR",
    "acceptsReservations": true,
+   "potentialAction": {
+    "@type": "ReserveAction",
+    "name": "Group reservation for 6 to 10 guests, by email at least 12 hours ahead",
+    "target": {
+     "@type": "EntryPoint",
+     "urlTemplate": "mailto:Reservations@cafe1981.nl"
+    },
+    "result": {
+     "@type": "FoodEstablishmentReservation",
+     "name": "Group reservation (6–10 guests, €25 minimum spend per person, 90 minutes)"
+    }
+   },
    "amenityFeature": [
     {
      "@type": "LocationFeatureSpecification",
@@ -830,7 +866,15 @@ footer { border-top: 1px solid var(--line); padding-block: 40px calc(32px + env(
      "name": "Do I need to book a table?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "No, just walk in. For groups, email us at Reservations@cafe1981.nl."
+      "text": "Not if you’re fewer than 6: just walk in, subject to availability. Groups of 6 to 10 book by email at least 12 hours ahead; see group reservations."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Can I book a table for a group?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Yes, for 6 to 10 guests. Email Reservations@cafe1981.nl at least 12 hours ahead. There is a minimum spend of €25 per person, the table is yours for 90 minutes, and on some days a fixed menu applies, which we discuss with you in advance. All reservations are subject to availability."
      }
     },
     {
@@ -1047,7 +1091,7 @@ footer { border-top: 1px solid var(--line); padding-block: 40px calc(32px + env(
         <address class="addr" style="font-style:normal">Korte Leidsedwarsstraat 203<br>1017 RB Amsterdam<small>Between Leidseplein and the Rijksmuseum. Tram 1, 2, 5, 7 or 19 to Leidseplein.</small></address>
         <div class="actions">
           <a class="btn btn-brass" href="https://www.google.com/maps/dir/?api=1&amp;destination=Caf%C3%A91981+Korte+Leidsedwarsstraat+203+Amsterdam" target="_blank" rel="noopener">Open in Google Maps <span class="arrow" aria-hidden="true">↗</span></a>
-          <a class="btn btn-line" href="mailto:Reservations@cafe1981.nl">Reservations@cafe1981.nl</a>
+          <a class="btn btn-line" href="#groups">Group bookings <span class="arrow" aria-hidden="true">↓</span></a>
         </div>
       </div>
       <div class="rv">
@@ -1087,6 +1131,23 @@ footer { border-top: 1px solid var(--line); padding-block: 40px calc(32px + env(
     </div>
   </section>
 
+  <section class="groups" id="groups" aria-labelledby="groups-h">
+    <div class="wrap">
+      <div class="g-intro rv">
+        <div class="label">Groups</div>
+        <h2 id="groups-h">Coming with <em>6 to 10</em>?</h2>
+        <p>We look forward to welcoming you and your guests. For groups of 6 to 10 we gladly reserve a table: just send us an email.</p>
+        <a class="btn btn-brass" href="mailto:Reservations@cafe1981.nl?subject=Group%20reservation%20%C2%B7%20Caf%C3%A91981&amp;body=Date%3A%0ATime%3A%0ANumber%20of%20guests%3A%0AName%3A%0A">Request a group booking <span class="arrow" aria-hidden="true">↗</span></a>
+        <p class="g-mail">Reservations@cafe1981.nl</p>
+      </div>
+      <div class="g-side rv">
+        <ul class="g-facts"><li><b>6–10</b><span>guests per reservation</span></li><li><b>12 h</b><span>book by email at least 12 hours ahead</span></li><li><b>€25</b><span>minimum spend per person</span></li><li><b>90 min</b><span>your table is reserved for 90 minutes</span></li></ul>
+        <ul class="g-notes"><li>Depending on the day, a fixed menu may apply; we’ll discuss it with you in advance.</li><li>All reservations are subject to availability.</li></ul>
+        <p class="g-walk">Fewer than 6 guests? Simply walk in, subject to availability.</p>
+      </div>
+    </div>
+  </section>
+
   <section class="faq" id="faq" aria-labelledby="faq-h">
     <div class="wrap">
       <div class="rv">
@@ -1096,7 +1157,8 @@ footer { border-top: 1px solid var(--line); padding-block: 40px calc(32px + env(
       <div class="faq-list rv">
         <details open><summary><h3>What are the opening hours of Café1981?</h3><i aria-hidden="true"></i></summary><p>We’re open every day from 08:00 to 21:00. Breakfast and lunch are served from 08:00; the evening menu with dinner and cocktails starts at 16:30.</p></details>
         <details><summary><h3>How do I get to Café1981?</h3><i aria-hidden="true"></i></summary><p>You’ll find us at Korte Leidsedwarsstraat 203, 1017 RB Amsterdam: a 2-minute walk from Leidseplein, 5 minutes from the Rijksmuseum and 8 minutes from Vondelpark. Trams 1, 2, 5, 7 and 19 stop at Leidseplein.</p></details>
-        <details><summary><h3>Do I need to book a table?</h3><i aria-hidden="true"></i></summary><p>No, just walk in. For groups, email us at <a href="mailto:Reservations@cafe1981.nl">Reservations@cafe1981.nl</a>.</p></details>
+        <details><summary><h3>Do I need to book a table?</h3><i aria-hidden="true"></i></summary><p>Not if you’re fewer than 6: just walk in, subject to availability. Groups of 6 to 10 book by email at least 12 hours ahead; see <a href="#groups">group reservations</a>.</p></details>
+        <details><summary><h3>Can I book a table for a group?</h3><i aria-hidden="true"></i></summary><p>Yes, for 6 to 10 guests. Email <a href="mailto:Reservations@cafe1981.nl">Reservations@cafe1981.nl</a> at least 12 hours ahead. There is a minimum spend of €25 per person, the table is yours for 90 minutes, and on some days a fixed menu applies, which we discuss with you in advance. All reservations are subject to availability.</p></details>
         <details><summary><h3>What should I order for breakfast?</h3><i aria-hidden="true"></i></summary><p>Our egg dishes: Eggs Royale with smoked salmon, Eggs Benedict, Eggs Florentine and the Green Omelette. Eggs Benedict, the Green Omelette and our French toast are what guests mention most in their Google reviews.</p></details>
         <details><summary><h3>Are there vegetarian options?</h3><i aria-hidden="true"></i></summary><p>Yes, every day. Think hummus &amp; falafel flatbread, the veggie burger and vegetable bitterballen, and in the evening vegetarian curries such as saag paneer, aloo matar and dal.</p></details>
         <details><summary><h3>Can I try Dutch food here?</h3><i aria-hidden="true"></i></summary><p>Yes. Order bitterballen with your drink, and in the evening hutspot (Dutch mash) with smoked rookworst sausage. Our curry bowls by Mayur, served with fresh naan, are a favourite too.</p></details>
@@ -1109,7 +1171,7 @@ footer { border-top: 1px solid var(--line); padding-block: 40px calc(32px + env(
 <footer>
   <div class="wrap">
     <div class="wordmark"><img class="wm-logo" src="img/logo.png" alt="Café1981" width="511" height="137" loading="lazy"></div>
-    <nav class="explore" aria-label="Explore"><span class="label">Explore</span><a href="breakfast-near-rijksmuseum/">Breakfast near the Rijksmuseum</a><a href="lunch-near-rijksmuseum/">Lunch near the Rijksmuseum</a><a href="terrace-leidseplein/">Terrace by Leidseplein</a><a href="dinner-cocktails-leidseplein/">Dinner &amp; cocktails</a></nav>
+    <nav class="explore" aria-label="Explore"><span class="label">Explore</span><a href="breakfast-near-rijksmuseum/">Breakfast near the Rijksmuseum</a><a href="lunch-near-rijksmuseum/">Lunch near the Rijksmuseum</a><a href="terrace-leidseplein/">Terrace by Leidseplein</a><a href="dinner-cocktails-leidseplein/">Dinner &amp; cocktails</a><a href="./#groups">Group bookings</a></nav>
     <div class="foot-row"><span>Café1981 · Korte Leidsedwarsstraat 203 · 1017 RB Amsterdam</span><span>Open daily 08:00 – 21:00</span><span><span class="foot-langs"><a href="./" hreflang="en" lang="en" aria-current="true">EN</a><a href="nl/" hreflang="nl" lang="nl">NL</a><a href="de/" hreflang="de" lang="de">DE</a><a href="fr/" hreflang="fr" lang="fr">FR</a><a href="es/" hreflang="es" lang="es">ES</a></span></span></div>
   </div>
 </footer>

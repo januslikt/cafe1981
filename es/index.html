@@ -412,6 +412,30 @@ footer { border-top: 1px solid var(--line); padding-block: 40px calc(32px + env(
   .more-card { min-height: 0; }
 }
 
+/* GROUPS */
+.groups { padding-block: 130px; background: var(--bg-2); border-block: 1px solid var(--line); }
+.groups .wrap { display: grid; grid-template-columns: 5fr 7fr; gap: 72px; align-items: start; }
+.groups h2 { font-variant-numeric: lining-nums; font-size: clamp(46px, 5.6vw, 88px); margin: 18px 0 26px; }
+.groups h2 em { color: var(--brass-hi); }
+.g-intro > p { max-width: 42ch; font-size: 17px; color: rgba(239,232,219,.86); margin: 0 0 30px; }
+.g-intro .g-mail { margin: 16px 0 0; font-family: var(--f-mono); font-size: 12px; letter-spacing: .06em; color: var(--mute); user-select: all; }
+.g-facts { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.g-facts li { display: flex; flex-direction: column; gap: 10px; padding: 26px 24px 24px; border-radius: 6px; border: 1px solid var(--line); background: var(--bg); }
+.g-facts b { font-family: var(--f-display); font-weight: 300; font-size: clamp(46px, 4.4vw, 64px); line-height: .9; letter-spacing: -.02em; color: var(--brass-hi); font-variant-numeric: lining-nums; }
+.g-facts span { font-size: 15px; color: rgba(239,232,219,.8); }
+.g-notes { list-style: none; margin: 26px 0 0; padding: 0; border-top: 1px solid var(--line); }
+.g-notes li { position: relative; padding: 14px 0 14px 22px; border-bottom: 1px solid var(--line); font-size: 15px; color: var(--mute); }
+.g-notes li::before { content: "✦"; position: absolute; left: 0; top: 15px; font-size: 9px; color: var(--brass); }
+.g-walk { margin: 22px 0 0; font-family: var(--f-display); font-style: italic; font-size: 24px; line-height: 1.25; color: var(--paper); }
+@media (max-width: 960px) {
+  .groups { padding-block: 96px; }
+  .groups .wrap { grid-template-columns: 1fr; gap: 40px; }
+}
+@media (max-width: 560px) {
+  .g-facts { gap: 10px; }
+  .g-facts li { padding: 20px 16px 18px; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; }
 }
@@ -486,6 +510,18 @@ footer { border-top: 1px solid var(--line); padding-block: 40px calc(32px + env(
    "priceRange": "€€",
    "currenciesAccepted": "EUR",
    "acceptsReservations": true,
+   "potentialAction": {
+    "@type": "ReserveAction",
+    "name": "Group reservation for 6 to 10 guests, by email at least 12 hours ahead",
+    "target": {
+     "@type": "EntryPoint",
+     "urlTemplate": "mailto:Reservations@cafe1981.nl"
+    },
+    "result": {
+     "@type": "FoodEstablishmentReservation",
+     "name": "Group reservation (6–10 guests, €25 minimum spend per person, 90 minutes)"
+    }
+   },
    "amenityFeature": [
     {
      "@type": "LocationFeatureSpecification",
@@ -819,7 +855,15 @@ footer { border-top: 1px solid var(--line); padding-block: 40px calc(32px + env(
      "name": "¿Hace falta reservar?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "No, entra sin más. Si venís en grupo, escríbenos a Reservations@cafe1981.nl."
+      "text": "Si sois menos de 6, no: entrad sin más, según disponibilidad. Los grupos de 6 a 10 personas reservan por email con al menos 12 horas de antelación; consulta las reservas de grupo."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Puedo reservar para un grupo?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sí, para 6 a 10 personas. Escribe a Reservations@cafe1981.nl con al menos 12 horas de antelación. Hay un consumo mínimo de 25 € por persona, la mesa es vuestra durante 90 minutos y algunos días se aplica un menú cerrado, que hablamos contigo antes. Todas las reservas están sujetas a disponibilidad."
      }
     },
     {
@@ -1036,7 +1080,7 @@ footer { border-top: 1px solid var(--line); padding-block: 40px calc(32px + env(
         <address class="addr" style="font-style:normal">Korte Leidsedwarsstraat 203<br>1017 RB Amsterdam<small>Entre Leidseplein y el Rijksmuseum. Tranvía 1, 2, 5, 7 o 19 hasta Leidseplein.</small></address>
         <div class="actions">
           <a class="btn btn-brass" href="https://www.google.com/maps/dir/?api=1&amp;destination=Caf%C3%A91981+Korte+Leidsedwarsstraat+203+Amsterdam" target="_blank" rel="noopener">Abrir en Google Maps <span class="arrow" aria-hidden="true">↗</span></a>
-          <a class="btn btn-line" href="mailto:Reservations@cafe1981.nl">Reservations@cafe1981.nl</a>
+          <a class="btn btn-line" href="#groups">Reservas de grupo <span class="arrow" aria-hidden="true">↓</span></a>
         </div>
       </div>
       <div class="rv">
@@ -1076,6 +1120,23 @@ footer { border-top: 1px solid var(--line); padding-block: 40px calc(32px + env(
     </div>
   </section>
 
+  <section class="groups" id="groups" aria-labelledby="groups-h">
+    <div class="wrap">
+      <div class="g-intro rv">
+        <div class="label">Grupos</div>
+        <h2 id="groups-h">¿Venís <em>de 6 a 10</em>?</h2>
+        <p>Será un placer recibirte a ti y a tus invitados. Para grupos de 6 a 10 personas reservamos mesa con mucho gusto: solo tienes que escribirnos.</p>
+        <a class="btn btn-brass" href="mailto:Reservations@cafe1981.nl?subject=Reserva%20de%20grupo%20%C2%B7%20Caf%C3%A91981&amp;body=Fecha%3A%0AHora%3A%0AN%C3%BAmero%20de%20personas%3A%0ANombre%3A%0A">Solicitar reserva de grupo <span class="arrow" aria-hidden="true">↗</span></a>
+        <p class="g-mail">Reservations@cafe1981.nl</p>
+      </div>
+      <div class="g-side rv">
+        <ul class="g-facts"><li><b>6–10</b><span>personas por reserva</span></li><li><b>12 h</b><span>reserva por email con al menos 12 horas de antelación</span></li><li><b>25 €</b><span>consumo mínimo por persona</span></li><li><b>90 min</b><span>la mesa es vuestra durante 90 minutos</span></li></ul>
+        <ul class="g-notes"><li>Según el día, puede aplicarse un menú cerrado; lo hablamos contigo con antelación.</li><li>Todas las reservas están sujetas a disponibilidad.</li></ul>
+        <p class="g-walk">¿Sois menos de 6? Entrad sin más, según disponibilidad.</p>
+      </div>
+    </div>
+  </section>
+
   <section class="faq" id="faq" aria-labelledby="faq-h">
     <div class="wrap">
       <div class="rv">
@@ -1085,7 +1146,8 @@ footer { border-top: 1px solid var(--line); padding-block: 40px calc(32px + env(
       <div class="faq-list rv">
         <details open><summary><h3>¿Cuál es el horario de Café1981?</h3><i aria-hidden="true"></i></summary><p>Abrimos todos los días de 8:00 a 21:00. Servimos desayunos y almuerzos desde las 8:00; la carta de noche, con cenas y cócteles, empieza a las 16:30.</p></details>
         <details><summary><h3>¿Cómo llego a Café1981?</h3><i aria-hidden="true"></i></summary><p>Estamos en Korte Leidsedwarsstraat 203, 1017 RB Ámsterdam: a 2 minutos a pie de Leidseplein, a 5 del Rijksmuseum y a 8 del Vondelpark. Los tranvías 1, 2, 5, 7 y 19 paran en Leidseplein.</p></details>
-        <details><summary><h3>¿Hace falta reservar?</h3><i aria-hidden="true"></i></summary><p>No, entra sin más. Si venís en grupo, escríbenos a <a href="mailto:Reservations@cafe1981.nl">Reservations@cafe1981.nl</a>.</p></details>
+        <details><summary><h3>¿Hace falta reservar?</h3><i aria-hidden="true"></i></summary><p>Si sois menos de 6, no: entrad sin más, según disponibilidad. Los grupos de 6 a 10 personas reservan por email con al menos 12 horas de antelación; consulta las <a href="#groups">reservas de grupo</a>.</p></details>
+        <details><summary><h3>¿Puedo reservar para un grupo?</h3><i aria-hidden="true"></i></summary><p>Sí, para 6 a 10 personas. Escribe a <a href="mailto:Reservations@cafe1981.nl">Reservations@cafe1981.nl</a> con al menos 12 horas de antelación. Hay un consumo mínimo de 25 € por persona, la mesa es vuestra durante 90 minutos y algunos días se aplica un menú cerrado, que hablamos contigo antes. Todas las reservas están sujetas a disponibilidad.</p></details>
         <details><summary><h3>¿Qué pido para desayunar?</h3><i aria-hidden="true"></i></summary><p>Nuestros platos de huevos: Eggs Royale con salmón ahumado, Eggs Benedict, Eggs Florentine y la Green Omelette. Los Eggs Benedict, la Green Omelette y nuestras torrijas (French toast) son lo más mencionado en las opiniones de Google.</p></details>
         <details><summary><h3>¿Tenéis opciones vegetarianas?</h3><i aria-hidden="true"></i></summary><p>Sí, todos los días: flatbread de hummus y falafel, la hamburguesa vegetal y bitterballen de verduras, y por la noche currys vegetarianos como saag paneer, aloo matar o dal.</p></details>
         <details><summary><h3>¿Puedo probar comida neerlandesa?</h3><i aria-hidden="true"></i></summary><p>Claro. Pide unas bitterballen con tu bebida y, por la noche, hutspot (puré de patata y zanahoria) con salchicha ahumada rookworst. Nuestros curry bowls de Mayur, con naan recién hecho, también triunfan.</p></details>
@@ -1098,7 +1160,7 @@ footer { border-top: 1px solid var(--line); padding-block: 40px calc(32px + env(
 <footer>
   <div class="wrap">
     <div class="wordmark"><img class="wm-logo" src="../img/logo.png" alt="Café1981" width="511" height="137" loading="lazy"></div>
-    <nav class="explore" aria-label="Descubre"><span class="label">Descubre</span><a href="../es/desayunar-amsterdam/">Desayunar en Ámsterdam</a><a href="../es/comer-cerca-rijksmuseum/">Comer cerca del Rijksmuseum</a><a href="../es/terraza-leidseplein/">Terraza en Leidseplein</a><a href="../es/cenar-leidseplein/">Cenar en Leidseplein</a></nav>
+    <nav class="explore" aria-label="Descubre"><span class="label">Descubre</span><a href="../es/desayunar-amsterdam/">Desayunar en Ámsterdam</a><a href="../es/comer-cerca-rijksmuseum/">Comer cerca del Rijksmuseum</a><a href="../es/terraza-leidseplein/">Terraza en Leidseplein</a><a href="../es/cenar-leidseplein/">Cenar en Leidseplein</a><a href="../es/#groups">Reservas de grupo</a></nav>
     <div class="foot-row"><span>Café1981 · Korte Leidsedwarsstraat 203 · 1017 RB Amsterdam</span><span>Abierto todos los días de 8:00 a 21:00</span><span><span class="foot-langs"><a href="../" hreflang="en" lang="en">EN</a><a href="../nl/" hreflang="nl" lang="nl">NL</a><a href="../de/" hreflang="de" lang="de">DE</a><a href="../fr/" hreflang="fr" lang="fr">FR</a><a href="../es/" hreflang="es" lang="es" aria-current="true">ES</a></span></span></div>
   </div>
 </footer>
