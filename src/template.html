@@ -94,10 +94,7 @@
       <div class="menu-grid">
         <div>
           <ul class="dishes panel" id="p-day" role="tabpanel" aria-labelledby="t-day">
-            <li class="dish active" data-img="eggs"><h3>Eggs <em>Florentine</em></h3><p>{{d1}}</p><span class="tag">{{p_florentine}}</span></li>
-            <li class="dish" data-img="pancakes"><h3>American <em>Pancakes</em></h3><p>{{d2}}</p><span class="tag">{{p_pancakes}}</span></li>
-            <li class="dish" data-img="omelette"><h3>Green <em>Omelette</em></h3><p>{{d3}}</p><span class="tag">{{p_omelette}}</span></li>
-            <li class="dish" data-img="fishchips"><h3>Fish &amp; <em>Chips</em></h3><p>{{d4}}</p><span class="tag">{{p_fish}}</span></li>
+{{DAY_DISHES}}
           </ul>
           <ul class="dishes panel" id="p-night" role="tabpanel" aria-labelledby="t-night" hidden>
             <li class="dish" data-img="spritz"><h3>Signature <em>Cocktails</em></h3><p>{{n1}}</p><span class="tag">{{tag-sig}}</span></li>
@@ -108,10 +105,7 @@
           <div class="menu-note"><span>{{m-note}}</span><a href="https://cafe1981.nl/wp-content/uploads/2026/09/cafe1981_lunch_sep_2026.pdf" target="_blank" rel="noopener">{{m-pdf1}}</a><a href="https://cafe1981.nl/wp-content/uploads/2026/09/cafe1981_diner_sep_2026.pdf" target="_blank" rel="noopener">{{m-pdf2}}</a></div>
         </div>
         <div class="menu-visual rv">
-          <img data-k="eggs" class="show" src="{{R}}img/eggs.webp" width="760" height="1140" alt="Eggs Florentine">
-          <img data-k="pancakes" src="{{R}}img/pancakes.webp" width="760" height="1140" alt="American Pancakes" loading="lazy">
-          <img data-k="omelette" src="{{R}}img/omelette.webp" width="760" height="1140" alt="Green Omelette" loading="lazy">
-          <img data-k="fishchips" src="{{R}}img/fishchips.webp" width="760" height="1140" alt="Fish &amp; Chips" loading="lazy">
+{{DAY_IMGS}}
           <img data-k="spritz" src="{{R}}img/spritz.webp" width="760" height="1140" alt="{{alt_cocktail}}" loading="lazy">
           <img data-k="lamb" src="{{R}}img/lamb.webp" width="760" height="1140" alt="Lamb Chops" loading="lazy">
           <img data-k="sate" src="{{R}}img/sate.webp" width="760" height="1140" alt="Chicken Saté" loading="lazy">
@@ -121,6 +115,8 @@
       </div>
     </div>
   </section>
+
+{{GALLERY}}
 
   <section class="spaces" id="spaces" aria-labelledby="spaces-h">
     <div class="wrap">

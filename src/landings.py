@@ -13,8 +13,8 @@ TOPICS = ['breakfast', 'lunch', 'terrace', 'dinner']
 
 # image key -> (file, width, height)
 IMAGES = {
-    'breakfast': ('eggs.webp', 760, 1140),
-    'lunch': ('fishchips.webp', 760, 1140),
+    'breakfast': ('royale.webp', 760, 1140),
+    'lunch': ('lunch-table.webp', 760, 1140),
     'terrace': ('terrace-1280.webp', 1280, 853),
     'dinner': ('interior-1600.webp', 1600, 1098),
 }
@@ -25,11 +25,11 @@ DISHES = {
     'pancakes': ('American Pancakes', 13.5), 'avocado': ('Smashed Avocado', 16.5), 'hummus': ('Hummus & Falafel', 15.5),
     'fish': ('Fish & Chips', 22.5), 'sate': ('Chicken Saté', 18.5), 'bitter': ('Vegetable Bitterballen', 10.5),
     'cocktails': ('Signature Cocktails', None), 'lamb': ('Lamb Chops', 24.5), 'hutspot': ('Hutspot with Rookworst', 20.5),
-    'butterchicken': ('Butter Chicken', 25.5),
+    'butterchicken': ('Butter Chicken', 25.5), 'salmon': ('Flat Salmon', 16.5), 'chicksalad': ('Spicy Chicken Salad', 16.5),
 }
 TOPIC_DISHES = {
     'breakfast': ['royale', 'benedict', 'frenchtoast', 'pancakes'],
-    'lunch': ['avocado', 'hummus', 'fish', 'sate'],
+    'lunch': ['avocado', 'salmon', 'chicksalad', 'fish'],
     'terrace': ['frenchtoast', 'avocado', 'bitter', 'cocktails'],
     'dinner': ['lamb', 'hutspot', 'butterchicken', 'cocktails'],
 }
@@ -48,7 +48,9 @@ DISH_DESC = {
         cocktails='From an Old Fashioned to a Margarita, mixed at the bar from 16:00',
         lamb='Grilled with rosemary and garlic, served with fries',
         hutspot='Dutch mash of potato, carrot and onion with smoked rookworst sausage',
-        butterchicken='Tandoori chicken in a mild tomato, cream and butter sauce, with naan'),
+        butterchicken='Tandoori chicken in a mild tomato, cream and butter sauce, with naan',
+        salmon='Salmon with yogurt spread, pickled cucumber, cherry tomatoes, capers and red onion on a flatbread',
+        chicksalad='Grilled spicy chicken, cucumber, cherry tomatoes, spinach and red onion, honey mustard dressing'),
     'nl': dict(
         royale='Gepocheerde eieren, gerookte zalm en hollandaise op een geroosterde English muffin',
         benedict='Gepocheerde eieren, ham en hollandaise op een geroosterde English muffin',
@@ -62,7 +64,9 @@ DISH_DESC = {
         cocktails='Van Old Fashioned tot Margarita, vanaf 16:00 gemaakt aan de bar',
         lamb='Gegrild met rozemarijn en knoflook, met friet',
         hutspot='Stamppot van aardappel, wortel en ui met rookworst',
-        butterchicken='Tandoori-kip in een milde saus van tomaat, room en boter, met naan'),
+        butterchicken='Tandoori-kip in een milde saus van tomaat, room en boter, met naan',
+        salmon='Zalm met yoghurtspread, zoetzure komkommer, kerstomaatjes, kappertjes en rode ui op flatbread',
+        chicksalad='Gegrilde pittige kip, komkommer, kerstomaatjes, spinazie en rode ui, honing-mosterddressing'),
     'de': dict(
         royale='Pochierte Eier, Räucherlachs und Sauce hollandaise auf getoastetem English Muffin',
         benedict='Pochierte Eier, Schinken und Sauce hollandaise auf getoastetem English Muffin',
@@ -76,7 +80,9 @@ DISH_DESC = {
         cocktails='Vom Old Fashioned bis zur Margarita, ab 16 Uhr an der Bar gemixt',
         lamb='Mit Rosmarin und Knoblauch gegrillt, dazu Pommes',
         hutspot='Niederländischer Stampf aus Kartoffeln, Möhren und Zwiebeln mit Rauchwurst (Rookworst)',
-        butterchicken='Tandoori-Hähnchen in milder Tomaten-Sahne-Butter-Sauce, dazu Naan'),
+        butterchicken='Tandoori-Hähnchen in milder Tomaten-Sahne-Butter-Sauce, dazu Naan',
+        salmon='Lachs mit Joghurtcreme, eingelegter Gurke, Kirschtomaten, Kapern und roten Zwiebeln auf Fladenbrot',
+        chicksalad='Gegrilltes scharfes Hähnchen, Gurke, Kirschtomaten, Spinat und rote Zwiebeln, Honig-Senf-Dressing'),
     'fr': dict(
         royale='Œufs pochés, saumon fumé et sauce hollandaise sur un English muffin grillé',
         benedict='Œufs pochés, jambon et sauce hollandaise sur un English muffin grillé',
@@ -90,7 +96,9 @@ DISH_DESC = {
         cocktails='De l’Old Fashioned à la Margarita, préparés au bar dès 16 h',
         lamb='Grillées au romarin et à l’ail, servies avec des frites',
         hutspot='Purée néerlandaise de pommes de terre, carottes et oignons, avec saucisse fumée rookworst',
-        butterchicken='Poulet tandoori dans une sauce douce tomate, crème et beurre, avec naan'),
+        butterchicken='Poulet tandoori dans une sauce douce tomate, crème et beurre, avec naan',
+        salmon='Saumon, crème au yaourt, concombre mariné, tomates cerises, câpres et oignon rouge sur flatbread',
+        chicksalad='Poulet épicé grillé, concombre, tomates cerises, épinards et oignon rouge, sauce miel-moutarde'),
     'es': dict(
         royale='Huevos pochados, salmón ahumado y salsa holandesa sobre un English muffin tostado',
         benedict='Huevos pochados, jamón cocido y salsa holandesa sobre un English muffin tostado',
@@ -104,7 +112,9 @@ DISH_DESC = {
         cocktails='Del Old Fashioned al Margarita, preparados en la barra desde las 16:00',
         lamb='A la parrilla con romero y ajo, con patatas fritas',
         hutspot='Puré neerlandés de patata, zanahoria y cebolla con salchicha ahumada rookworst',
-        butterchicken='Pollo tandoori en una salsa suave de tomate, nata y mantequilla, con naan'),
+        butterchicken='Pollo tandoori en una salsa suave de tomate, nata y mantequilla, con naan',
+        salmon='Salmón con crema de yogur, pepinillo, tomates cherry, alcaparras y cebolla roja sobre pan plano',
+        chicksalad='Pollo picante a la parrilla, pepino, tomates cherry, espinacas y cebolla roja, aliño de miel y mostaza'),
 }
 
 UI = {
@@ -377,4 +387,19 @@ P['es'] = {
              ('¿Tenéis comida india?', 'Sí. La carta de noche tiene los curry bowls de Mayur: butter chicken, curry de cordero, chicken tikka masala, saag paneer, aloo matar y dal, con naan normal o de ajo.'),
              ('¿Puedo probar comida neerlandesa en la cena?', 'Sí: hutspot con rookworst, saté de pollo con salsa de cacahuete y bitterballen de verduras para acompañar la bebida.'),
              ('¿Hay que reservar para cenar?', f'No, ven sin reserva. Los grupos de 6 a 10 personas reservan por email con al menos 12 horas de antelación: {MAIL}.')]),
+}
+
+
+# Day tab on the home page: (dish key, image key, image file) — photos from the café, November 2026
+HOME_DAY = [('royale', 'royale'), ('pancakes', 'pancakes-new'), ('frenchtoast', 'frenchtoast'),
+            ('avocado', 'avocado'), ('salmon', 'salmon'), ('chicksalad', 'chicksalad')]
+# Kitchen gallery: (image file, caption key or dish name)
+GALLERY = [('lunch-table', None), ('avocado-hand', 'Smashed Avocado'), ('goatsalad', 'Goat Cheese Salad'),
+           ('applepie', 'Apple Pie by Holtkamp'), ('salmon-top', 'Flat Salmon'), ('chicksalad-top', 'Spicy Chicken Salad')]
+GALLERY_UI = {
+    'en': ('Fresh from our kitchen', 'Lunch for the whole table'),
+    'nl': ('Vers uit onze keuken', 'Lunch voor de hele tafel'),
+    'de': ('Frisch aus unserer Küche', 'Lunch für den ganzen Tisch'),
+    'fr': ('Tout juste sortis de la cuisine', 'Le déjeuner à partager'),
+    'es': ('Recién salido de la cocina', 'Comida para compartir'),
 }

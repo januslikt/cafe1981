@@ -436,6 +436,17 @@ footer { border-top: 1px solid var(--line); padding-block: 40px calc(32px + env(
   .g-facts li { padding: 20px 16px 18px; }
 }
 
+/* KITCHEN GALLERY */
+.kitchen { padding-block: 10px 120px; overflow: hidden; }
+.kitchen .label { margin-bottom: 22px; }
+.kitchen-row { --pad: max(20px, calc((100vw - 1320px) / 2 + 20px)); display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: var(--pad); padding: 0 var(--pad) 8px; scrollbar-width: none; }
+.kitchen-row::-webkit-scrollbar { display: none; }
+.kitchen-row figure { flex: 0 0 clamp(220px, 21vw, 300px); margin: 0; position: relative; aspect-ratio: 2 / 3; border-radius: 6px; overflow: hidden; background: var(--bg-2); scroll-snap-align: start; }
+.kitchen-row img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease); }
+.kitchen-row figure:hover img { transform: scale(1.04); }
+.kitchen-row figcaption { position: absolute; left: 12px; bottom: 12px; font-family: var(--f-mono); font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--paper); background: rgba(11,16,28,.55); padding: 6px 10px; border-radius: 99px; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+@media (max-width: 960px) { .kitchen { padding-bottom: 96px; } }
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; }
 }
@@ -983,10 +994,12 @@ footer { border-top: 1px solid var(--line); padding-block: 40px calc(32px + env(
       <div class="menu-grid">
         <div>
           <ul class="dishes panel" id="p-day" role="tabpanel" aria-labelledby="t-day">
-            <li class="dish active" data-img="eggs"><h3>Eggs <em>Florentine</em></h3><p>Œufs pochés, avocat, épinards sautés et sauce hollandaise sur un English muffin grillé</p><span class="tag">17 €</span></li>
-            <li class="dish" data-img="pancakes"><h3>American <em>Pancakes</em></h3><p>Épais et moelleux, avec sirop d’érable, fraises et myrtilles</p><span class="tag">13,50 €</span></li>
-            <li class="dish" data-img="omelette"><h3>Green <em>Omelette</em></h3><p>Gouda, épinards, oignons et bacon croustillant, avec pain au levain grillé</p><span class="tag">16,50 €</span></li>
-            <li class="dish" data-img="fishchips"><h3>Fish &amp; <em>Chips</em></h3><p>Poisson blanc en pâte à frire croustillante, frites dorées et sauce à l’ail</p><span class="tag">22,50 €</span></li>
+            <li class="dish active" data-img="royale"><h3>Eggs <em>Royale</em></h3><p>Œufs pochés, saumon fumé et sauce hollandaise sur un English muffin grillé</p><span class="tag">17,50 €</span></li>
+            <li class="dish" data-img="pancakes-new"><h3>American <em>Pancakes</em></h3><p>Épais et moelleux, avec sirop d’érable, fraises et myrtilles</p><span class="tag">13,50 €</span></li>
+            <li class="dish" data-img="frenchtoast"><h3>French <em>Toast</em></h3><p>Pain perdu à la vanille et à la cannelle, fruits rouges et clotted cream</p><span class="tag">14,50 €</span></li>
+            <li class="dish" data-img="avocado"><h3>Smashed <em>Avocado</em></h3><p>Avocat, tomates cerises, radis, roquette et parmesan sur un flatbread tiède</p><span class="tag">16,50 €</span></li>
+            <li class="dish" data-img="salmon"><h3>Flat <em>Salmon</em></h3><p>Saumon, crème au yaourt, concombre mariné, tomates cerises, câpres et oignon rouge sur flatbread</p><span class="tag">16,50 €</span></li>
+            <li class="dish" data-img="chicksalad"><h3>Spicy <em>Chicken Salad</em></h3><p>Poulet épicé grillé, concombre, tomates cerises, épinards et oignon rouge, sauce miel-moutarde</p><span class="tag">16,50 €</span></li>
           </ul>
           <ul class="dishes panel" id="p-night" role="tabpanel" aria-labelledby="t-night" hidden>
             <li class="dish" data-img="spritz"><h3>Signature <em>Cocktails</em></h3><p>De l’Old Fashioned à la Margarita, préparés au bar dès 16 h</p><span class="tag">Signature</span></li>
@@ -997,10 +1010,13 @@ footer { border-top: 1px solid var(--line); padding-block: 40px calc(32px + env(
           <div class="menu-note"><span>Carte du soir dès 16 h 30. Plats végétariens tous les jours.</span><a href="https://cafe1981.nl/wp-content/uploads/2026/09/cafe1981_lunch_sep_2026.pdf" target="_blank" rel="noopener">Carte du midi (PDF, en anglais)</a><a href="https://cafe1981.nl/wp-content/uploads/2026/09/cafe1981_diner_sep_2026.pdf" target="_blank" rel="noopener">Carte du soir (PDF, en anglais)</a></div>
         </div>
         <div class="menu-visual rv">
-          <img data-k="eggs" class="show" src="../img/eggs.webp" width="760" height="1140" alt="Eggs Florentine">
-          <img data-k="pancakes" src="../img/pancakes.webp" width="760" height="1140" alt="American Pancakes" loading="lazy">
-          <img data-k="omelette" src="../img/omelette.webp" width="760" height="1140" alt="Green Omelette" loading="lazy">
-          <img data-k="fishchips" src="../img/fishchips.webp" width="760" height="1140" alt="Fish &amp; Chips" loading="lazy">
+          <img data-k="royale" class="show" src="../img/royale.webp" width="760" height="1140" alt="Eggs Royale · Café1981">
+          <img data-k="pancakes-new" src="../img/pancakes-new.webp" width="760" height="1140" alt="American Pancakes · Café1981" loading="lazy">
+          <img data-k="frenchtoast" src="../img/frenchtoast.webp" width="760" height="1140" alt="French Toast · Café1981" loading="lazy">
+          <img data-k="avocado" src="../img/avocado.webp" width="760" height="1140" alt="Smashed Avocado · Café1981" loading="lazy">
+          <img data-k="salmon" src="../img/salmon.webp" width="760" height="1140" alt="Flat Salmon · Café1981" loading="lazy">
+          <img data-k="chicksalad" src="../img/chicksalad.webp" width="760" height="1140" alt="Spicy Chicken Salad · Café1981" loading="lazy">
+
           <img data-k="spritz" src="../img/spritz.webp" width="760" height="1140" alt="Un cocktail au bar du Café1981" loading="lazy">
           <img data-k="lamb" src="../img/lamb.webp" width="760" height="1140" alt="Lamb Chops" loading="lazy">
           <img data-k="sate" src="../img/sate.webp" width="760" height="1140" alt="Chicken Saté" loading="lazy">
@@ -1009,6 +1025,11 @@ footer { border-top: 1px solid var(--line); padding-block: 40px calc(32px + env(
         </div>
       </div>
     </div>
+  </section>
+
+  <section class="kitchen" aria-label="Tout juste sortis de la cuisine">
+    <div class="wrap"><div class="label">Tout juste sortis de la cuisine</div></div>
+    <div class="kitchen-row"><figure><img src="../img/lunch-table.webp" width="760" height="1140" loading="lazy" alt="Le déjeuner à partager · Café1981"><figcaption>Le déjeuner à partager</figcaption></figure><figure><img src="../img/avocado-hand.webp" width="760" height="1140" loading="lazy" alt="Smashed Avocado · Café1981"><figcaption>Smashed Avocado</figcaption></figure><figure><img src="../img/goatsalad.webp" width="760" height="1140" loading="lazy" alt="Goat Cheese Salad · Café1981"><figcaption>Goat Cheese Salad</figcaption></figure><figure><img src="../img/applepie.webp" width="760" height="1140" loading="lazy" alt="Apple Pie by Holtkamp · Café1981"><figcaption>Apple Pie by Holtkamp</figcaption></figure><figure><img src="../img/salmon-top.webp" width="760" height="1140" loading="lazy" alt="Flat Salmon · Café1981"><figcaption>Flat Salmon</figcaption></figure><figure><img src="../img/chicksalad-top.webp" width="760" height="1140" loading="lazy" alt="Spicy Chicken Salad · Café1981"><figcaption>Spicy Chicken Salad</figcaption></figure></div>
   </section>
 
   <section class="spaces" id="spaces" aria-labelledby="spaces-h">

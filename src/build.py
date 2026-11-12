@@ -273,6 +273,28 @@ def footlangs(l, paths=None):
         for o in LANGS) + '</span>'
 
 
+def day_menu(l, R):
+    items, imgs = [], []
+    for i, (d, img) in enumerate(LP.HOME_DAY):
+        name, p = LP.DISHES[d]
+        first, last = (name.split(' ', 1) + [''])[:2] if ' ' in name else ('', name)
+        h3 = f'{html.escape(first)} <em>{html.escape(last)}</em>' if first else f'<em>{html.escape(last)}</em>'
+        items.append(f'            <li class="dish{" active" if i == 0 else ""}" data-img="{img}"><h3>{h3}</h3>'
+                     f'<p>{LP.DISH_DESC[l][d]}</p><span class="tag">{price(p, l)}</span></li>')
+        imgs.append(f'          <img data-k="{img}"{" class=\"show\"" if i == 0 else ""} src="{R}img/{img}.webp" width="760" height="1140" '
+                    f'alt="{html.escape(name)} · Café1981"{"" if i == 0 else " loading=\"lazy\""}>')
+    return '\n'.join(items), '\n'.join(imgs) + '\n'
+
+
+def gallery(l, R):
+    label, table = LP.GALLERY_UI[l]
+    figs = ''.join(
+        f'<figure><img src="{R}img/{f}.webp" width="760" height="1140" loading="lazy" alt="{html.escape(c or table)} · Café1981">'
+        f'<figcaption>{html.escape(c or table)}</figcaption></figure>' for f, c in LP.GALLERY)
+    return (f'  <section class="kitchen" aria-label="{label}">\n    <div class="wrap"><div class="label">{label}</div></div>\n'
+            f'    <div class="kitchen-row">{figs}</div>\n  </section>')
+
+
 def groups(l):
     g = GROUPS[l]
     mail = ('mailto:Reservations@cafe1981.nl?subject=' + urllib.parse.quote(g['subject'] + ' · Café1981')
@@ -372,7 +394,8 @@ def build():
             'REDIRECT': REDIRECT if l == 'en' else '',
             'HEAD': head(l, t), 'JSONLD': jsonld(l, t), 'LANGMENU': langmenu(l, t), 'FOOTLANGS': footlangs(l),
             'STATEMENT': statement(t['s-p']), 'FAQ': faq(t['faq']), 'HOURS': hours(l, t),
-            'EXPLORE': explore(l, page_path(l)), 'GROUPS': groups(l), 'GROUP_NAV': GROUPS[l]['nav'],
+            'EXPLORE': explore(l, page_path(l)), 'GALLERY': gallery(l, '' if l == 'en' else '../'),
+            'DAY_DISHES': day_menu(l, '' if l == 'en' else '../')[0], 'DAY_IMGS': day_menu(l, '' if l == 'en' else '../')[1], 'GROUPS': groups(l), 'GROUP_NAV': GROUPS[l]['nav'],
             'STARS_5': STARS_5, 'STARS_47': STARS_47,
             'JS_L': json.dumps({'lang': l, 'open': t['open'], 'closed': t['closed'], 'today': t['today'],
                                 'langs': {o: {'ask': S[o]['ask'], 'cta': S[o]['cta'], 'href': rel(l, o)} for o in LANGS}},

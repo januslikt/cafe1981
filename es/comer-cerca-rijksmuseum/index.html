@@ -21,7 +21,7 @@
 <meta property="og:title" content="Dónde comer cerca del Rijksmuseum · Café1981 Ámsterdam">
 <meta property="og:description" content="Comer a cinco minutos a pie del Rijksmuseum: panes planos, ensaladas, hamburguesas y fish &amp; chips en una calle tranquila junto a Leidseplein. Abierto a diario.">
 <meta property="og:url" content="https://januslikt.github.io/cafe1981/es/comer-cerca-rijksmuseum/">
-<meta property="og:image" content="https://januslikt.github.io/cafe1981/img/fishchips.webp">
+<meta property="og:image" content="https://januslikt.github.io/cafe1981/img/lunch-table.webp">
 <meta property="og:image:width" content="760">
 <meta property="og:image:height" content="1140">
 <meta property="og:image:alt" content="Dónde comer cerca del Rijksmuseum">
@@ -434,6 +434,17 @@ footer { border-top: 1px solid var(--line); padding-block: 40px calc(32px + env(
   .g-facts li { padding: 20px 16px 18px; }
 }
 
+/* KITCHEN GALLERY */
+.kitchen { padding-block: 10px 120px; overflow: hidden; }
+.kitchen .label { margin-bottom: 22px; }
+.kitchen-row { --pad: max(20px, calc((100vw - 1320px) / 2 + 20px)); display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: var(--pad); padding: 0 var(--pad) 8px; scrollbar-width: none; }
+.kitchen-row::-webkit-scrollbar { display: none; }
+.kitchen-row figure { flex: 0 0 clamp(220px, 21vw, 300px); margin: 0; position: relative; aspect-ratio: 2 / 3; border-radius: 6px; overflow: hidden; background: var(--bg-2); scroll-snap-align: start; }
+.kitchen-row img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease); }
+.kitchen-row figure:hover img { transform: scale(1.04); }
+.kitchen-row figcaption { position: absolute; left: 12px; bottom: 12px; font-family: var(--f-mono); font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--paper); background: rgba(11,16,28,.55); padding: 6px 10px; border-radius: 99px; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+@media (max-width: 960px) { .kitchen { padding-bottom: 96px; } }
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; }
 }
@@ -809,7 +820,7 @@ footer { border-top: 1px solid var(--line); padding-block: 40px calc(32px + env(
    "about": {
     "@id": "https://januslikt.github.io/cafe1981/#cafe"
    },
-   "primaryImageOfPage": "https://januslikt.github.io/cafe1981/img/fishchips.webp",
+   "primaryImageOfPage": "https://januslikt.github.io/cafe1981/img/lunch-table.webp",
    "breadcrumb": {
     "@id": "https://januslikt.github.io/cafe1981/es/comer-cerca-rijksmuseum/#crumbs"
    }
@@ -915,7 +926,7 @@ footer { border-top: 1px solid var(--line); padding-block: 40px calc(32px + env(
           <div><dt>A pie</dt><dd>A 2 min de Leidseplein</dd></div>
         </dl>
       </div>
-      <figure class="lp-img"><img src="../../img/fishchips.webp" width="760" height="1140" alt="Dónde comer cerca del Rijksmuseum · Café1981" fetchpriority="high"></figure>
+      <figure class="lp-img"><img src="../../img/lunch-table.webp" width="760" height="1140" alt="Dónde comer cerca del Rijksmuseum · Café1981" fetchpriority="high"></figure>
     </div>
   </section>
 
@@ -924,7 +935,7 @@ footer { border-top: 1px solid var(--line); padding-block: 40px calc(32px + env(
       <div class="lp-prose"><p>La carta de mediodía es sencilla: panes planos calientes con aguacate o con hummus y falafel, ensaladas como la César con pollo o la de queso de cabra, sopas con pan, hamburguesas y un fish &amp; chips crujiente. Los platos de huevos siguen en la carta, así que unos Eggs Benedict a media mañana siempre son posibles.</p><p>Para el café, nuestra tarta de manzana y nuestra tarta de chocolate vienen de Holtkamp, la conocida pastelería de Ámsterdam. Si hace sol, siéntate en la terraza, justo delante.</p></div>
       <div class="lp-menu">
         <div class="label">En la carta</div>
-        <ul class="dishes"><li class="dish"><h3>Smashed Avocado</h3><p>Aguacate, tomates cherry, rábano, rúcula y parmesano sobre pan plano caliente</p><span class="tag">16,50 €</span></li><li class="dish"><h3>Hummus &amp; Falafel</h3><p>Falafel crujiente, hummus, pepino y rúcula sobre pan plano caliente</p><span class="tag">15,50 €</span></li><li class="dish"><h3>Fish &amp; Chips</h3><p>Pescado blanco rebozado y crujiente, patatas fritas y salsa de ajo</p><span class="tag">22,50 €</span></li><li class="dish"><h3>Chicken Saté</h3><p>Brochetas de pollo especiadas con salsa de cacahuete y patatas fritas</p><span class="tag">18,50 €</span></li></ul>
+        <ul class="dishes"><li class="dish"><h3>Smashed Avocado</h3><p>Aguacate, tomates cherry, rábano, rúcula y parmesano sobre pan plano caliente</p><span class="tag">16,50 €</span></li><li class="dish"><h3>Flat Salmon</h3><p>Salmón con crema de yogur, pepinillo, tomates cherry, alcaparras y cebolla roja sobre pan plano</p><span class="tag">16,50 €</span></li><li class="dish"><h3>Spicy Chicken Salad</h3><p>Pollo picante a la parrilla, pepino, tomates cherry, espinacas y cebolla roja, aliño de miel y mostaza</p><span class="tag">16,50 €</span></li><li class="dish"><h3>Fish &amp; Chips</h3><p>Pescado blanco rebozado y crujiente, patatas fritas y salsa de ajo</p><span class="tag">22,50 €</span></li></ul>
         <div class="menu-note"><span>Precios de la carta de septiembre de 2026.</span><a href="https://cafe1981.nl/wp-content/uploads/2026/09/cafe1981_lunch_sep_2026.pdf" target="_blank" rel="noopener">Carta de mediodía (PDF, en inglés)</a><a href="https://cafe1981.nl/wp-content/uploads/2026/09/cafe1981_diner_sep_2026.pdf" target="_blank" rel="noopener">Carta de noche (PDF, en inglés)</a></div>
       </div>
     </div>
